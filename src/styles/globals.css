@@ -27,6 +27,21 @@
   .containerFooter1 {
     display: none;
   }
+  .header1{
+    display: none;
+  }
+}
+@media (max-width: 750px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  .header {
+    display: none;
+  }
+  .header1{
+    display: grid ;
+  }
 }
 
 @media (max-width: 720px) {

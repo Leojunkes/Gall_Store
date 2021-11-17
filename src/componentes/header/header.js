@@ -17,7 +17,7 @@ import Link from 'next/link';
 
 export default function Header() {
   return (
-    <>
+    <div className="header">
       <Flex h="8rem" fontWeight="400" bg="gray.100">
         <Flex m="10px auto">
           <Image
@@ -76,6 +76,6 @@ export default function Header() {
           </Tabs>
         </Flex>
       </Flex>
-    </>
+    </div>
   );
 }

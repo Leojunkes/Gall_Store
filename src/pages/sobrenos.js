@@ -2,12 +2,13 @@
 import { Flex, Text, Image } from '@chakra-ui/react';
 export default function SobreNos() {
   return (
-    <Flex mt="10px" bg="#f6f8fa">
-      <Flex  alignItems="center" flexDirection="column">
+    <Flex mt="10px" backgroundImage="url('/imagens/sobreGall.png')">
+      <Flex alignItems="center" flexDirection="column">
         <Text
           fontSize="3.5rem"
           textShadow="10.936px 8.74092px 0px rgba(0, 0, 0, 0.26), 7.08816px 5.66541px 0px rgba(0, 0, 0, 0.197407), 4.21239px 3.36687px 0px rgba(0, 0, 0, 0.157926), 2.1872px 1.74818px 0px rgba(0, 0, 0, 0.13), 0.891082px 0.712223px 0px rgba(0, 0, 0, 0.102074), 0.202519px 0.161869px 0px rgba(0, 0, 0, 0.0625926);"
           color="#125C20"
+          
         >
           Sobre
         </Text>

@@ -1,6 +1,8 @@
 import { Flex, Button, Image, Text, Grid } from '@chakra-ui/react';
 import Almofadas from '../componentes/almofadasCad';
 
+
+
 export default function Produtos() {
   return (
     <div style={{ marginTop: '30px' }}>
@@ -11,6 +13,7 @@ export default function Produtos() {
       <Grid  m="20px auto" w="80rem" gap={5} templateColumns="repeat(3,1fr)">
         <Almofadas />
       </Grid>
+      
     </div>
   );
 }
