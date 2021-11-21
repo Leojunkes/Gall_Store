@@ -1,6 +1,18 @@
 /* eslint-disable @next/next/link-passhref */
 /* eslint-disable jsx-a11y/alt-text */
-import { Flex, Button, Image, Text } from '@chakra-ui/react';
+import {
+  Flex,
+  Button,
+  Image,
+  Text,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverHeader,
+  PopoverBody,
+} from '@chakra-ui/react';
 import { BsInstagram, BsFacebook } from 'react-icons/bs';
 import Link from 'next/link';
 export default function Footer() {
@@ -19,14 +31,62 @@ export default function Footer() {
           <Text ml="50px" color="#ffffff">
             Moda, Estilo, Elegância, vista-se com Gall
           </Text>
+          <Link href="https://www.instagram.com/gall.oficial/">
+            <BsInstagram
+              cursor="pointer"
+              style={{ marginLeft: '5px', color: '#ffffff' }}
+            />
+          </Link>
+          <Flex
+          ml="5px"
+          alignItems="center"
+          fontSize="18"
+          bg="#3b5998"
+          borderRadius="60px"
+          w="30px"
+          h="30px"
+        >
+          <Link href="https://www.facebook.com/gall.oficial">
+            <BsFacebook cursor="pointer" style={{ marginLeft: '5px' }} />
+          </Link>
+        </Flex>
+        </Flex>
+
+        <Flex  flexDirection="column" color="#ffffff"s>
+          <Text color="#71BDD2">Dúvidas</Text>
+          <Text>Trocas e Devoluçoes</Text>
+          <Text>Termos de Uso</Text>
+          <Text>Política de Reembolso</Text>
+          <Text>Termos de Serviço</Text>
         </Flex>
 
         <Flex flexDirection="column" color="#ffffff">
           <Text color="#71BDD2">Mapa</Text>
           <Text>Home</Text>
           <Text>Sobre</Text>
-          <Text>Produtos</Text>
-          <Text>Contato</Text>
+          <Popover>
+            <PopoverTrigger>
+              <Button
+                bg="none"
+                _hover="false"
+                _focus="none"
+                fontSize="1.1rem"
+                fontWeight="light"
+                mt='-8px'
+                ml='-15px'
+              >
+                Produtos
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent _focus="none" bg="#398b63">
+              <PopoverArrow />
+              <PopoverCloseButton />
+              <PopoverHeader color="#ffffff">Almofadas</PopoverHeader>
+              <PopoverBody color="#ffffff">
+                A Gall terá o maior prazer em lhe ajudar!
+              </PopoverBody>
+            </PopoverContent>
+          </Popover>
         </Flex>
         <Flex flexDirection="column" color="#ffffff">
           <Text color="#71BDD2">Categorias</Text>
@@ -65,26 +125,9 @@ export default function Footer() {
           w="30px"
           h="30px"
         >
-          <Link href="https://www.instagram.com/gall.oficial/">
-            <BsInstagram
-              cursor="pointer"
-              style={{ marginLeft: '5px', color: '#ffffff' }}
-            />
-          </Link>
+          
         </Flex>
-        <Flex
-          ml="5px"
-          alignItems="center"
-          fontSize="18"
-          bg="#3b5998"
-          borderRadius="60px"
-          w="30px"
-          h="30px"
-        >
-          <Link href="https://www.facebook.com/gall.oficial">
-            <BsFacebook cursor="pointer" style={{ marginLeft: '5px' }} />
-          </Link>
-        </Flex>
+       
       </Flex>
     </div>
   );

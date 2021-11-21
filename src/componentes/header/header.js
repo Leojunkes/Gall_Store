@@ -9,7 +9,13 @@ import {
   TabList,
   TabPanels,
   Tab,
-  TabPanel,
+  Popover,
+  PopoverTrigger,
+  PopoverBody,
+  PopoverContent,
+  PopoverHeader,
+  PopoverArrow,
+  PopoverCloseButton,
 } from '@chakra-ui/react';
 import { BsHandbag } from 'react-icons/bs';
 
@@ -50,7 +56,7 @@ export default function Header() {
           <Text ml="6px">Produtos</Text>
           <Text ml="6px">Sobre Nós</Text>
           <Text ml="6px">Contato</Text> */}
-          <Tabs  color="gray.800" variant="line" colorScheme="green">
+          <Tabs color="gray.800" variant="line" colorScheme="green">
             <TabList>
               <Link href="/">
                 <Tab fontSize="1.3rem" _focus="none">
@@ -70,7 +76,19 @@ export default function Header() {
               </Link>
 
               <Tab fontSize="1.3rem" _focus="none">
-                Contato
+                <Popover >
+                  <PopoverTrigger>
+                    <Button _hover="false" _focus="none" fontSize="1.3rem" fontWeight='light'>Contato</Button>
+                  </PopoverTrigger>
+                  <PopoverContent _focus="none" bg='#398b63'>
+                    <PopoverArrow />
+                    <PopoverCloseButton />
+                    <PopoverHeader color='#ffffff'>WhatsApp</PopoverHeader>
+                    <PopoverBody color='#ffffff'>
+                      A Gall terá o maior prazer em lhe ajudar!
+                    </PopoverBody>
+                  </PopoverContent>
+                </Popover>
               </Tab>
             </TabList>
           </Tabs>
