@@ -15,7 +15,7 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
             rel="stylesheet"
           />
-          {/* Fonte princessa Safia  */}
+          {/* Fonte princessa Sofia  */}
           <link
             href="https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap"
             rel="stylesheet"

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/link-passhref */
 /* eslint-disable jsx-a11y/alt-text */
 import {
   Flex,
@@ -19,6 +20,13 @@ import {
   Input,
   Stack,
   useDisclosure,
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  PopoverArrow,
+  PopoverCloseButton,
+  PopoverHeader,
+  PopoverBody,
 } from '@chakra-ui/react';
 import { BsHandbag } from 'react-icons/bs';
 import { GiHamburgerMenu } from 'react-icons/gi';
@@ -56,12 +64,39 @@ export default function Header1() {
               <Image src="/imagens/logoGall1.png" />
             </DrawerHeader>
 
-            <DrawerBody fontSize="20px">
+            <DrawerBody cursor='pointer' fontSize="20px">
               <Stack spacing="8">
-                <Text>Home</Text>
-                <Text>Produtos</Text>
-                <Text>Sobre Nós</Text>
-                <Text>Contato</Text>
+                <Link href="/">
+                  <Text>Home</Text>
+                </Link>
+                <Link href="/produtos">
+                  <Text>Produtos</Text>
+                </Link>
+                <Link href="/sobrenos">
+                  <Text>Sobre Nós</Text>
+                </Link>
+                <Popover>
+                  <PopoverTrigger>
+                    <Button
+                      _hover="false"
+                      _focus="none"
+                      fontSize="1.6rem"
+                      fontWeight="light"
+                      bg="none"
+                      justifyContent="initial"
+                    >
+                      <Text ml='-13px'>Contato</Text>
+                    </Button>
+                  </PopoverTrigger>
+                  <PopoverContent _focus="none" bg="#398b63">
+                    <PopoverArrow />
+                    <PopoverCloseButton />
+                    <PopoverHeader color="#ffffff">WhatsApp</PopoverHeader>
+                    <PopoverBody color="#ffffff">
+                      A Gall terá o maior prazer em lhe ajudar!
+                    </PopoverBody>
+                  </PopoverContent>
+                </Popover>
               </Stack>
             </DrawerBody>
           </DrawerContent>
