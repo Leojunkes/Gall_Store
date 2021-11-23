@@ -1,5 +1,9 @@
+/* eslint-disable @next/next/link-passhref */
 import { Flex, Button, Image, Text, Grid } from '@chakra-ui/react';
 import Almofadas from '../componentes/almofadasCad';
+
+import Link from 'next/link';
+import Almofadas1 from '../componentes/almofadas1';
 
 export default function Produtos() {
   return (
@@ -11,14 +15,20 @@ export default function Produtos() {
         h="2rem"
         alignItems="center"
         justifyContent="space-evenly"
-        cursor='pointer'
+        cursor="pointer"
       >
-        <Text _hover={{color:'gray.300'}}>Almofadas</Text>
-        <Text _hover={{color:'gray.300'}}>Almofadas1</Text>
-        <Text _hover={{color:'gray.300'}}>Almofadas2</Text>
-        <Text _hover={{color:'gray.300'}}>Almofadas3</Text>
-        <Text _hover={{color:'gray.300'}}>Bolsas</Text>
-        <Text _hover={{color:'gray.300'}}>Camisetas</Text>
+        <Link href='/'>
+          <Text _hover={{ color: 'gray.300' }}>Almofadas</Text>
+        </Link>
+
+        <Link href="/almofadas1">
+          <Text _hover={{ color: 'gray.300' }}>Almofadas1</Text>
+        </Link>
+
+        <Text _hover={{ color: 'gray.300' }}>Almofadas2</Text>
+        <Text _hover={{ color: 'gray.300' }}>Almofadas3</Text>
+        <Text _hover={{ color: 'gray.300' }}>Bolsas</Text>
+        <Text _hover={{ color: 'gray.300' }}>Camisetas</Text>
       </Flex>
 
       <Flex
@@ -36,6 +46,7 @@ export default function Produtos() {
 
       <div className="produtos1">
         <Almofadas />
+        <Almofadas1 />
       </div>
     </div>
   );

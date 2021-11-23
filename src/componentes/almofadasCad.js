@@ -62,68 +62,7 @@ export const almofadas = [
   },
 ];
 
-const almofadas1 = [
-  {
-    id: 1,
-    title: '',
-    valor: '',
-    imagem: '',
-  },
-  {
-    id: 2,
-    title: '',
-    valor: '',
-    imagem: '',
-  },
-  {
-    id: 3,
-    title: '',
-    valor: '',
-    imagem: '',
-  },
-  {
-    id: 4,
-    title: '',
-    valor: '',
-    imagem: '',
-  },
-  {
-    id: 5,
-    title: '',
-    valor: '',
-    imagem: '',
-  },
-  {
-    id: 6,
-    title: '',
-    valor: '',
-    imagem: '',
-  },
-  {
-    id: 7,
-    title: '',
-    valor: '',
-    imagem: '',
-  },
-  {
-    id: 8,
-    title: '',
-    valor: '',
-    imagem: '',
-  },
-  {
-    id: 9,
-    title: '',
-    valor: '',
-    imagem: '',
-  },
-  {
-    id: 10,
-    title: '',
-    valor: '',
-    imagem: '',
-  },
-];
+
 
 export default function Almofadas() {
   const { isOpen, onToggle } = useDisclosure();
@@ -154,3 +93,5 @@ export default function Almofadas() {
     </>
   );
 }
+
+

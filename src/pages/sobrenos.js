@@ -45,7 +45,7 @@ export default function SobreNos() {
             colaborar com a produção de moda consciente.{' '}
           </Text>
         </Grid>
-        <Grid p="30px 0 0 350px" templateColumns="repeat(2,1fr)">
+        <Grid p="30px 0 0 350px" templateColumns="repeat(3,1fr)">
           <Grid maxW="250px">
             <Text
               fontSize="1.5rem"
