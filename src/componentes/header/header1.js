@@ -28,7 +28,7 @@ import {
   PopoverHeader,
   PopoverBody,
 } from '@chakra-ui/react';
-import { BsHandbag } from 'react-icons/bs';
+import { GiBeachBag } from 'react-icons/gi';
 import { GiHamburgerMenu } from 'react-icons/gi';
 
 import Link from 'next/link';
@@ -103,8 +103,8 @@ export default function Header1() {
         </Drawer>
         <Image w="120px" h="100px" src="/imagens/logoGall1.png" />
         <Flex mr="25px" alignItems="center">
-          <BsHandbag style={{ width: '6rem', height: '3rem' }} />
-          <Text marginLeft="-45px" mt="17px" fontSize="1.4rem">
+          <GiBeachBag style={{ width: '6rem', height: '3rem',color:'#376b2e' }} />
+          <Text color='#ffffff' marginLeft="-45px" mt="17px" fontSize="1.4rem">
             0
           </Text>
         </Flex>

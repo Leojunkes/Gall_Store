@@ -1,0 +1,139 @@
+[
+    {
+        "id": " 1",
+        "imagem": "http://localhost:3000/gallAlmofadas/IMG_6058_.jpg",
+        "imagemHover": "http://localhost:3000/gallAlmofadas/IMG_6060_.jpg",
+        "title": "Folhasverdes"
+    },
+    {
+        "id": "2 ",
+        "imagem": " http://localhost:3000/gallAlmofadas/IMG_6062_.jpg",
+        "imagemHover": "http://localhost:3000/gallAlmofadas/IMG_6064_.jpg",
+        "title": "folhasVerdes1"
+    },
+    {
+        "id": "3 ",
+        "imagem": "http://localhost:3000/gallAlmofadas/IMG_6065_.jpg",
+        "imagemHover": "http://localhost:3000/gallAlmofadas/IMG_6068_.jpg",
+        "title": "folhasVerdes2"
+    },
+    {
+        "id": "4 ",
+        "imagem": " http://localhost:3000/gallAlmofadas/IMG_6069_.jpg",
+        "imagemHover": "http://localhost:3000/gallAlmofadas/IMG_6071_.jpg",
+        "title": "vermelhasAlmof"
+    },
+    {
+        "id": " 5",
+        "imagem": " http://localhost:3000/gallAlmofadas/IMG_6073_.jpg",
+        "imagemHover": "http://localhost:3000/gallAlmofadas/IMG_6075_.jpg",
+        "title": "marromAlmof"
+    },
+    {
+        "id": " 6",
+        "imagem": " http://localhost:3000/gallAlmofadas/IMG_6077_.jpg",
+        "title": "AlmofMarromCircular"
+    },
+    {
+        "id": " 7",
+        "imagem": " http://localhost:3000/gallAlmofadas/IMG_6078_.jpg",
+        "imagemHover": "http://localhost:3000/gallAlmofadas/IMG_6081_.jpg",
+        "title": "amareloFlor"
+    },
+    {
+        "id": " 8",
+        "imagem": " http://localhost:3000/gallAlmofadas/IMG_6083_.jpg",
+        "imagemHover": "http://localhost:3000/gallAlmofadas/IMG_6085_.jpg",
+        "title": "amareloFlor1"
+    },
+    {
+        "id": " 9",
+        "imagem": " http://localhost:3000/gallAlmofadas/IMG_6086_.jpg",
+        "title": "AmareloFlorUma"
+    },
+    {
+        "id": " 10",
+        "imagem": " /gallCamisetas/DSC01460-01.jpeg",
+        "title": "Marilisa"
+    },
+    {
+        "id": " 11",
+        "imagem": " /gallCamisetas/DSC01467-01.jpeg",
+        "title": "Xispiritu"
+    },
+    {
+        "id": " 12",
+        "imagem": " /gallCamisetas/DSC01472-01.jpeg",
+        "title": "Zelda"
+    },
+    {
+        "id": " 13",
+        "imagem": " /gallCamisetas/DSC01477-01.jpeg",
+        "title": "Huascar"
+    },
+    {
+        "id": " 14",
+        "imagem": "/gallCamisetas/DSC01478-01.jpeg",
+        "title": "Juliano"
+    },
+    {
+        "id": " 15",
+        "imagem": "/gallCamisetas/DSC01486-01.jpeg",
+        "title": "Guto"
+    },
+    {
+        "id": " 16",
+        "imagem": "/gallCamisetas/DSC01492-01.jpeg",
+        "title": "Gustavo"
+    },
+    {
+        "id": " 17",
+        "imagem": " /gallCamisetas/DSC01495-01.jpeg",
+        "title": "iuri"
+    },
+    {
+        "id": " 18",
+        "imagem": " /gallCamisetas/DSC01504-01-01.jpeg",
+        "title": "Lindomar"
+    },
+    {
+        "id": " 19",
+        "imagem": " /gallCamisetas/DSC01507-01-01.jpeg",
+        "title": "Jilo"
+    },
+    {
+        "id": " 20",
+        "imagem": " /gallCamisetas/DSC01509-01-01.jpeg",
+        "title": "Alendoa"
+    },
+    {
+        "id": " 21",
+        "imagem": " /gallCamisetas/DSC01515-01-01.jpeg",
+        "title": "André"
+    },
+    {
+        "id": " 22",
+        "imagem": " /gallCamisetas/DSC01519-01-01.jpeg",
+        "title": "Thiago"
+    },
+    {
+        "id": " 23",
+        "imagem": " /gallCamisetas/DSC01520-01-01.jpeg",
+        "title": "Freito"
+    },
+    {
+        "id": " 24",
+        "imagem": " /gallCamisetas/DSC01521-01-01-01.jpeg",
+        "title": "Senhoriu"
+    },
+    {
+        "id": "25",
+        "imagem": " /gallCamisetas/DSC01525-01-01.jpeg",
+        "title": "Eduarda"
+    },
+    {
+        "id": "26 ",
+        "imagem": "/gallCamisetas/DSC01512-01-01.jpeg ",
+        "title": "Tyutam"
+    }
+]

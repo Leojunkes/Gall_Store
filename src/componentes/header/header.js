@@ -17,7 +17,7 @@ import {
   PopoverArrow,
   PopoverCloseButton,
 } from '@chakra-ui/react';
-import { BsHandbag } from 'react-icons/bs';
+import { GiBeachBag } from 'react-icons/gi';
 
 import Link from 'next/link';
 
@@ -34,11 +34,12 @@ export default function Header() {
           />
         </Flex>
         <Flex mr="20px">
-          <BsHandbag
+          <GiBeachBag
             style={{ marginTop: '20px', marginRight: '10px' }}
             fontSize="2.2rem"
+            color="#376b2e"
           />
-          <Text fontSize="0.9rem" mt="33px" ml="-31px">
+          <Text color='#ffffff' fontSize="0.9rem" mt="33px" ml="-31px">
             0
           </Text>
         </Flex>
@@ -76,15 +77,22 @@ export default function Header() {
               </Link>
 
               <Tab fontSize="1.3rem" _focus="none">
-                <Popover >
+                <Popover>
                   <PopoverTrigger>
-                    <Button _hover="false" _focus="none" fontSize="1.3rem" fontWeight='light'>Contato</Button>
+                    <Button
+                      _hover="false"
+                      _focus="none"
+                      fontSize="1.3rem"
+                      fontWeight="light"
+                    >
+                      Contato
+                    </Button>
                   </PopoverTrigger>
-                  <PopoverContent _focus="none" bg='#398b63'>
+                  <PopoverContent _focus="none" bg="#398b63">
                     <PopoverArrow />
                     <PopoverCloseButton />
-                    <PopoverHeader color='#ffffff'>WhatsApp</PopoverHeader>
-                    <PopoverBody color='#ffffff'>
+                    <PopoverHeader color="#ffffff">WhatsApp</PopoverHeader>
+                    <PopoverBody color="#ffffff">
                       A Gall terá o maior prazer em lhe ajudar!
                     </PopoverBody>
                   </PopoverContent>

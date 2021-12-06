@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 import { Flex, Text, Image, Grid, GridItem } from '@chakra-ui/react';
+
 export default function SobreNos() {
   return (
-    <div style={{backgroundColor: '#ced8d6'}}>
+    <div style={{ backgroundColor: '#ced8d6' }}>
       <Flex
         w="45rem"
         m="10px auto"
@@ -11,8 +12,6 @@ export default function SobreNos() {
         justifyContent="center"
         bg="#125C20"
         h="3rem"
-        paddingTop="2px"
-        
       >
         <Text fontSize="18px">
           Feliz com o projeto e cheia de inspiração, a{' '}
@@ -29,7 +28,7 @@ export default function SobreNos() {
         backgroundSize="cover"
       >
         <Grid
-          // mt="-390px"
+          mt="100px"
           // ml="150px"
           justifyContent="center"
         >

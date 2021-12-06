@@ -3,7 +3,7 @@ export default function CarouselAuto() {
   const exclusividade = '/imagens/exclusividade2.png';
   return (
     <div>
-      <UncontrolledCarousel
+      <UncontrolledCarousel 
         items={[
           {
             altText: 'Slide 1',

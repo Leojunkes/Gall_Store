@@ -1,26 +1,11 @@
 import { Flex, Button, Image, Text, Grid } from '@chakra-ui/react';
-import Almofadas1 from '../componentes/almofadas1';
+
+import HeaderProdutos from '../componentes/header_Produtos';
 
 export default function ProdutosAl1() {
   return (
     <div>
-      <Flex
-        color="#ffffff"
-        bg="#125C20"
-        mt="-17px"
-        h="2rem"
-        alignItems="center"
-        justifyContent="space-evenly"
-        cursor="pointer"
-      >
-        <Text _hover={{ color: 'gray.300' }}>Almofadas</Text>
-        <Text _hover={{ color: 'gray.300' }}>Almofadas1</Text>
-        <Text _hover={{ color: 'gray.300' }}>Almofadas2</Text>
-        <Text _hover={{ color: 'gray.300' }}>Almofadas3</Text>
-        <Text _hover={{ color: 'gray.300' }}>Bolsas</Text>
-        <Text _hover={{ color: 'gray.300' }}>Camisetas</Text>
-      </Flex>
-
+      <HeaderProdutos />
       <Flex
         color="gray.100"
         borderRadius="0 20px 0 20px"
@@ -34,9 +19,7 @@ export default function ProdutosAl1() {
         <Text fontSize="2rem">Almofadas1</Text>
       </Flex>
 
-      <Grid templateColumns='repeat(3,1fr)' >
-        <Almofadas1 />
-      </Grid>
+      <Grid templateColumns="repeat(3,1fr)">{/* <Almofadas1 /> */}</Grid>
     </div>
   );
 }

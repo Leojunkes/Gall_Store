@@ -1,36 +1,14 @@
 /* eslint-disable @next/next/link-passhref */
 import { Flex, Button, Image, Text, Grid } from '@chakra-ui/react';
-import Almofadas from '../componentes/almofadasCad';
 
 import Link from 'next/link';
-import Almofadas1 from '../componentes/almofadas1';
+import Almofadas from '../componentes/almofadas';
+import HeaderProdutos from '../componentes/header_Produtos';
 
 export default function Produtos() {
   return (
     <div className="produtos" style={{ marginTop: '30px' }}>
-      <Flex
-        color="#ffffff"
-        bg="#125C20"
-        mt="-17px"
-        h="2rem"
-        alignItems="center"
-        justifyContent="space-evenly"
-        cursor="pointer"
-      >
-        <Link href='/'>
-          <Text _hover={{ color: 'gray.300' }}>Almofadas</Text>
-        </Link>
-
-        <Link href="/almofadas1">
-          <Text _hover={{ color: 'gray.300' }}>Almofadas1</Text>
-        </Link>
-
-        <Text _hover={{ color: 'gray.300' }}>Almofadas2</Text>
-        <Text _hover={{ color: 'gray.300' }}>Almofadas3</Text>
-        <Text _hover={{ color: 'gray.300' }}>Bolsas</Text>
-        <Text _hover={{ color: 'gray.300' }}>Camisetas</Text>
-      </Flex>
-
+      <HeaderProdutos />
       <Flex
         color="gray.100"
         borderRadius="0 20px 0 20px"
@@ -46,7 +24,7 @@ export default function Produtos() {
 
       <div className="produtos1">
         <Almofadas />
-        <Almofadas1 />
+        {/* <Almofadas1 /> */}
       </div>
     </div>
   );
