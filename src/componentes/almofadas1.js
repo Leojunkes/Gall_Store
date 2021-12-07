@@ -1,94 +1,33 @@
 /* eslint-disable jsx-a11y/alt-text */
-import {
-  Image,
-  Button,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Flex,
-  Grid,
-} from '@chakra-ui/react';
+import { Image, useDisclosure, Box, Flex } from '@chakra-ui/react';
+import DATA_ALMOFADAS1 from '/mockProdutos/ALMOF1_DATA';
+import { Button, Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 
-const almofadas1 = [
-  {
-    id: 1,
-    title: '',
-    valor: '',
-    imagem:
-      'https://api-next-teste.vercel.app/_next/image?url=%2FgallAlmofadas%2FIMG_6090_.jpg&w=750&q=75',
-  },
-  {
-    id: 2,
-    title: '',
-    valor: '',
-    imagem:
-      'https://api-next-teste.vercel.app/_next/image?url=%2FgallAlmofadas%2FIMG_6132_.jpg&w=750&q=75',
-  },
-  {
-    id: 3,
-    title: '',
-    valor: '',
-    imagem:
-      'https://api-next-teste.vercel.app/_next/image?url=%2FgallAlmofadas%2FIMG_6120_.jpg&w=750&q=75',
-  },
-  {
-    id: 4,
-    title: '',
-    valor: '',
-    imagem:
-      'https://api-next-teste.vercel.app/_next/image?url=%2FgallAlmofadas%2FIMG_6112_.jpg&w=750&q=75',
-  },
-  {
-    id: 5,
-    title: '',
-    valor: '',
-    imagem:
-      'https://api-next-teste.vercel.app/_next/image?url=%2FgallAlmofadas%2FIMG_6117_.jpg&w=750&q=75',
-  },
-  {
-    id: 6,
-    title: '',
-    valor: '',
-    imagem:
-      'https://api-next-teste.vercel.app/_next/image?url=%2FgallAlmofadas%2FIMG_6109_.jpg&w=750&q=75',
-  },
-  {
-    id: 7,
-    title: '',
-    valor: '',
-    imagem:
-      'https://api-next-teste.vercel.app/_next/image?url=%2FgallAlmofadas%2FIMG_6105_.jpg&w=750&q=75',
-  },
-  {
-    id: 8,
-    title: '',
-    valor: '',
-    imagem:
-      'https://api-next-teste.vercel.app/_next/image?url=%2FgallAlmofadas%2FIMG_6100_.jpg&w=750&q=75',
-  },
-  {
-    id: 9,
-    title: '',
-    valor: '',
-    imagem:
-      'https://api-next-teste.vercel.app/_next/image?url=%2FgallAlmofadas%2FIMG_6083_.jpg&w=750&q=75',
-  },
-  {
-    id: 10,
-    title: '',
-    valor: '',
-    imagem:
-      'https://api-next-teste.vercel.app/_next/image?url=%2FgallAlmofadas%2FIMG_6097_.jpg&w=750&q=75',
-  },
-];
-
-export default function Almofadas1() {
+export default function Almofadas() {
+  const { isOpen, onToggle } = useDisclosure();
   return (
     <>
-      {almofadas1.map((a, index) => (
-        <Grid key={index}>
-          <Image src={a.imagem} />
-        </Grid>
+      {DATA_ALMOFADAS1.map((a, index) => (
+        <div key={index}>
+          <Image
+            transition="all ease 0.2s"
+            _hover={{ transform: 'scale(1)' }}
+            transform="scale(0.9)"
+            src={a.imagem}
+            alt={a.imagem}
+            loading="lazy"
+          />
+          <CardBody bg="red" w="50px">
+            <CardTitle tag="h5">Card title</CardTitle>
+            <CardSubtitle className="mb-2 text-muted" tag="h6">
+              Card subtitle
+            </CardSubtitle>
+
+            <Button style={{ backgroundColor: '#2e6a2c' }}>
+              Adicionar a sacola
+            </Button>
+          </CardBody>
+        </div>
       ))}
     </>
   );

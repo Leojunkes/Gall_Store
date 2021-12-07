@@ -20,7 +20,7 @@ export default function ProdutosAl2() {
       </Flex>
 
       <Grid templateColumns="repeat(3,1fr)">
-        {/* <Almofadas1 /> */}
+        
       </Grid>
     </div>
   );
