@@ -10,13 +10,14 @@ export default function Almofadas() {
   return (
     <>
       {DATA_ALMOFADAS.map((a, index) => (
-        <div key={index}>
+        <div style={{margin:'auto'}} key={index}>
           <Image
             transition="all ease 0.2s"
             _hover={{ transform: 'scale(1)' }}
             transform="scale(0.9)"
             src={a.imagem}
             alt={a.imagem}
+            w='20rem'
             loading="lazy"
           />
           <CardBody bg="red" w="50px">

@@ -6,7 +6,14 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <title>Leo-Junkes</title>
+          
+          {/* Bootstrap */}
+          <head>
+            <link
+              rel="stylesheet"
+              href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+            />
+          </head>
           {/* Google Fonts  */}
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />

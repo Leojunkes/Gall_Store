@@ -1,5 +1,5 @@
 import { Flex, Button, Image, Text, Grid } from '@chakra-ui/react';
-import Almofadas1 from '../componentes/almofadas1';
+import Almofadas3 from '../componentes/almofadas3';
 import HeaderProdutos from '../componentes/header_Produtos';
 
 export default function ProdutosAl3() {
@@ -10,7 +10,7 @@ export default function ProdutosAl3() {
         color="gray.100"
         borderRadius="0 20px 0 20px"
         bg="#2e6a2c"
-        w="200px"
+        w="350px"
         h="40px"
         m="30px auto"
         justifyContent="center"
@@ -20,7 +20,7 @@ export default function ProdutosAl3() {
       </Flex>
 
       <Grid templateColumns="repeat(3,1fr)">
-        {/* <Almofadas1 /> */}
+        <Almofadas3/>
       </Grid>
     </div>
   );

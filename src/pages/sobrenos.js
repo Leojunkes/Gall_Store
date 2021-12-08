@@ -68,7 +68,7 @@ export default function SobreNos() {
             >
               Arte
             </Text>
-            <Text mt="8px" paddingBottom="230px" fontSize="1rem">
+            <Text mt="8px" paddingBottom="100px" fontSize="1rem">
               A preocupação com o meio ambiente e o amor pela arte compõe o DNA
               Gall. De forma alegre e artística, fauna e flora estão retratadas
               nas estampas e bordados dos produtos da marca, aproximando as
@@ -95,7 +95,7 @@ export default function SobreNos() {
             >
               Diversidade
             </Text>
-            <Text mt="-29px" paddingBottom="230px" fontSize="1rem">
+            <Text mt="-29px" paddingBottom="100px" fontSize="1rem">
               Voltada ao o público em geral, a confecção de camisetas unissex
               deu início ao projeto.
             </Text>

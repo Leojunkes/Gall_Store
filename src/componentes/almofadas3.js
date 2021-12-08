@@ -1,13 +1,12 @@
-/* eslint-disable jsx-a11y/alt-text */
 import { Image, useDisclosure, Box, Flex } from '@chakra-ui/react';
-import DATA_ALMOFADAS1 from '/mockProdutos/ALMOF1_DATA';
+import DATA_ALMOFADAS3 from '/mockProdutos/ALMOF3_DATA';
 import { Button, Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 
-export default function Almofadas1() {
+export default function Almofadas3() {
   const { isOpen, onToggle } = useDisclosure();
   return (
     <>
-      {DATA_ALMOFADAS1.map((a, index) => (
+      {DATA_ALMOFADAS3.map((a, index) => (
         <div style={{margin:'auto'}} key={index}>
           <Image
             transition="all ease 0.2s"
@@ -15,8 +14,8 @@ export default function Almofadas1() {
             transform="scale(0.9)"
             src={a.imagem}
             alt={a.imagem}
-            w='20rem'
             loading="lazy"
+            w='22rem'
           />
           <CardBody bg="red" w="50px">
             <CardTitle tag="h5">Card title</CardTitle>
