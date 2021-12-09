@@ -9,7 +9,7 @@ import Header1 from '../componentes/header/header1';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider  theme={theme}>
+    <ChakraProvider resetCSS={true}  theme={theme}>
       <Header/> 
       <Header1/>
       <Component {...pageProps} />

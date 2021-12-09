@@ -39,7 +39,7 @@ export default function Header() {
             fontSize="2.2rem"
             color="#376b2e"
           />
-          <Text color='#ffffff' fontSize="0.9rem" mt="33px" ml="-31px">
+          <Text color="#ffffff" fontSize="0.9rem" mt="33px" ml="-31px">
             0
           </Text>
         </Flex>
@@ -79,12 +79,7 @@ export default function Header() {
               <Tab fontSize="1.3rem" _focus="none">
                 <Popover>
                   <PopoverTrigger>
-                    <Button
-                      _hover="false"
-                      _focus="none"
-                      fontSize="1.3rem"
-                      fontWeight="light"
-                    >
+                    <Button fontWeight='md' _hover="false" _focus="none" fontSize="1.3rem">
                       Contato
                     </Button>
                   </PopoverTrigger>

@@ -23,7 +23,7 @@ export default function HeaderProdutos() {
       alignItems="center"
       cursor="pointer"
     >
-      <Flex m='auto'>
+      <Flex m=' auto'>
         <Link href="/produtos">
           <Text>Almofadas</Text>
         </Link>

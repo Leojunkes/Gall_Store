@@ -11,13 +11,13 @@ export default function ProdutosAl1() {
         color="gray.100"
         borderRadius="0 20px 0 20px"
         bg="#2e6a2c"
-        w="200px"
-        h="40px"
-        m="30px auto"
+        w="130px"
+        h="30px"
+        m="30px"
         justifyContent="center"
         alignItems="center"
       >
-        <Text fontSize="2rem">Almofadas1</Text>
+        <Text m='auto' fontSize="1.2rem">Almofadas1</Text>
       </Flex>
 
       <Grid templateColumns="repeat(3,1fr)">

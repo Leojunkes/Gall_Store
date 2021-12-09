@@ -1,34 +1,31 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Image, useDisclosure, Box, Flex } from '@chakra-ui/react';
+import { Image, Button, Box, Flex, Text, Heading } from '@chakra-ui/react';
 import DATA_ALMOFADAS1 from '/mockProdutos/ALMOF1_DATA';
-import { Button, Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
 
 export default function Almofadas1() {
-  const { isOpen, onToggle } = useDisclosure();
   return (
     <>
       {DATA_ALMOFADAS1.map((a, index) => (
-        <div style={{margin:'auto'}} key={index}>
+        <Box m="14px auto" key={index}>
           <Image
             transition="all ease 0.2s"
             _hover={{ transform: 'scale(1)' }}
             transform="scale(0.9)"
             src={a.imagem}
             alt={a.imagem}
-            w='20rem'
+            w="20rem"
             loading="lazy"
           />
-          <CardBody bg="red" w="50px">
-            <CardTitle tag="h5">Card title</CardTitle>
-            <CardSubtitle className="mb-2 text-muted" tag="h6">
-              Card subtitle
-            </CardSubtitle>
-
+          <Box textAlign="center">
+            <Text>{a.title}</Text>
+            <Heading size="md">{a.valor}</Heading>
             <Button style={{ backgroundColor: '#2e6a2c' }}>
-              Adicionar a sacola
+              <Text m="auto" color="gray.100">
+                Adicionar a sacola
+              </Text>
             </Button>
-          </CardBody>
-        </div>
+          </Box>
+        </Box>
       ))}
     </>
   );
