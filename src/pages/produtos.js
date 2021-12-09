@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
-import { Flex, Button, Image, Text, Grid } from '@chakra-ui/react';
+import { Flex, Button, Image, Text, Grid, Heading } from '@chakra-ui/react';
 import Almofadas from '../componentes/almofadasCad';
 
 import Link from 'next/link';
@@ -35,13 +35,13 @@ export default function Produtos() {
         color="gray.100"
         borderRadius="0 20px 0 20px"
         bg="#2e6a2c"
-        w="200px"
+        w="100px"
         h="40px"
-        m="30px auto"
+        m="30px"
         justifyContent="center"
         alignItems="center"
       >
-        <Text fontSize="2rem">Almofadas</Text>
+        <Heading fontSize="1.2rem">Almofadas</Heading>
       </Flex>
 
       <div className="produtos1">

@@ -1,26 +1,26 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable react/display-name */
 /* eslint-disable import/no-anonymous-default-export */
-import { Image, useDisclosure, Box, Flex } from '@chakra-ui/react';
+import { Button, Image, useDisclosure, Box, Flex, Heading, Text } from '@chakra-ui/react';
 
-import { Button, Card, CardBody, CardTitle, CardSubtitle } from 'reactstrap';
+
 
 export const almofadas = [
   {
     id: 1,
-    title: '',
+    title: 'lindosma',
     valor: '',
     imagem: 'https:/api-next-teste.vercel.app/gallAlmofadas/IMG_6058_.jpg',
   },
   {
     id: 2,
-    title: '',
+    title: 'assssskkss',
     valor: '',
     imagem: 'https:/api-next-teste.vercel.app/gallAlmofadas/IMG_6065_.jpg',
   },
   {
     id: 3,
-    title: '',
+    title: 'karinaaaaa',
     valor: '',
     imagem: 'https:/api-next-teste.vercel.app/gallAlmofadas/IMG_6069_.jpg',
   },
@@ -78,16 +78,20 @@ export default function Almofadas() {
             alt={a.imagem}
             loading="lazy"
           />
-          <CardBody bg="red" w="50px">
-            <CardTitle tag="h5">Card title</CardTitle>
-            <CardSubtitle className="mb-2 text-muted" tag="h6">
-              Card subtitle
-            </CardSubtitle>
+          <Box textAlign='center'>
+            
+            <Heading size={'sm'}>{a.title}</Heading>
+            <Button mt='5px' style={{ backgroundColor: '#2e6a2c' }}>
+            <Text color='gray.100'>Adicionar a sacola</Text>
+          </Button>
+          </Box>
 
-            <Button style={{ backgroundColor: '#2e6a2c' }}>
-              Adicionar a sacola
-            </Button>
-          </CardBody>
+
+          
+
+
+          
+
         </div>
       ))}
     </>
