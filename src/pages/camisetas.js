@@ -1,13 +1,11 @@
 import { Flex, Button, Image, Text, Grid } from '@chakra-ui/react';
-import Almofadas1 from '../componentes/almofadas1';
+import Almofadas1 from '../componentes/almofadas/almofadas1';
 import HeaderProdutos from '../componentes/header_Produtos';
 
 export default function ProdutosCamisetas() {
   return (
     <div>
-      
-        <HeaderProdutos mt='50px' />
-      
+      <HeaderProdutos mt="50px" />
 
       <Flex
         color="gray.100"
@@ -22,9 +20,7 @@ export default function ProdutosCamisetas() {
         <Text fontSize="2rem">olá sou Camisetas</Text>
       </Flex>
 
-      <Grid templateColumns="repeat(3,1fr)">
-        {/* <Almofadas1 /> */}
-      </Grid>
+      <Grid templateColumns="repeat(3,1fr)">{/* <Almofadas1 /> */}</Grid>
     </div>
   );
 }

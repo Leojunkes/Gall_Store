@@ -16,32 +16,35 @@ import Link from 'next/link';
 export default function HeaderProdutos() {
   return (
     <Flex
-      color="#ffffff"
+      w="80%"
+      m="10px auto"
+      borderRadius="30px 0 30px 0"
+      color="gray.200"
+      justifyContent="center"
       bg="#125C20"
-      mt="20px"
-      h="2rem"
-      alignItems="center"
-      cursor="pointer"
+      h=""
+      textAlign="center"
     >
-      <Flex m=' auto'>
-        <Link href="/produtos">
-          <Text>Almofadas</Text>
+      <Flex cursor="pointer">
+        <Link  href="/produtos">
+          <Text mt="15px" fontSize="1.2rem">
+            Almofadas
+          </Text>
         </Link>
-
         <Link href="/almofadas1">
-          <Text ml='10px'>Almofadas1</Text>
+          <Text m="15px 0 0 10px" fontSize="1.2rem">
+            Almofadas1
+          </Text>
         </Link>
         <Link href="/almofadas2">
-          <Text ml='10px'>Almofadas2</Text>
+          <Text m="15px 0 0 10px" fontSize="1.2rem">
+            Almofadas2
+          </Text>
         </Link>
         <Link href="/almofadas3">
-          <Text ml='10px'>Almofadas3</Text>
-        </Link>
-        <Link href="/bolsas">
-          <Text ml='10px'>Bolsas</Text>
-        </Link>
-        <Link href="/camisetas">
-          <Text ml='10px'>Camisetas</Text>
+          <Text m="15px 0 0 10px" fontSize="1.2rem">
+            Almofadas3
+          </Text>
         </Link>
       </Flex>
     </Flex>

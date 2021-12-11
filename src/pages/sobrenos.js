@@ -1,19 +1,20 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Flex, Text, Image, Grid, GridItem } from '@chakra-ui/react';
+import { Flex, Text, Image, Grid, GridItem,Heading } from '@chakra-ui/react';
 
 export default function SobreNos() {
   return (
     <div style={{ backgroundColor: '#ced8d6' }}>
       <Flex
-        w="45rem"
+        w="80%"
         m="10px auto"
         borderRadius="30px 0 30px 0"
         color="gray.200"
         justifyContent="center"
         bg="#125C20"
-        h="3rem"
+        h=""
+        textAlign='center'
       >
-        <Text fontSize="18px">
+        <Text mt='15px' fontSize="1.2rem">
           Feliz com o projeto e cheia de inspiração, a{' '}
           <label style={{ fontFamily: 'princess sofia', fontSize: '30px' }}>
             Gall
@@ -39,11 +40,11 @@ export default function SobreNos() {
           >
             Sobre Nós
           </Text>
-          <Text fontSize="1.1rem" maxW="240px">
+          <Heading size='md' fontWeight='medium' maxW="300px">
             {' '}
             A Gall nasceu comprometida com o futuro e com o propósito de
             colaborar com a produção de moda consciente.{' '}
-          </Text>
+          </Heading>
         </Grid>
         <Grid m="80px auto" templateColumns="repeat(2,1fr)">
           <Grid maxW="250px">

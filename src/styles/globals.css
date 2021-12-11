@@ -32,12 +32,23 @@
   }
   .produtos1 {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
-@media (max-width: 750px) {
+
+@media (max-width: 930px) {
   html {
     font-size: 87.5%;
+  }
+  .produtos1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: 83.5%;
   }
 
   .header {
@@ -50,7 +61,7 @@
 
 @media (max-width: 720px) {
   html {
-    font-size: 87.5%;
+    font-size: 80.5%;
   }
 
   .containerFooter1 {
@@ -58,12 +69,12 @@
   }
   .produtos1 {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 570px) {
   html {
-    font-size: 82.5%;
+    font-size: 78.5%;
   }
   .cardFotos {
     margin: auto;
@@ -79,7 +90,7 @@
   }
   .produtos1 {
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -88,7 +99,7 @@ imput,
 textarea,
 select,
 button {
-  font: 400 1rem 'Roboto', sans-serif;
+  font: 400 1rem 'Inter', sans-serif;
 }
 
 body {
