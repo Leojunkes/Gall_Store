@@ -10,7 +10,7 @@ import {
   Box,
 } from '@chakra-ui/react';
 
-import {BsCartPlus} from 'react-icons/bs'
+import { BsCartPlus } from 'react-icons/bs';
 import DATA_ALMOFADAS from '/mockProdutos/ALMOF_DATA';
 import HeaderProdutos from '../componentes/header_Produtos';
 
@@ -18,8 +18,17 @@ import { useState } from 'react';
 
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { AiOutlineSearch } from 'react-icons/ai';
+import { React } from 'react';
 
 export default function Produtos() {
+  function addProduct(id) {
+    const addprod = DATA_ALMOFADAS.find((p) => p.id === id);
+    setProdutos(addprod);
+    console.log(addprod);
+  }
+  // const finalRef = React.useRef();
+  const [produtos, setProdutos] = useState([DATA_ALMOFADAS]);
+
   const [search, setSearch] = useState('');
   return (
     <div
@@ -60,7 +69,7 @@ export default function Produtos() {
           />
         </InputGroup>
       </Flex>
-      <Divider m='30px auto' color='gray.400'w='80%'/>
+      <Divider m="30px auto" color="gray.400" w="80%" />
 
       <div className="produtos1">
         <>
@@ -76,16 +85,19 @@ export default function Produtos() {
               m="14px auto"
               key={index}
             >
-              <Image
-                transition="all ease 0.2s"
-                // _hover={{ transform: 'scale(1)' }}
-                _hover={{ transform: 'scale(1)' }}
-                transform="scale(0.9)"
-                src={a.imagem}
-                alt={a.imagem}
-                w="20rem"
-                loading="lazy"
-              />
+              <Box type="button" onClick={() => addProduct(a.id)}>
+                <Image
+                  backgroundImage=""
+                  transition="all ease 0.2s"
+                  _hover={{ transform: 'scale(1)' }}
+                  transform="scale(0.9)"
+                  src={a.imagem}
+                  alt={a.imagem}
+                  w="20rem"
+                  loading="lazy"
+                />
+              </Box>
+
               <Box textAlign="center">
                 <Text>{a.title}</Text>
                 <Heading color="#2e6a2c" size="md">
@@ -93,12 +105,12 @@ export default function Produtos() {
                 </Heading>
                 <Box paddingBottom="14px">
                   <Button
-                  mt='4.5px'
+                    mt="4.5px"
                     borderRadius="30px 0 0 0px"
                     style={{ backgroundColor: '#2e6a2c' }}
                   >
                     <Text m="auto" color="gray.100">
-                      <BsCartPlus style={{fontSize:'1.6rem'}}/>
+                      <BsCartPlus style={{ fontSize: '1.6rem' }} />
                     </Text>
                   </Button>
                   <Button mt="4px" borderRadius="0px 0 100px" bg="red.700">

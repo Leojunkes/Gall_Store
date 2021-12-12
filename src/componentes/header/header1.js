@@ -60,8 +60,8 @@ export default function Header1() {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader>
-              <Image src="/imagens/logoGall1.png" />
+            <DrawerHeader >
+              <Image  src="/imagens/logoGall1.png" />
             </DrawerHeader>
 
             <DrawerBody cursor='pointer' fontSize="20px">
