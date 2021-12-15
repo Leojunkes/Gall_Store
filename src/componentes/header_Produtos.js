@@ -24,26 +24,38 @@ export default function HeaderProdutos() {
       bg="#125C20"
       h=""
       textAlign="center"
+      className="headerProdutos"
+      
     >
-      <Flex cursor="pointer">
+      <Flex cursor='pointer' mt='3' className="headerProdutos">
         <Link  href="/produtos">
-          <Text mt="15px" fontSize="1.2rem">
+          <Text fontSize="1.2rem">
             Almofadas
           </Text>
         </Link>
-        <Link href="/almofadas1">
-          <Text m="15px 0 0 10px" fontSize="1.2rem">
+        <Link  href="/almofadas1">
+          <Text ml='2' fontSize="1.2rem">
             Almofadas1
           </Text>
         </Link>
         <Link href="/almofadas2">
-          <Text m="15px 0 0 10px" fontSize="1.2rem">
+          <Text ml='2' fontSize="1.2rem">
             Almofadas2
           </Text>
         </Link>
         <Link href="/almofadas3">
-          <Text m="15px 0 0 10px" fontSize="1.2rem">
+          <Text ml='2' fontSize="1.2rem">
             Almofadas3
+          </Text>
+        </Link>
+        <Link href="/camisetas">
+          <Text ml='2' fontSize="1.2rem">
+            Camisetas
+          </Text>
+        </Link>
+        <Link href="/bolsas">
+          <Text ml='2' fontSize="1.2rem">
+            Bolsas
           </Text>
         </Link>
       </Flex>

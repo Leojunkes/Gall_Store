@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import { Flex, Text, Image, Grid, GridItem,Heading } from '@chakra-ui/react';
+import { Flex, Text, Image, Grid, GridItem, Heading } from '@chakra-ui/react';
 
 export default function SobreNos() {
   return (
@@ -12,9 +12,9 @@ export default function SobreNos() {
         justifyContent="center"
         bg="#125C20"
         h=""
-        textAlign='center'
+        textAlign="center"
       >
-        <Text mt='15px' fontSize="1.2rem">
+        <Text mt="15px" fontSize="1.2rem">
           Feliz com o projeto e cheia de inspiração, a{' '}
           <label style={{ fontFamily: 'princess sofia', fontSize: '30px' }}>
             Gall
@@ -40,42 +40,45 @@ export default function SobreNos() {
           >
             Sobre Nós
           </Text>
-          <Heading size='md' fontWeight='medium' maxW="300px">
+          <Heading size="md" fontWeight="medium" maxW="300px">
             {' '}
             A Gall nasceu comprometida com o futuro e com o propósito de
             colaborar com a produção de moda consciente.{' '}
           </Heading>
         </Grid>
         <Grid m="80px auto" templateColumns="repeat(2,1fr)">
-          <Grid maxW="250px">
-            <Text
-              fontSize="1.5rem"
-              // textShadow="10.936px 8.74092px 0px rgba(0, 0, 0, 0.26), 7.08816px 5.66541px 0px rgba(0, 0, 0, 0.197407), 4.21239px 3.36687px 0px rgba(0, 0, 0, 0.157926), 2.1872px 1.74818px 0px rgba(0, 0, 0, 0.13), 0.891082px 0.712223px 0px rgba(0, 0, 0, 0.102074), 0.202519px 0.161869px 0px rgba(0, 0, 0, 0.0625926);"
-              color="#125C20"
-            >
-              Criatividade
-            </Text>
-            <Text mt="8px" fontSize="1rem">
-              Posteriormente ampliou-se a linha com a produção de almofadas que
-              trazem delicados bordados manuais e bolsas femininas e masculinas
-              que através da reciclagem de materiais torna o produto mais
-              sustentável.
-            </Text>
-            <Text
-              fontSize="1.5rem"
-              mt="10px"
-              // textShadow="10.936px 8.74092px 0px rgba(0, 0, 0, 0.26), 7.08816px 5.66541px 0px rgba(0, 0, 0, 0.197407), 4.21239px 3.36687px 0px rgba(0, 0, 0, 0.157926), 2.1872px 1.74818px 0px rgba(0, 0, 0, 0.13), 0.891082px 0.712223px 0px rgba(0, 0, 0, 0.102074), 0.202519px 0.161869px 0px rgba(0, 0, 0, 0.0625926);"
-              color="#125C20"
-            >
-              Arte
-            </Text>
-            <Text mt="8px" paddingBottom="100px" fontSize="1rem">
-              A preocupação com o meio ambiente e o amor pela arte compõe o DNA
-              Gall. De forma alegre e artística, fauna e flora estão retratadas
-              nas estampas e bordados dos produtos da marca, aproximando as
-              pessoas da natureza.
-            </Text>
-          </Grid>
+          <div className="sobrenos10">
+            <Grid maxW="250px">
+              <Text
+                fontSize="1.5rem"
+                // textShadow="10.936px 8.74092px 0px rgba(0, 0, 0, 0.26), 7.08816px 5.66541px 0px rgba(0, 0, 0, 0.197407), 4.21239px 3.36687px 0px rgba(0, 0, 0, 0.157926), 2.1872px 1.74818px 0px rgba(0, 0, 0, 0.13), 0.891082px 0.712223px 0px rgba(0, 0, 0, 0.102074), 0.202519px 0.161869px 0px rgba(0, 0, 0, 0.0625926);"
+                color="#125C20"
+              >
+                Criatividade
+              </Text>
+              <Text mt="8px" fontSize="1rem">
+                Posteriormente ampliou-se a linha com a produção de almofadas
+                que trazem delicados bordados manuais e bolsas femininas e
+                masculinas que através da reciclagem de materiais torna o
+                produto mais sustentável.
+              </Text>
+              <Text
+                fontSize="1.5rem"
+                mt="10px"
+                // textShadow="10.936px 8.74092px 0px rgba(0, 0, 0, 0.26), 7.08816px 5.66541px 0px rgba(0, 0, 0, 0.197407), 4.21239px 3.36687px 0px rgba(0, 0, 0, 0.157926), 2.1872px 1.74818px 0px rgba(0, 0, 0, 0.13), 0.891082px 0.712223px 0px rgba(0, 0, 0, 0.102074), 0.202519px 0.161869px 0px rgba(0, 0, 0, 0.0625926);"
+                color="#125C20"
+              >
+                Arte
+              </Text>
+              <Text mt="8px" paddingBottom="100px" fontSize="1rem">
+                A preocupação com o meio ambiente e o amor pela arte compõe o
+                DNA Gall. De forma alegre e artística, fauna e flora estão
+                retratadas nas estampas e bordados dos produtos da marca,
+                aproximando as pessoas da natureza.
+              </Text>
+            </Grid>
+          </div>
+
           <Grid ml="20px" maxW="250px">
             <Text
               fontSize="1.5rem"
