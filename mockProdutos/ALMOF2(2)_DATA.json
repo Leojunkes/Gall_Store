@@ -1,0 +1,79 @@
+[
+    {
+        "id": " 11",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6245_.jpg",
+        "imagemHover": "",
+        "title": "Colors1Almof",
+        "valor": "62.90"
+    },
+    {
+        "id": " 12",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6246_.jpg",
+        "imagemHover": "",
+        "title": "Colors10Almof",
+        "valor": "62.90"
+    },
+    {
+        "id": " 13",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6248_.jpg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6250_.jpg",
+        "title": "MarromAlmoff",
+        "valor": "62.90"
+    },
+    {
+        "id": " 14",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6252_.jpg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6253_.jpg",
+        "title": "Marrom21Almoff",
+        "valor": "62.90"
+    },
+    {
+        "id": " 15",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6255_.jpg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6257_.jpg",
+        "title": "Marrom11Almoff",
+        "valor": "62.90"
+    },
+    {
+        "id": " 16",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6260_.jpg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6262_.jpg",
+        "title": "Woman1",
+        "valor": "62.90"
+    },
+    {
+        "id": " 17",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6264_.jpg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6266_.jpg",
+        "title": "Woman10",
+        "valor": "62.90"
+    },
+    {
+        "id": " 18",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6268_.jpg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6269_.jpg",
+        "title": "Woman20",
+        "valor": "62.90"
+    },
+    {
+        "id": " 19",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6271_.jpg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6273_.jpg",
+        "title": "Blueflowers",
+        "valor": "62.90"
+    },
+    {
+        "id": " 20",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6275_.jpg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6277_.jpg",
+        "title": "WhiteFlowers",
+        "valor": "62.90"
+    },
+    {
+        "id": " 21",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6280_.jpg",
+        "imagemHover": "",
+        "title": "WhiteClower",
+        "valor": "62.90"
+    }
+]

@@ -1,0 +1,65 @@
+[
+    {
+        "id": " 11",
+        "imagem": "https://api-next-teste.vercel.app/gallCamisetas/DSC01486-01.jpeg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallCamisetas/DSC01495-01.jpeg",
+        "title": "WhiteCamiGallHappy",
+        "valor": "55.90"
+    },
+    {
+        "id": " 12",
+        "imagem": "https://api-next-teste.vercel.app/gallCamisetas/DSC01492-01.jpeg",
+        "imagemHover": "",
+        "title": "PinkCharm",
+        "valor": "55.90"
+    },
+    {
+        "id": " 13",
+        "imagem": "https://api-next-teste.vercel.app/gallCamisetas/DSC01504-01-01.jpeg",
+        "imagemHover": "",
+        "title": "WhitewithColorsPing",
+        "valor": "55.90"
+    },
+    {
+        "id": " 14",
+        "imagem": "https://api-next-teste.vercel.app/gallCamisetas/DSC01507-01-01.jpeg",
+        "imagemHover": "",
+        "title": "WhiteCamiLoks",
+        "valor": "62.90"
+    },
+    {
+        "id": " 15",
+        "imagem": "https://api-next-teste.vercel.app/gallCamisetas/DSC01509-01-01.jpeg",
+        "imagemHover": "",
+        "title": "WhiteLokschanceWater",
+        "valor": "62.90"
+    },
+    {
+        "id": " 16",
+        "imagem": "https://api-next-teste.vercel.app/gallCamisetas/DSC01515-01-01.jpeg",
+        "imagemHover": "",
+        "title": "GallArtWhiteCami",
+        "valor": "62.90"
+    },
+    {
+        "id": " 17",
+        "imagem": "https://api-next-teste.vercel.app/gallCamisetas/DSC01519-01-01.jpeg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallCamisetas/DSC01520-01-01.jpeg",
+        "title": "WhiteCamiTreeLow",
+        "valor": "79.90"
+    },
+    {
+        "id": " 18",
+        "imagem": "https://api-next-teste.vercel.app/gallCamisetas/DSC01521-01-01-01.jpeg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallCamisetas/DSC01525-01-01.jpeg",
+        "title": "WhiteColorsLoukoFly",
+        "valor": "62.90"
+    },
+    {
+        "id": " 19",
+        "imagem": "https://api-next-teste.vercel.app/gallCamisetas/DSC01512-01-01.jpeg",
+        "imagemHover": "",
+        "title": "WhiteCamiStyle",
+        "valor": "62.90"
+    }
+]

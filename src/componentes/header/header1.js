@@ -39,7 +39,10 @@ export default function Header1() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   return (
-    <div className="header1">
+    <div
+      style={{ width: '100%', height: '100%', overflow: 'hidden' }}
+      className="header1"
+    >
       <Flex h="8rem" bg="gray.100" justifyContent="space-between">
         <Button
           _focus="none"
@@ -60,11 +63,11 @@ export default function Header1() {
           <DrawerOverlay />
           <DrawerContent>
             <DrawerCloseButton />
-            <DrawerHeader >
-              <Image  src="/imagens/logoGall1.png" />
+            <DrawerHeader>
+              <Image src="/imagens/logoGall1.png" />
             </DrawerHeader>
 
-            <DrawerBody cursor='pointer' fontSize="20px">
+            <DrawerBody cursor="pointer" fontSize="20px">
               <Stack spacing="8">
                 <Link href="/">
                   <Text>Home</Text>
@@ -85,7 +88,7 @@ export default function Header1() {
                       bg="none"
                       justifyContent="initial"
                     >
-                      <Text ml='-13px'>Contato</Text>
+                      <Text ml="-13px">Contato</Text>
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent _focus="none" bg="#398b63">
@@ -103,8 +106,10 @@ export default function Header1() {
         </Drawer>
         <Image w="120px" h="100px" src="/imagens/logoGall1.png" />
         <Flex mr="25px" alignItems="center">
-          <GiBeachBag style={{ width: '6rem', height: '3rem',color:'#376b2e' }} />
-          <Text color='#ffffff' marginLeft="-45px" mt="25px" fontSize="1.4rem">
+          <GiBeachBag
+            style={{ width: '6rem', height: '3rem', color: '#376b2e' }}
+          />
+          <Text color="#ffffff" marginLeft="-45px" mt="25px" fontSize="1.4rem">
             0
           </Text>
         </Flex>

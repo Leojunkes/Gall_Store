@@ -14,20 +14,34 @@ import { BsCartPlus } from 'react-icons/bs';
 import DATA_ALMOFADAS from '/mockProdutos/ALMOF_DATA';
 import HeaderProdutos from '../componentes/header_Produtos';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import { React } from 'react';
 
 export default function Produtos() {
+
+  const [produtos, setProdutos] = useState([]);
+
+  useEffect(() => {
+    const localStorageTasks = JSON.parse(localStorage.getItem('produtos'));
+    const produtos =
+      localStorage.getItem('produtos') !== null ? localStorageTasks : [];
+    console.log(produtos);
+    setProdutos([produtos]);
+  }, []);
+  
+
   function addProduct(id) {
-    const addprod = DATA_ALMOFADAS.find((p) => p.id === id);
-    setProdutos(addprod);
-    console.log(addprod);
+    const produtos = DATA_ALMOFADAS.find((p) => p.id === id);
+    // setProdutos(addprod);
+    localStorage.setItem('produtos', JSON.stringify(produtos));
+    setProdutos(produtos);
+    console.log(produtos);
+    // console.log(addprod);
   }
   // const finalRef = React.useRef();
-  const [produtos, setProdutos] = useState([DATA_ALMOFADAS]);
 
   const [search, setSearch] = useState('');
   return (
@@ -113,8 +127,14 @@ export default function Produtos() {
                       <BsCartPlus style={{ fontSize: '1.6rem' }} />
                     </Text>
                   </Button>
-                  <Button mt="4px" borderRadius="0px 0 100px" bg="red.700">
-                    <Text m="auto" color="gray.100">
+                  <Button
+                    border="2px"
+                    borderColor="red.800"
+                    mt="4px"
+                    borderRadius="0px 0 100px"
+                    bg="gray.200"
+                  >
+                    <Text m="auto" color="red.700">
                       Comprar agora
                     </Text>
                   </Button>

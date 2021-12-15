@@ -123,7 +123,17 @@ export default function Footer1() {
             src="https://www.yoganatomia.com.br/wp-content/uploads/2021/06/1200px-Logo%E2%80%94pix_powered_by_Banco_Central_Brazil_2020.svg-1024x364.png"
           />
         </Flex>
+        
       </div>
+      {/* <Flex
+        alignItems="center"
+        justifyContent="center"
+        color="gray.300"
+        h="60px"
+        bg="#0a0a0a"
+      >
+        ©Gall store Online 2021 - Todos os direitos reservados
+      </Flex> */}
     </div>
   );
 }

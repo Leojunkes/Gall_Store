@@ -3,7 +3,7 @@ import { Flex, Text, Image, Grid, GridItem, Heading } from '@chakra-ui/react';
 
 export default function SobreNos() {
   return (
-    <div style={{ backgroundColor: '#ced8d6' }}>
+    <div style={{ backgroundColor: '#ced8d6',width: '100vw'}}>
       <Flex
         w="80%"
         m="10px auto"

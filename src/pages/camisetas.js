@@ -20,7 +20,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 
 export default function Produtos() {
   function addProduct(id) {
-    const addprod = CAMIS_DATA.find((p) => p.id ===id);
+    const addprod = CAMIS_DATA.find((p) => p.id === id);
     console.log(addprod);
   }
   const [search, setSearch] = useState('');
@@ -42,7 +42,6 @@ export default function Produtos() {
         alignItems="center"
       >
         <Text m="auto" fontSize="1.2rem">
-          
           Camisetas
         </Text>
       </Flex>
@@ -82,14 +81,13 @@ export default function Produtos() {
             >
               <Box type="button" onClick={() => addProduct(a.id)}>
                 <Image
-                  backgroundImage=""
                   transition="all ease 0.2s"
                   _hover={{ transform: 'scale(1)' }}
                   transform="scale(0.9)"
                   src={a.imagem}
                   alt={a.imagem}
                   w="20rem"
-                  loading='lazy'
+                  loading="lazy"
                 />
               </Box>
 
@@ -122,4 +120,3 @@ export default function Produtos() {
     </div>
   );
 }
-

@@ -1,0 +1,86 @@
+[
+    {
+        "id": " 11",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6328_.jpg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6332_.jpg",
+        "title": "Colors10ACAlmof",
+        "valor": "62.90"
+    },
+    {
+        "id": " 12",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6334_.jpg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6336_.jpg",
+        "title": "BlueLox",
+        "valor": "62.90"
+    },
+    {
+        "id": " 13",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6337_.jpg",
+        "imagemHover": "",
+        "title": "Marrom3Almoff",
+        "valor": "62.90"
+    },
+    {
+        "id": " 14",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6341_.jpg",
+        "imagemHover": "",
+        "title": "WomenWhiteAlmof",
+        "valor": "62.90"
+    },
+    {
+        "id": " 15",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6342_.jpg",
+        "imagemHover": "",
+        "title": "FloweraWhiteAlmof",
+        "valor": "62.90"
+    },
+    {
+        "id": " 16",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6345_.jpg",
+        "imagemHover": "",
+        "title": "Almof2BlueWhite",
+        "valor": "62.90"
+    },
+    {
+        "id": " 17",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6347_.jpg",
+        "imagemHover": "",
+        "title": "Origamis3Almof",
+        "valor": "62.90"
+    },
+    {
+        "id": " 18",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6350_.jpg",
+        "imagemHover": "",
+        "title": "Colors3Almof",
+        "valor": "62.90"
+    },
+    {
+        "id": " 19",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6352_.jpg",
+        "imagemHover": "",
+        "title": "ColorsAlmof3Brin",
+        "valor": "62.90"
+    },
+    {
+        "id": " 20",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6354_.jpg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6356_.jpg",
+        "title": "StripeAlmof",
+        "valor": "62.90"
+    },
+    {
+        "id": " 21",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6357_.jpg",
+        "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6360_.jpg",
+        "title": "WhiteAlmofsLis",
+        "valor": "62.90"
+    },
+    {
+        "id": " 22",
+        "imagem": "https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6363_.jpg",
+        "imagemHover": "",
+        "title": "MistAlmofsCloh",
+        "valor": "62.90"
+    }
+]
