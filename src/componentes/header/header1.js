@@ -105,14 +105,21 @@ export default function Header1() {
           </DrawerContent>
         </Drawer>
         <Image w="120px" h="100px" src="/imagens/logoGall1.png" />
-        <Flex mr="25px" alignItems="center">
-          <GiBeachBag
-            style={{ width: '6rem', height: '3rem', color: '#376b2e' }}
-          />
-          <Text color="#ffffff" marginLeft="-45px" mt="25px" fontSize="1.4rem">
-            0
-          </Text>
-        </Flex>
+        <Link href="/carrinho">
+          <Flex cursor='pointer' mr="25px" alignItems="center">
+            <GiBeachBag
+              style={{ width: '6rem', height: '3rem', color: '#376b2e' }}
+            />
+            <Text
+              color="#ffffff"
+              marginLeft="-45px"
+              mt="25px"
+              fontSize="1.2rem"
+            >
+              0
+            </Text>
+          </Flex>
+        </Link>
       </Flex>
     </div>
   );

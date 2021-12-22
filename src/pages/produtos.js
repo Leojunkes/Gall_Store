@@ -21,21 +21,26 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { React } from 'react';
 
 export default function Produtos() {
-  var [produtos, setProdutos] = useState([]);
+  var [produtos, setProdutos] = useState(['']);
 
   useEffect(() => {
     const localStorageTasks = JSON.parse(localStorage.getItem('produtos'));
     const produtos =
       localStorage.getItem('produtos') !== null ? localStorageTasks : [];
-    
+
     setProdutos([produtos]);
+    console.log(produtos);
   }, []);
+  // for(let p of produtos) {
+  //   console.log(p)
+  // }
 
   function addProduct(id) {
-     produtos = DATA_ALMOFADAS.find((p) => p.id === id);
-    // setProdutos(addprod);
-    localStorage.setItem('produtos', JSON.stringify(produtos));
+    produtos = DATA_ALMOFADAS.find((p) => p.id === id);
+
     setProdutos(produtos);
+    localStorage.setItem('produtos', JSON.stringify([produtos]));
+
     console.log(produtos);
     // console.log(addprod);
   }

@@ -14,12 +14,12 @@ import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 export default function Cart() {
   const [produtos, setProdutos] = useState([]);
 
-  useEffect(() => {
+   useEffect(() => {
     const localStorageTasks = JSON.parse(localStorage.getItem('produtos'));
     const produtos =
-      localStorage.getItem('produtos') !== null ? localStorageTasks : [];
-    console.log(produtos);
-    setProdutos([produtos]);
+     localStorage.getItem('produtos') !== null ? localStorageTasks : [];
+    
+  setProdutos(produtos);
   }, []);
 
   return (

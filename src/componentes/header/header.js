@@ -20,6 +20,7 @@ import {
 import { GiBeachBag } from 'react-icons/gi';
 
 import Link from 'next/link';
+import { Box } from '@chakra-ui/react';
 
 export default function Header() {
   return (
@@ -33,16 +34,23 @@ export default function Header() {
             src="/imagens/logoGall1.png"
           />
         </Flex>
-        <Link href='/carrinho'>
+        <Link href="/carrinho">
           <Flex cursor="pointer" mr="20px">
             <GiBeachBag
-              style={{ marginTop: '20px', marginRight: '10px' }}
+              style={{ width: '6rem', marginTop: '20px', marginRight: '-35px' }}
               fontSize="2.2rem"
               color="#376b2e"
             />
-            <Text color="#ffffff" fontSize="0.9rem" mt="33px" ml="-31px">
-              0
-            </Text>
+            <Box m='20px 40px 0 0' w=''h='20px'borderRadius='full' bg='red.700'>
+              <Text
+                color="gray.100"
+                fontSize="0.9rem"
+                m='0.2px 7px 0 7px'
+                fontSize="15"
+              >
+                0
+              </Text>
+            </Box>
           </Flex>
         </Link>
       </Flex>
