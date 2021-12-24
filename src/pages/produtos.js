@@ -12,6 +12,7 @@ import {
 
 import { BsCartPlus } from 'react-icons/bs';
 import DATA_ALMOFADAS from '/mockProdutos/ALMOF_DATA';
+
 import HeaderProdutos from '../componentes/header_Produtos';
 
 import { useState, useEffect } from 'react';
@@ -22,6 +23,11 @@ import { React } from 'react';
 
 export default function Produtos() {
   var [produtos, setProdutos] = useState(['']);
+
+  function openAlmofadas() {
+    setOpen(true);
+    console.log(open);
+  }
 
   useEffect(() => {
     const localStorageTasks = JSON.parse(localStorage.getItem('produtos'));
