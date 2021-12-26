@@ -107,7 +107,7 @@ export default function Footer1() {
         </Flex>
       </div>
       <div className="containerFooter1">
-        <Flex  mr="15px" mt="8px">
+        <Flex mr="15px"mt='-30px' paddingBottom='20px'>
           <Text ml="10px" maxW="100px" color="#71BDD2">
             Formas de Pagamento
           </Text>
