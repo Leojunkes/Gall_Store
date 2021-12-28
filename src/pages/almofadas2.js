@@ -20,7 +20,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 
 export default function Produtos() {
   function addProduct(id) {
-    const addprod = DATA_ALMOFADAS2.find((p) => p.id ===id);
+    const addprod = DATA_ALMOFADAS2.find((p) => p.id === id);
     console.log(addprod);
   }
   const [search, setSearch] = useState('');
@@ -107,8 +107,15 @@ export default function Produtos() {
                       <BsCartPlus style={{ fontSize: '1.6rem' }} />
                     </Text>
                   </Button>
-                  <Button mt="4px" borderRadius="0px 0 100px" bg="red.700">
-                    <Text m="auto" color="gray.100">
+                  <Button
+                    border="1px"
+                    borderColor="#2e6a2c"
+                    mt="4px"
+                    borderRadius="0px 0 100px"
+                    bg="gray.200"
+                    ml='1'
+                  >
+                    <Text m="auto" color="#2e6a2c">
                       Comprar agora
                     </Text>
                   </Button>

@@ -24,10 +24,7 @@ import { React } from 'react';
 export default function Produtos() {
   var [produtos, setProdutos] = useState(['']);
 
-  function openAlmofadas() {
-    setOpen(true);
-    console.log(open);
-  }
+
 
   useEffect(() => {
     const localStorageTasks = JSON.parse(localStorage.getItem('produtos'));
@@ -126,7 +123,7 @@ export default function Produtos() {
                 <Heading color="#2e6a2c" size="md">
                   {a.valor}
                 </Heading>
-                <Box paddingBottom="14px">
+                <Box  paddingBottom="14px">
                   <Button
                     mt="4.5px"
                     borderRadius="30px 0 0 0px"
@@ -137,13 +134,14 @@ export default function Produtos() {
                     </Text>
                   </Button>
                   <Button
-                    border="2px"
-                    borderColor="red.800"
+                    border="1px"
+                    borderColor="#2e6a2c"
                     mt="4px"
                     borderRadius="0px 0 100px"
                     bg="gray.200"
+                    ml='1'
                   >
-                    <Text m="auto" color="red.700">
+                    <Text m="auto" color="#2e6a2c">
                       Comprar agora
                     </Text>
                   </Button>
