@@ -55,7 +55,7 @@ export default function Produtos() {
       className="produtos"
       style={{ marginTop: '30px', backgroundColor: '#f9fafc' }}
     >
-      <HeaderProdutos />
+      <HeaderProdutos style={{position:'fixed'}} />
 
       <Flex
         color="gray.100"

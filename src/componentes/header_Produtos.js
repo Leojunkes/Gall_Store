@@ -25,15 +25,16 @@ export default function HeaderProdutos() {
       h=""
       textAlign="center"
       className="headerProdutos"
-      
+
+
     >
       <Flex cursor='pointer' mt='3' className="headerProdutos">
-        <Link  href="/produtos">
+        <Link href="/produtos">
           <Text fontSize="1.2rem">
             Almofadas
           </Text>
         </Link>
-        <Link  href="/almofadas1">
+        <Link href="/almofadas1">
           <Text ml='2' fontSize="1.2rem">
             Almofadas1
           </Text>

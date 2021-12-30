@@ -19,10 +19,17 @@ import {
 } from '@chakra-ui/react';
 import { GiBeachBag } from 'react-icons/gi';
 
+
 import Link from 'next/link';
 import { Box } from '@chakra-ui/react';
 
+import { useCart } from '../../hooks/useCart';
+
 export default function Header() {
+
+  const cart = useCart()
+  console.log(cart)
+
   return (
     <div className="header">
       <Flex h="8rem" fontWeight="400" bg="gray.100">
@@ -41,7 +48,7 @@ export default function Header() {
               fontSize="2.2rem"
               color="#376b2e"
             />
-            <Box m='20px 40px 0 0' w=''h='20px'borderRadius='full' bg='red.700'>
+            <Box m='20px 40px 0 0' w='' h='20px' borderRadius='full' bg='red.700'>
               <Text
                 color="gray.100"
                 fontSize="0.9rem"

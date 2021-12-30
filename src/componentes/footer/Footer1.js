@@ -13,6 +13,8 @@ import {
 import { BsInstagram, BsFacebook } from 'react-icons/bs';
 import Link from 'next/link';
 import { useState } from 'react';
+
+import { FiFacebook, FiTwitter } from 'react-icons/fi';
 export default function Footer1() {
   const [ischangebutton, SetIsChangeButton] = useState(false);
 
@@ -53,7 +55,7 @@ export default function Footer1() {
     console.log(ischangebutton);
   }
   return (
-    <div style={{backgroundColor:'#313131'}}>
+    <div style={{ backgroundColor: '#313131' }}>
       <div className="containerFooter1">
         <Flex
           paddingTop="30px"
@@ -65,11 +67,33 @@ export default function Footer1() {
           fontSize="1.125rem"
           w="100vw"
         >
-          <Flex mt="40px" maxW="250px" flexDirection="column">
-            <Text ml="20px" color="#ffffff">
+          <Flex ml="-44px" mt="30px" maxW="250px" flexDirection="column">
+            <Text ml="50px" color="#ffffff">
               Moda, Estilo, Elegância, vista-se com Gall
             </Text>
+            <Text mt="10px" ml="50px" color="#ffffff">
+              Siga Gall em suas redes sociais:
+            </Text>
+
+            <Flex
+              m="10px 0 0 40px"
+              maxW="100px"
+              cursor="pointer"
+              justifyContent="space-evenly"
+            >
+              <Link href="https://www.instagram.com/gall.oficial/">
+                <BsInstagram style={{ marginLeft: '5px', color: '#ffffff' }} />
+              </Link>
+              <Link href="https://www.facebook.com/gall.oficial">
+                <FiFacebook style={{ color: '#ffffff' }} />
+              </Link>
+              <Link href="">
+                <FiTwitter style={{ color: '#ffffff' }} />
+              </Link>
+            </Flex>
           </Flex>
+
+
 
           <Flex cursor="pointer" flexDirection="column" color="#ffffff" s>
             <Text color="#71BDD2">Dúvidas</Text>
@@ -107,7 +131,7 @@ export default function Footer1() {
         </Flex>
       </div>
       <div className="containerFooter1">
-        <Flex mr="15px"mt='-30px' paddingBottom='20px'>
+        <Flex mr="15px" mt='25px' paddingBottom='20px'>
           <Text ml="10px" maxW="100px" color="#71BDD2">
             Formas de Pagamento
           </Text>
@@ -123,7 +147,7 @@ export default function Footer1() {
             src="https://www.yoganatomia.com.br/wp-content/uploads/2021/06/1200px-Logo%E2%80%94pix_powered_by_Banco_Central_Brazil_2020.svg-1024x364.png"
           />
         </Flex>
-        
+
       </div>
       {/* <Flex
         alignItems="center"
