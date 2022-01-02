@@ -15,11 +15,11 @@ export default function Cart() {
   const [produtos, setProdutos] = useState([]);
 
    useEffect(() => {
-    const localStorageTasks = JSON.parse(localStorage.getItem('produtos'));
+    const localStorageTasks = localStorage.getItem('produtos');
     const produtos =
      localStorage.getItem('produtos') !== null ? localStorageTasks : [];
     
-  setProdutos(produtos);
+  setProdutos([...produtos]);
   }, []);
 
   return (

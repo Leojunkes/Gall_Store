@@ -3,6 +3,7 @@
 import {
   Flex,
   Button,
+
   Image,
   Text,
   Tabs,
@@ -23,16 +24,20 @@ import { GiBeachBag } from 'react-icons/gi';
 import Link from 'next/link';
 import { Box } from '@chakra-ui/react';
 
+
+import { useContext } from 'react';
 import { useCart } from '../../hooks/useCart';
 
 export default function Header() {
-
   const cart = useCart()
-  console.log(cart)
+
 
   return (
     <div className="header">
+
       <Flex h="8rem" fontWeight="400" bg="gray.100">
+        <Text color='gray.900'></Text>
+
         <Flex m="10px auto">
           <Image
             borderRadius="100px"
