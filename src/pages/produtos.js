@@ -19,8 +19,13 @@ import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 export default function Produtos() {
+
+    var [produtos, setProdutos] = useState([''])
+
     function addProduct(id) {
-        const produtos = DATA_ALMOFADAS.find((p) => p.id === id);
+         produtos = DATA_ALMOFADAS.find((p) => p.id === id);
+        setProdutos([produtos]);
+        localStorage.setItem('produtos', produtos);
         console.log(produtos);
     }
     const [search, setSearch] = useState('');
