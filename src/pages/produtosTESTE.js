@@ -1,10 +1,19 @@
 /* eslint-disable @next/next/link-passhref */
-import { Box, Flex, Image, Input, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, Image, Input, Text } from '@chakra-ui/react'
 import { useState } from 'react';
 import { Product } from '../componentes/produtosArray'
 
 const Products = () => {
   const [search, setSearch] = useState('');
+  const [produtos, setProdutos] = useState([]);
+
+
+  const addProduct = (id) => {
+    const produtos = Product.find((p) => p.id === id);
+    setProdutos([produtos]);
+    localStorage.setItem('produtos', produtos);
+    console.log(produtos);
+  }
   return (
     <>
       <Input
@@ -27,8 +36,18 @@ const Products = () => {
           }
         }).map((p, index) =>
           <Box key={index}>
-            <Image src={p.imagem} />
+            <Image
+              backgroundImage=""
+              transition="all ease 0.2s"
+              _hover={{ transform: 'scale(1)' }}
+              transform="scale(0.9)"
+              src={p.imagem}
+              alt={p.imagem}
+              w="20rem"
+              loading="lazy"
+            />
             <Text>{p.name}</Text>
+            <Button bg='green.400' type="button" onClick={() => addProduct(p.id)}>Adicionar ao carrinho</Button>
           </Box>
         )}
 

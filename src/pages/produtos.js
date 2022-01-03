@@ -23,7 +23,7 @@ export default function Produtos() {
     var [produtos, setProdutos] = useState([''])
 
     function addProduct(id) {
-         produtos = DATA_ALMOFADAS.find((p) => p.id === id);
+        produtos = DATA_ALMOFADAS.find((p) => p.id === id);
         setProdutos([produtos]);
         localStorage.setItem('produtos', produtos);
         console.log(produtos);
@@ -47,7 +47,7 @@ export default function Produtos() {
                 alignItems="center"
             >
                 <Text m="auto" fontSize="1.2rem">
-                    Almofadas2
+                    Almofadas
                 </Text>
             </Flex>
             <Flex ml="20px">

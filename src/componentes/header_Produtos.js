@@ -59,6 +59,11 @@ export default function HeaderProdutos() {
             Bolsas
           </Text>
         </Link>
+        <Link href="/produtosTESTE">
+          <Text ml='2' fontSize="1.2rem">
+            Teste
+          </Text>
+        </Link>
       </Flex>
     </Flex>
   );
