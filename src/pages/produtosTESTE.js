@@ -1,17 +1,28 @@
 /* eslint-disable @next/next/link-passhref */
 import { Box, Button, Flex, Image, Input, Text } from '@chakra-ui/react'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Product } from '../componentes/produtosArray'
 
 const Products = () => {
   const [search, setSearch] = useState('');
-  const [produtos, setProdutos] = useState([]);
+  var [produtos, setProdutos] = useState([]);
+
+  useEffect(() => {
+    const StorageProducts = JSON.parse(localStorage.getItem('produtos'));
+
+    const produtos = localStorage.getItem('produtos') !== null ? StorageProducts : []
+    console.log(produtos)
+
+    setProdutos([produtos])
+  }, [])
 
 
   const addProduct = (id) => {
-    const produtos = Product.find((p) => p.id === id);
-    setProdutos([produtos]);
-    localStorage.setItem('produtos', produtos);
+    produtos = Product.find((p) => p.id === id);
+    setProdutos((old) => [...old, produtos])
+
+    localStorage.setItem('produtos', JSON.stringify(produtos));
+
     console.log(produtos);
   }
   return (
