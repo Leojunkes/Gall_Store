@@ -18,7 +18,7 @@ const Products = () => {
 
 
   const addProduct = (id) => {
-    produtos = Product.find((p) => p.id === id);
+    const produtos = Product.find((p) => p.id === id);
     setProdutos((old) => [...old, produtos])
 
     localStorage.setItem('produtos', JSON.stringify(produtos));
