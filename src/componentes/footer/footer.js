@@ -69,6 +69,7 @@ export default function Footer() {
         fontWeight="400"
         bg="#313131"
         fontSize="1.125rem"
+        
       >
         <Flex ml="-44px" mt="30px" maxW="250px" flexDirection="column">
           <Text ml="50px" color="#ffffff">

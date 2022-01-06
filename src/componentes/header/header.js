@@ -26,10 +26,15 @@ import { Box } from '@chakra-ui/react';
 
 
 import { useContext } from 'react';
-import { useCart } from '../../hooks/useCart';
+import { CartContext, useCart } from '../../hooks/useCart';
 
 export default function Header() {
-  const cart = useCart()
+  // const cart = useCart()
+  const cart = useContext(CartContext)
+
+  function add() {
+    console.log(cart)
+  }
 
 
   return (
@@ -47,24 +52,26 @@ export default function Header() {
           />
         </Flex>
         <Link href="/carrinho">
-          <Flex cursor="pointer" mr="20px">
+          <Flex position="absolute" right="-30px" cursor="pointer" mr="70px">
             <GiBeachBag
-              style={{ width: '6rem', marginTop: '20px', marginRight: '-35px' }}
+              style={{ width: '6rem', marginTop: '20px', marginRight: '-50px' }}
               fontSize="2.2rem"
               color="#376b2e"
             />
-            <Box m='20px 40px 0 0' w='' h='20px' borderRadius='full' bg='red.700'>
+            <Box textAlign='center' m='20px -20px 0 20px' w='1.5rem' h='20px' borderRadius='full' bg='red.700'>
               <Text
                 color="gray.100"
                 fontSize="0.9rem"
-                m='0.2px 7px 0 7px'
+
                 fontSize="15"
               >
-                0
+                2
               </Text>
             </Box>
+
           </Flex>
         </Link>
+        <button onClick={add}>aperte</button>
       </Flex>
 
       <Flex

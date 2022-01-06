@@ -7,6 +7,13 @@ import {
   Divider,
   Heading,
   Box,
+  Table,
+  Tr,
+  Th,
+  Thead,
+  Tbody,
+  Td,
+  Tfoot,
 } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
@@ -23,33 +30,92 @@ const Cart = () => {
   }, []);
 
   return (
-    <div style={{ border: '1px solid', height: '260px', marginTop: '35px' }}>
+    <div style={{ marginTop: '35px' }}>
+      <Flex>
+        <Table >
+          <Thead  bg = '#125c20'>
+            <Tr >
+              <Th color='gray.100'>Sua sacola está com 2 itens</Th>
+
+              <Th color='gray.100'>Preço Unitário</Th>
+              <Th color='gray.100'>Quantidade</Th>
+              <Th color='gray.100'>Subtotal</Th>
+            </Tr>
+          </Thead>
+
+          <Tbody>
+            <Tr>
+
+              <Td>
+                <Flex>
+                  <Image w='10rem' src='https://api-next-teste.vercel.app/gallAlmofadas/IMG_6086_.jpg' />
+                  <Heading color='gray.500' ml='-25px' size="md" maxW="250px">WhiteStripe</Heading>
+                  <Heading color='gray.500' m='30px 0 0 -90px' size="sm">Ref: 12345</Heading>
+                </Flex>
+              </Td>
+              <Td fontSize='18px'>R$ 69,90</Td>
+              <Td>
+                <Flex>
+                  <Flex w="40px" type="button">
+                    <AiOutlineMinusCircle style={{ fontSize: '25px'}} />
+                  </Flex>{' '}
+                  
+                    <Heading m='1px 6px 0 0' size='md'>1</Heading>
+                  
+
+                  <Flex ml='1.5' w="30px">
+                    <AiOutlinePlusCircle style={{ fontSize: '25px', marginLeft: '0px' }} />
+                  </Flex>
+                </Flex>
+              </Td>
+              <Td fontSize='18px'>R$ 69,90</Td>
+
+
+            </Tr>
+            <Tr>
+
+              <Td>
+                <Flex>
+                  <Image w='10rem' src='https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6354_.jpg' />
+                  <Heading color='gray.500' ml='-25px' size="md" maxW="250px">WhiteStripe</Heading>
+                  <Heading color='gray.500' m='30px 0 0 -90px' size="sm">Ref: 12345</Heading>
+                </Flex>
+              </Td>
+              <Td fontSize='18px'>R$ 69,90</Td>
+              <Td>
+                <Flex>
+                  <Flex w="40px" type="button">
+                    <AiOutlineMinusCircle style={{ fontSize: '25px'}} />
+                  </Flex>{' '}
+                  
+                    <Heading m='1px 6px 0 0' size='md'>1</Heading>
+                  
+
+                  <Flex ml='1.5' w="30px">
+                    <AiOutlinePlusCircle style={{ fontSize: '25px', marginLeft: '0px' }} />
+                  </Flex>
+                </Flex>
+              </Td>
+              <Td fontSize='18px'>R$ 69,90</Td>
+
+
+            </Tr>
+          </Tbody>
+          <Tfoot>
+            <Tr bg = '#125c20'>
+              <Th></Th>
+              <Th></Th>
+              <Th></Th>
+              <Th color='gray.100' fontSize='20px'>Subtotal: R$ 139,80</Th>
+            </Tr>
+          </Tfoot>
+
+        </Table>
+
+      </Flex>
+
       
-        <Flex mt="30px" h="200px" bg="#ffffff">
-          <Image w="22rem" src='https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6354_.jpg' />
 
-          <Flex ml="12px" flexDirection="column">
-            <Heading maxW="250px"></Heading>
-            <Heading size="sm">Ref: </Heading>
-            {/* <Text>tamanho G</Text> */}
-            {/* <Text>Cor:Marinho</Text> */}
-            <Flex>
-              <Flex w="40px" type="button">
-                <AiOutlineMinusCircle style={{ fontSize: '30px' }} />
-              </Flex>{' '}
-              <Box textAlign='center' border='1px' w='50px'>
-                <Heading mt='2' size='md'>1</Heading>
-              </Box>
-
-              <Flex ml='1.5' w="40px">
-                <AiOutlinePlusCircle style={{ fontSize: '30px', marginLeft: '6px' }} />
-              </Flex>
-            </Flex>
-
-            <Heading m='30px 0 0 20px'></Heading>
-          </Flex>
-        </Flex>
-      
     </div>
   );
 }
