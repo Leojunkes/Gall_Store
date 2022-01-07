@@ -67,7 +67,7 @@ export default function Footer1() {
           fontSize="1.125rem"
           w="100vw"
         >
-          <Flex ml="-44px" mt="30px" maxW="250px" flexDirection="column">
+          <Flex ml="-44px" mt="30px" maxW="120px" flexDirection="column">
             <Text ml="50px" color="#ffffff">
               Moda, Estilo, Elegância, vista-se com Gall
             </Text>

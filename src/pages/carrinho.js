@@ -17,23 +17,24 @@ import {
 } from '@chakra-ui/react';
 import { useState, useEffect } from 'react';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
+import Link from 'next/link';
 
 const Cart = () => {
-  const [produtos, setProdutos] = useState([]);
+  const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    const localStorageTasks = localStorage.getItem('produtos');
-    const produtos =
-      localStorage.getItem('produtos') !== null ? localStorageTasks : [];
+    const localStorageProdutos = JSON.parse(localStorage.getItem('produtos'));
+    const cart =
+      localStorage.getItem('produtos') !== null ? localStorageProdutos : [];
 
-    setProdutos([...produtos]);
+    setCart([...cart]);
   }, []);
 
   return (
     <div style={{ marginTop: '35px' }}>
       <Flex>
         <Table >
-          <Thead  bg = '#125c20'>
+          <Thead bg='#125c20'>
             <Tr >
               <Th color='gray.100'>Sua sacola está com 2 itens</Th>
 
@@ -42,79 +43,62 @@ const Cart = () => {
               <Th color='gray.100'>Subtotal</Th>
             </Tr>
           </Thead>
+          {cart.map((c, key) => (
+            <Tbody key={key}>
+              <Tr>
 
-          <Tbody>
-            <Tr>
-
-              <Td>
-                <Flex>
-                  <Image w='10rem' src='https://api-next-teste.vercel.app/gallAlmofadas/IMG_6086_.jpg' />
-                  <Heading color='gray.500' ml='-25px' size="md" maxW="250px">WhiteStripe</Heading>
-                  <Heading color='gray.500' m='30px 0 0 -90px' size="sm">Ref: 12345</Heading>
-                </Flex>
-              </Td>
-              <Td fontSize='18px'>R$ 69,90</Td>
-              <Td>
-                <Flex>
-                  <Flex w="40px" type="button">
-                    <AiOutlineMinusCircle style={{ fontSize: '25px'}} />
-                  </Flex>{' '}
-                  
-                    <Heading m='1px 6px 0 0' size='md'>1</Heading>
-                  
-
-                  <Flex ml='1.5' w="30px">
-                    <AiOutlinePlusCircle style={{ fontSize: '25px', marginLeft: '0px' }} />
+                <Td>
+                  <Flex>
+                    <Image w='10rem' src={c.imagem} />
+                    <Heading color='gray.500' ml='2' size="md" maxW="250px">{c.title}</Heading>
+                    <Heading color='gray.500' m='30px 0 0 -90px' size="sm">Ref: {c.id}</Heading>
                   </Flex>
-                </Flex>
-              </Td>
-              <Td fontSize='18px'>R$ 69,90</Td>
+                </Td>
+                <Td fontSize='18px'>R$ {c.valor}</Td>
+                <Td>
+                  <Flex>
+                    <Flex w="40px" type="button">
+                      <AiOutlineMinusCircle style={{ fontSize: '25px' }} />
+                    </Flex>{' '}
 
-
-            </Tr>
-            <Tr>
-
-              <Td>
-                <Flex>
-                  <Image w='10rem' src='https://api-next-teste.vercel.app/gallAlmofadas3/IMG_6354_.jpg' />
-                  <Heading color='gray.500' ml='-25px' size="md" maxW="250px">WhiteStripe</Heading>
-                  <Heading color='gray.500' m='30px 0 0 -90px' size="sm">Ref: 12345</Heading>
-                </Flex>
-              </Td>
-              <Td fontSize='18px'>R$ 69,90</Td>
-              <Td>
-                <Flex>
-                  <Flex w="40px" type="button">
-                    <AiOutlineMinusCircle style={{ fontSize: '25px'}} />
-                  </Flex>{' '}
-                  
                     <Heading m='1px 6px 0 0' size='md'>1</Heading>
-                  
 
-                  <Flex ml='1.5' w="30px">
-                    <AiOutlinePlusCircle style={{ fontSize: '25px', marginLeft: '0px' }} />
+
+                    <Flex ml='1.5' w="30px">
+                      <AiOutlinePlusCircle style={{ fontSize: '25px', marginLeft: '0px' }} />
+                    </Flex>
                   </Flex>
-                </Flex>
-              </Td>
-              <Td fontSize='18px'>R$ 69,90</Td>
+                </Td>
+                <Td fontSize='18px'>R$ {c.valor}</Td>
 
 
-            </Tr>
-          </Tbody>
+              </Tr>
+
+            </Tbody>
+          ))}
+
           <Tfoot>
-            <Tr bg = '#125c20'>
+            <Tr bg='#125c20'>
               <Th></Th>
               <Th></Th>
               <Th></Th>
-              <Th color='gray.100' fontSize='20px'>Subtotal: R$ 139,80</Th>
+              <Box ml='-160px'>
+                <Th color='gray.100' fontSize='1.5rem'>Subtotal: R$ 139,80</Th>
+              </Box>
+
+
+
+
             </Tr>
           </Tfoot>
 
         </Table>
 
       </Flex>
+      <Link href='/produtos'>
+        <Button colorScheme='cyan'>continuar comprando</Button>
+      </Link>
 
-      
 
     </div>
   );

@@ -18,10 +18,20 @@ import { useState } from 'react';
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { AiOutlineSearch } from 'react-icons/ai';
 
-export default function Produtos() {
-  function addProduct(id) {
+const Produtos = () => {
+
+  const [cart, setCart] = useState([]);
+
+  const addProduct=(id)=> {
     const addprod = DATA_ALMOFADAS1.find((p) => p.id === id);
-    console.log(addprod);
+    const newProdutos = {
+      ...addprod,
+    }
+
+    localStorage.setItem('produtos', JSON.stringify(cart))
+    setCart((old) => [...old, newProdutos])
+
+
   }
   const [search, setSearch] = useState('');
   return (
@@ -79,7 +89,7 @@ export default function Produtos() {
               m="14px auto"
               key={index}
             >
-              <Box type="button" onClick={() => addProduct(a.id)}>
+              <Box >
                 <Image
                   backgroundImage=""
                   transition="all ease 0.2s"
@@ -99,6 +109,7 @@ export default function Produtos() {
                 </Heading>
                 <Box paddingBottom="14px">
                   <Button
+                    type="button" onClick={() => addProduct(a.id)}
                     mt="4.5px"
                     borderRadius="30px 0 0 0px"
                     style={{ backgroundColor: '#2e6a2c' }}
@@ -128,3 +139,4 @@ export default function Produtos() {
     </div>
   );
 }
+export default Produtos

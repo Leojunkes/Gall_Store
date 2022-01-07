@@ -35,32 +35,32 @@ export default function HeaderProdutos() {
           </Text>
         </Link>
         <Link href="/almofadas1">
-          <Text ml='2' fontSize="1.2rem">
+          <Text ml='8px' fontSize="1.2rem">
             Almofadas1
           </Text>
         </Link>
         <Link href="/almofadas2">
-          <Text ml='2' fontSize="1.2rem">
+          <Text ml='8px' fontSize="1.2rem">
             Almofadas2
           </Text>
         </Link>
         <Link href="/almofadas3">
-          <Text ml='2' fontSize="1.2rem">
+          <Text ml='8px' fontSize="1.2rem">
             Almofadas3
           </Text>
         </Link>
         <Link href="/camisetas">
-          <Text ml='2' fontSize="1.2rem">
+          <Text ml='8px' fontSize="1.2rem">
             Camisetas
           </Text>
         </Link>
         <Link href="/bolsas">
-          <Text ml='2' fontSize="1.2rem">
+          <Text ml='8px' fontSize="1.2rem">
             Bolsas
           </Text>
         </Link>
         <Link href="/produtosTESTE">
-          <Text ml='2' fontSize="1.2rem">
+          <Text ml='8px'fontSize="1.2rem">
             Teste
           </Text>
         </Link>
