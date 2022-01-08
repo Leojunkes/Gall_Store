@@ -25,13 +25,11 @@ export default function Produtos() {
     const addprod = CAMIS_DATA.find((p) => p.id === id);
     const newProdutos = {
       ...addprod,
-    }
+    };
 
-    localStorage.setItem('produtos', JSON.stringify(cart))
-    setCart((old) => [...old, newProdutos])
-
-
-  }
+    localStorage.setItem('produtos', JSON.stringify(cart));
+    setCart((old) => [...old, newProdutos]);
+  };
   const [search, setSearch] = useState('');
   return (
     <div
@@ -121,7 +119,7 @@ export default function Produtos() {
                     mt="4px"
                     borderRadius="0px 0 100px"
                     bg="gray.200"
-                    ml='1'
+                    ml="1"
                   >
                     <Text m="auto" color="#2e6a2c">
                       Comprar agora

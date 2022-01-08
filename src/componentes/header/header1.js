@@ -70,13 +70,13 @@ export default function Header1() {
             <DrawerBody cursor="pointer" fontSize="20px">
               <Stack spacing="8">
                 <Link href="/">
-                  <Text>Home</Text>
+                  <Text fontWeight='medium'>Home</Text>
                 </Link>
                 <Link href="/produtos">
-                  <Text>Produtos</Text>
+                  <Text fontWeight='medium'>Produtos</Text>
                 </Link>
                 <Link href="/sobrenos">
-                  <Text>Sobre Nós</Text>
+                  <Text fontWeight='medium'>Sobre Nós</Text>
                 </Link>
                 <Popover>
                   <PopoverTrigger>
@@ -88,7 +88,7 @@ export default function Header1() {
                       bg="none"
                       justifyContent="initial"
                     >
-                      <Text ml="-13px">Contato</Text>
+                      <Text fontWeight='medium' ml="-13px">Contato</Text>
                     </Button>
                   </PopoverTrigger>
                   <PopoverContent _focus="none" bg="#398b63">

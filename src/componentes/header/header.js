@@ -3,7 +3,6 @@
 import {
   Flex,
   Button,
-
   Image,
   Text,
   Tabs,
@@ -20,28 +19,30 @@ import {
 } from '@chakra-ui/react';
 import { GiBeachBag } from 'react-icons/gi';
 
-
 import Link from 'next/link';
 import { Box } from '@chakra-ui/react';
 
-
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { CartContext, useCart } from '../../hooks/useCart';
 
-export default function Header() {
-  // const cart = useCart()
-  const cart = useContext(CartContext)
+const Header = () => {
+  const [cart, setCart] = useState([]);
 
-  function add() {
-    console.log(cart)
-  }
+  useEffect(() => {
+    const localStorageProdutos = JSON.parse(localStorage.getItem('produtos'));
+    
 
+    console.log(length);
+    const cart =
+      localStorage.getItem('produtos') !== null ? localStorageProdutos : [];
+
+    setCart([...cart]);
+  }, []);
 
   return (
     <div className="header">
-
       <Flex h="8rem" fontWeight="400" bg="gray.100">
-        <Text color='gray.900'></Text>
+        <Text color="gray.900"></Text>
 
         <Flex m="10px auto">
           <Image
@@ -58,20 +59,20 @@ export default function Header() {
               fontSize="2.2rem"
               color="#376b2e"
             />
-            <Box textAlign='center' m='20px -20px 0 20px' w='1.5rem' h='20px' borderRadius='full' bg='red.700'>
-              <Text
-                color="gray.100"
-                fontSize="0.9rem"
-
-                fontSize="15"
-              >
-                2
+            <Box
+              textAlign="center"
+              m="20px -20px 0 20px"
+              w="1.5rem"
+              h="20px"
+              borderRadius="full"
+              bg="red.700"
+            >
+              <Text color="gray.100" fontSize="0.9rem" fontSize="15">
+                4
               </Text>
             </Box>
-
           </Flex>
         </Link>
-        <button onClick={add}>aperte</button>
       </Flex>
 
       <Flex
@@ -121,9 +122,12 @@ export default function Header() {
                     <PopoverArrow />
                     <PopoverCloseButton />
                     <PopoverHeader color="#ffffff">WhatsApp</PopoverHeader>
-                    <PopoverBody color="#ffffff">
-                      A Gall terá o maior prazer em lhe ajudar!
-                    </PopoverBody>
+                    <Link href="https://api.whatsapp.com/send?phone=5547997275360&text=">
+                      <PopoverBody color="#ffffff">
+                        A Gall terá o maior prazer em lhe ajudar! Nos envie uma
+                        mensagem por aqui
+                      </PopoverBody>
+                    </Link>
                   </PopoverContent>
                 </Popover>
               </Tab>
@@ -133,4 +137,5 @@ export default function Header() {
       </Flex>
     </div>
   );
-}
+};
+export default Header;

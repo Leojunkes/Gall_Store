@@ -25,13 +25,11 @@ const Produtos = () => {
     const addprod = DATA_ALMOFADAS2.find((p) => p.id === id);
     const newProdutos = {
       ...addprod,
-    }
+    };
 
-    localStorage.setItem('produtos', JSON.stringify(cart))
-    setCart((old) => [...old, newProdutos])
-
-
-  }
+    localStorage.setItem('produtos', JSON.stringify(cart));
+    setCart((old) => [...old, newProdutos]);
+  };
   const [search, setSearch] = useState('');
   return (
     <div
@@ -122,7 +120,7 @@ const Produtos = () => {
                     mt="4px"
                     borderRadius="0px 0 100px"
                     bg="gray.200"
-                    ml='1'
+                    ml="1"
                   >
                     <Text m="auto" color="#2e6a2c">
                       Comprar agora
@@ -136,5 +134,5 @@ const Produtos = () => {
       </div>
     </div>
   );
-}
-export default Produtos
+};
+export default Produtos;
