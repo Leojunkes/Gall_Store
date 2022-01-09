@@ -30,6 +30,7 @@ const Header = () => {
   const cart1 = useContext(CartContext);
   const itemsCount = Object.keys(cart1.cart).length;
   const [cart, setCart] = useState([]);
+  const n = <span>{itemsCount}</span>
 
   function saveLocalStorage() {
     saveStorage();
@@ -81,7 +82,7 @@ const Header = () => {
               bg="red.700"
             >
               <Text color="gray.100" fontSize="0.9rem" fontSize="15">
-                {itemsCount > 0 && <span>{itemsCount}</span>}
+                {itemsCount > 0 ?n:0}
               </Text>
             </Box>
           </Flex>

@@ -4,6 +4,7 @@ import {
   Image,
   Text,
   Grid,
+  HStack,
   Divider,
   Heading,
   Box,
@@ -15,14 +16,20 @@ import {
   Td,
   Tfoot,
 } from '@chakra-ui/react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 import Link from 'next/link';
+import { CartContext } from '../hooks/useCart';
 
 const Cart = () => {
   const [cart, setCart] = useState([]);
+  const cart1 = useContext(CartContext);
+  const itemsCount = Object.keys(cart1.cart).length;
+  const n = <span>{itemsCount}</span>;
 
   useEffect(() => {
+    localStorage.setItem('q', JSON.stringify(itemsCount));
+
     const localStorageProdutos = JSON.parse(localStorage.getItem('produtos'));
 
     const cart1 =
@@ -38,7 +45,7 @@ const Cart = () => {
           <Thead bg="#125c20">
             <Tr>
               <Th fontSize="0.8rem" color="gray.100">
-                Sua sacola está com 2 itens
+                Sua sacola está com {itemsCount > 0 ? n : 0} itens
               </Th>
 
               <Th fontSize="0.8rem" color="gray.100">
@@ -101,9 +108,20 @@ const Cart = () => {
           </Tfoot>
         </Table>
       </Flex>
-      <Link href="/produtos">
-        <Button colorScheme="cyan">continuar comprando</Button>
-      </Link>
+      <Flex mt="10px" alignItems="center" justifyContent="center">
+        <HStack spacing={28}>
+          <Link href="/produtos">
+            <Button color="gray.800" bg="gray.300" border="1px solid green">
+              Continuar comprando
+            </Button>
+          </Link>
+          <Link href="/produtos">
+            <Button color="gray.100" bg="#125c20">
+              Finalizar Compra
+            </Button>
+          </Link>
+        </HStack>
+      </Flex>
     </div>
   );
 };
