@@ -19,13 +19,17 @@ import { useContext, useEffect, useState } from 'react';
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { AiOutlineSearch } from 'react-icons/ai';
 
+import Link from 'next/link';
+
 const Produtos = () => {
-  const { addProduct } = useContext(CartContext);
+  const { addProduct, saveStorage } = useContext(CartContext);
 
   function handleAddProduct(id) {
     addProduct(id);
   }
-
+  function saveLocalStorage() {
+    saveStorage();
+  }
   const [search, setSearch] = useState('');
   return (
     <div
@@ -120,9 +124,16 @@ const Produtos = () => {
                     bg="gray.200"
                     ml="1"
                   >
-                    <Text m="auto" color="#2e6a2c">
-                      Comprar agora
-                    </Text>
+                    <Link href="/carrinho">
+                      <Text
+                        type="button"
+                        onClick={saveLocalStorage}
+                        m="auto"
+                        color="#2e6a2c"
+                      >
+                        Comprar agora
+                      </Text>
+                    </Link>
                   </Button>
                 </Box>
               </Box>

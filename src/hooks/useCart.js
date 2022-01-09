@@ -8,17 +8,19 @@ export const CartProvider = ({ children }) => {
 
   const addProduct = (id) => {
     const addprod = DATA_ALMOFADAS.find((p) => p.id === id);
+
     const newProdutos = {
       ...addprod,
     };
 
     setCart((old) => [...old, newProdutos]);
-
-    localStorage.setItem('produtos', JSON.stringify([...cart]));
+  };
+  const saveStorage = () => {
+    localStorage.setItem('produtos', JSON.stringify(cart));
   };
 
   return (
-    <CartContext.Provider value={{ addProduct }}>
+    <CartContext.Provider value={{ cart, addProduct, saveStorage }}>
       {children}
     </CartContext.Provider>
   );

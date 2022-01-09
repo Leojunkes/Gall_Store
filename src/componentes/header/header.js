@@ -23,14 +23,20 @@ import Link from 'next/link';
 import { Box } from '@chakra-ui/react';
 
 import { useContext, useEffect, useState } from 'react';
-import { CartContext, useCart } from '../../hooks/useCart';
+import { CartContext } from '../../hooks/useCart';
 
 const Header = () => {
+  const { saveStorage } = useContext(CartContext);
+  const cart1 = useContext(CartContext);
+  const itemsCount = Object.keys(cart1.cart).length;
   const [cart, setCart] = useState([]);
+
+  function saveLocalStorage() {
+    saveStorage();
+  }
 
   useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('produtos'));
-    
 
     console.log(length);
     const cart =
@@ -53,7 +59,14 @@ const Header = () => {
           />
         </Flex>
         <Link href="/carrinho">
-          <Flex position="absolute" right="-30px" cursor="pointer" mr="70px">
+          <Flex
+            type="button"
+            onClick={saveLocalStorage}
+            position="absolute"
+            right="-30px"
+            cursor="pointer"
+            mr="70px"
+          >
             <GiBeachBag
               style={{ width: '6rem', marginTop: '20px', marginRight: '-50px' }}
               fontSize="2.2rem"
@@ -68,7 +81,7 @@ const Header = () => {
               bg="red.700"
             >
               <Text color="gray.100" fontSize="0.9rem" fontSize="15">
-                4
+                {itemsCount > 0 && <span>{itemsCount}</span>}
               </Text>
             </Box>
           </Flex>
