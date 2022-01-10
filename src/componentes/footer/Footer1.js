@@ -67,7 +67,7 @@ export default function Footer1() {
           fontSize="1.125rem"
           w="100vw"
         >
-          <Flex ml="-44px" mt="30px" maxW="120px" flexDirection="column">
+          {/*<Flex ml="30px" mt="230px" maxW="350px" flexDirection="row">
             <Text ml="50px" color="#ffffff">
               Moda, Estilo, Elegância, vista-se com Gall
             </Text>
@@ -91,7 +91,7 @@ export default function Footer1() {
                 <FiTwitter style={{ color: '#ffffff' }} />
               </Link>
             </Flex>
-          </Flex>
+          </Flex>*/}
 
 
 
@@ -131,7 +131,7 @@ export default function Footer1() {
         </Flex>
       </div>
       <div className="containerFooter1">
-        <Flex mr="15px" mt='25px' paddingBottom='20px'>
+        <Flex mr="15px" mt='-50px' paddingBottom='20px'>
           <Text ml="10px" maxW="100px" color="#71BDD2">
             Formas de Pagamento
           </Text>

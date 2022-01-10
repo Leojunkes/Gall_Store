@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
     setCart((old) => [...old, newProdutos]);
   };
   const saveStorage = () => {
-    localStorage.setItem('produtos', JSON.stringify(cart));
+    localStorage.setItem('produtos', JSON.stringify([...cart]));
   };
 
   return (

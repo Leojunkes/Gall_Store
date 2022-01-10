@@ -24,6 +24,15 @@ import Link from 'next/link';
 const Produtos = () => {
   const { addProduct, saveStorage } = useContext(CartContext);
 
+  const arrayteste = [1, 2, 3];
+
+  var soma = 0;
+
+  for (var i = 0; i < arrayteste.length; i++) {
+    soma += arrayteste[i];
+  }
+  console.log(soma)
+
   function handleAddProduct(id) {
     addProduct(id);
   }

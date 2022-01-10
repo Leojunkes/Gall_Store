@@ -25,11 +25,17 @@ const Cart = () => {
   const [cart, setCart] = useState([]);
   const cart1 = useContext(CartContext);
   const itemsCount = Object.keys(cart1.cart).length;
+  const s = itemsCount;
+  console.log(s);
   const n = <span>{itemsCount}</span>;
 
-  useEffect(() => {
-    localStorage.setItem('q', JSON.stringify(itemsCount));
+  const arrayValores = cart.map((m) => <span>{m.valor * s}</span>);
 
+  //var soma = arrayValores.reduce(function (soma, i) {
+  //  return soma + i;
+  //});
+
+  useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('produtos'));
 
     const cart1 =
@@ -93,19 +99,20 @@ const Cart = () => {
               </Tr>
             </Tbody>
           ))}
-
-          <Tfoot>
-            <Tr bg="#125c20">
-              <Th></Th>
-              <Th></Th>
-              <Th></Th>
-              <Box ml="-160px">
-                <Th color="gray.100" fontSize="1.4rem">
-                  Subtotal: R$ 139,80
-                </Th>
-              </Box>
-            </Tr>
-          </Tfoot>
+          {cart.map((c, index) => (
+            <Tfoot key={index}>
+              <Tr bg="#125c20">
+                <Th></Th>
+                <Th></Th>
+                <Th></Th>
+                <Box ml="-160px">
+                  <Th color="gray.100" fontSize="1.4rem">
+                    Subtotal: {c.valor*s}
+                  </Th>
+                </Box>
+              </Tr>
+            </Tfoot>
+          ))}
         </Table>
       </Flex>
       <Flex mt="10px" alignItems="center" justifyContent="center">
@@ -122,6 +129,8 @@ const Cart = () => {
           </Link>
         </HStack>
       </Flex>
+
+      {arrayValores}
     </div>
   );
 };
