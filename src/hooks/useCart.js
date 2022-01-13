@@ -1,13 +1,12 @@
 import { createContext, useContext, useState } from 'react';
 
-import DATA_ALMOFADAS from '/mockProdutos/ALMOF_DATA';
 export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-
+  //Adicionar produto
   const addProduct = (id) => {
-    const addprod = DATA_ALMOFADAS.find((p) => p.id === id);
+    const addprod = cart.find((p) => p.id === id);
 
     const newProdutos = {
       ...addprod,
@@ -15,6 +14,10 @@ export const CartProvider = ({ children }) => {
 
     setCart((old) => [...old, newProdutos]);
   };
+
+  //increment product
+
+  //Salvar Produto Localstorage
   const saveStorage = () => {
     localStorage.setItem('produtos', JSON.stringify([...cart]));
   };

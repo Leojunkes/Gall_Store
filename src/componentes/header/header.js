@@ -30,23 +30,11 @@ const Header = () => {
   const cart1 = useContext(CartContext);
   const itemsCount = Object.keys(cart1.cart).length;
   const n = <span>{itemsCount}</span>;
-  const [cart, setCart] = useState([]);
+  
 
   function saveLocalStorage() {
     saveStorage();
   }
-  
-  
-
-  useEffect(() => {
-    const localStorageProdutos = JSON.parse(localStorage.getItem('produtos'));
-
-    console.log(length);
-    const cart =
-      localStorage.getItem('produtos') !== null ? localStorageProdutos : [];
-
-    setCart([...cart]);
-  }, []);
 
   return (
     <div className="header">

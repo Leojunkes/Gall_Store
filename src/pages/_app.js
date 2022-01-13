@@ -6,21 +6,17 @@ import '../styles/globals.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer1 from '../componentes/footer/Footer1';
 import Header1 from '../componentes/header/header1';
-import { CartProvider } from '../hooks/useCart'
-
+import { CartProvider } from '../hooks/useCart';
 
 function MyApp({ Component, pageProps }) {
   return (
     <CartProvider>
-      <ChakraProvider >
-
+      <ChakraProvider>
         <Header />
         <Header1 />
         <Component {...pageProps} />
         <Footer />
         <Footer1 />
-
-
       </ChakraProvider>
     </CartProvider>
   );

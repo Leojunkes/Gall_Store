@@ -23,17 +23,6 @@ import { CartContext } from '../hooks/useCart';
 
 const Cart = () => {
   const [cart, setCart] = useState([]);
-  const cart1 = useContext(CartContext);
-  const itemsCount = Object.keys(cart1.cart).length;
-  const s = itemsCount;
-  console.log(s);
-  const n = <span>{itemsCount}</span>;
-
-  const arrayValores = cart.map((m) => <span>{m.valor * s}</span>);
-
-  //var soma = arrayValores.reduce(function (soma, i) {
-  //  return soma + i;
-  //});
 
   useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('produtos'));
@@ -43,6 +32,31 @@ const Cart = () => {
 
     setCart([...cart1]);
   }, []);
+
+  const cart2 = useContext(CartContext);
+
+  const itemsCount = Object.keys(cart2.cart).length;
+  let [value, setValue] = useState(1);
+  const s = itemsCount;
+  console.log(s);
+  const n = <span>{itemsCount}</span>;
+
+  const arrayValores = cart.map((m) => <span>{m.valor * s}</span>);
+
+  const increment = () => {
+    const valor = value + 1;
+    console.log(valor);
+    setValue(valor);
+  };
+
+  const decrement = () => {
+    const valor = value - 1;
+    setValue(valor);
+  };
+
+  //var soma = arrayValores.reduce(function (soma, i) {
+  //  return soma + i;
+  //});
 
   return (
     <div style={{ marginTop: '35px' }}>
@@ -81,17 +95,22 @@ const Cart = () => {
                 </Td>
                 <Td fontSize="18px">R$ {c.valor}</Td>
                 <Td>
-                  <Flex>
-                    <Flex w="40px" type="button">
-                      <AiOutlineMinusCircle style={{ fontSize: '25px' }} />
-                    </Flex>{' '}
+                  <Flex mr="40px">
+                    <Box type="button" onClick={decrement}>
+                      <Flex w="40px" type="button">
+                        <AiOutlineMinusCircle style={{ fontSize: '25px' }} />
+                      </Flex>{' '}
+                    </Box>
+
                     <Heading m="1px 6px 0 0" size="md">
-                      1
+                      {value}
                     </Heading>
                     <Flex ml="1.5" w="30px">
-                      <AiOutlinePlusCircle
-                        style={{ fontSize: '25px', marginLeft: '0px' }}
-                      />
+                      <Box type="button" onClick={increment}>
+                        <AiOutlinePlusCircle
+                          style={{ fontSize: '25px', marginLeft: '0px' }}
+                        />
+                      </Box>
                     </Flex>
                   </Flex>
                 </Td>
@@ -99,20 +118,19 @@ const Cart = () => {
               </Tr>
             </Tbody>
           ))}
-          {cart.map((c, index) => (
-            <Tfoot key={index}>
-              <Tr bg="#125c20">
-                <Th></Th>
-                <Th></Th>
-                <Th></Th>
-                <Box ml="-160px">
-                  <Th color="gray.100" fontSize="1.4rem">
-                    Subtotal: {c.valor*s}
-                  </Th>
-                </Box>
-              </Tr>
-            </Tfoot>
-          ))}
+
+          <Tfoot>
+            <Tr bg="#125c20">
+              <Th></Th>
+              <Th></Th>
+              <Th></Th>
+              <Box ml="-160px">
+                <Th color="gray.100" fontSize="1.4rem">
+                  Subtotal: R$ {arrayValores}
+                </Th>
+              </Box>
+            </Tr>
+          </Tfoot>
         </Table>
       </Flex>
       <Flex mt="10px" alignItems="center" justifyContent="center">

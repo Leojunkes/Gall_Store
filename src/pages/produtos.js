@@ -14,7 +14,7 @@ import DATA_ALMOFADAS from '/mockProdutos/ALMOF_DATA';
 import HeaderProdutos from '../componentes/header_Produtos';
 import { CartContext } from '../hooks/useCart';
 
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { AiOutlineSearch } from 'react-icons/ai';
@@ -23,6 +23,9 @@ import Link from 'next/link';
 
 const Produtos = () => {
   const { addProduct, saveStorage } = useContext(CartContext);
+  const cart2 = useContext(CartContext);
+
+  const itemsCount = Object.keys(cart2.cart).length;
 
   const arrayteste = [1, 2, 3];
 
@@ -31,12 +34,13 @@ const Produtos = () => {
   for (var i = 0; i < arrayteste.length; i++) {
     soma += arrayteste[i];
   }
-  console.log(soma)
+  console.log(soma);
 
   function handleAddProduct(id) {
     addProduct(id);
   }
-  function saveLocalStorage() {
+  function saveLocalStorage(e) {
+    e.preventDefault();
     saveStorage();
   }
   const [search, setSearch] = useState('');
@@ -121,9 +125,12 @@ const Produtos = () => {
                     borderRadius="30px 0 0 0px"
                     style={{ backgroundColor: '#2e6a2c' }}
                   >
-                    <Text m="auto" color="gray.100">
-                      <BsCartPlus style={{ fontSize: '1.6rem' }} />
-                    </Text>
+                    <Flex color="gray.100" flexDirection="row">
+                      <Text m="auto">
+                        <BsCartPlus style={{ fontSize: '1.5rem' }} />
+                      </Text>
+                      ({itemsCount})
+                    </Flex>
                   </Button>
                   <Button
                     border="1px"

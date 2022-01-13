@@ -85,7 +85,7 @@ export default function Footer() {
             cursor="pointer"
             justifyContent="space-evenly"
           >
-            <Link href="https://www.instagram.com/gall.oficial/">
+            <Link target="_blank"href="https://www.instagram.com/gall.oficial/">
               <BsInstagram style={{ marginLeft: '5px', color: '#ffffff' }} />
             </Link>
             <Link href="https://www.facebook.com/gall.oficial">
