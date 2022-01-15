@@ -20,20 +20,21 @@ import { useState, useEffect, useContext } from 'react';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 import Link from 'next/link';
 import { CartContext } from '../hooks/useCart';
+import { formatPrice } from '../utils/format';
 
 const Cart = () => {
+  
+  const cart2 = useContext(CartContext);
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    const localStorageProdutos = JSON.parse(localStorage.getItem('produtos'));
+    const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
 
     const cart1 =
-      localStorage.getItem('produtos') !== null ? localStorageProdutos : [];
+      localStorage.getItem('products') !== null ? localStorageProdutos : [];
 
     setCart([...cart1]);
   }, []);
-
-  const cart2 = useContext(CartContext);
 
   const itemsCount = Object.keys(cart2.cart).length;
   let [value, setValue] = useState(1);
@@ -42,6 +43,18 @@ const Cart = () => {
   const n = <span>{itemsCount}</span>;
 
   const arrayValores = cart.map((m) => <span>{m.valor * s}</span>);
+
+  const cartFormatted = cart.map((product) => ({
+    ...product,
+    priceFormatted: formatPrice(product.valor),
+    priceTotal: formatPrice(product.valor),
+  }));
+
+  const total = formatPrice(
+    cart.reduce((sumTotal, product) => {
+      return (sumTotal += product.price * product.amount);
+    }, 0),
+  );
 
   const increment = () => {
     const valor = value + 1;

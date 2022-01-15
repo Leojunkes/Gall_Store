@@ -36,11 +36,13 @@ const Produtos = () => {
   }
   console.log(soma);
 
-  function handleAddProduct(id) {
+  //Adicionar produto
+  function addProducts(id) {
     addProduct(id);
   }
-  function saveLocalStorage(e) {
-    e.preventDefault();
+
+  //Salvar Produto Localstorage
+  function saveStorages() {
     saveStorage();
   }
   const [search, setSearch] = useState('');
@@ -120,7 +122,7 @@ const Produtos = () => {
                 <Box paddingBottom="14px">
                   <Button
                     type="button"
-                    onClick={() => handleAddProduct(a.id)}
+                    onClick={() => addProducts(a.id)}
                     mt="4.5px"
                     borderRadius="30px 0 0 0px"
                     style={{ backgroundColor: '#2e6a2c' }}
@@ -143,7 +145,7 @@ const Produtos = () => {
                     <Link href="/carrinho">
                       <Text
                         type="button"
-                        onClick={saveLocalStorage}
+                        onClick={saveStorages}
                         m="auto"
                         color="#2e6a2c"
                       >
