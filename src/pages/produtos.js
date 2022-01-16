@@ -7,6 +7,7 @@ import {
   Divider,
   Heading,
   Box,
+  createStandaloneToast,
 } from '@chakra-ui/react';
 
 import { BsCartPlus } from 'react-icons/bs';
@@ -39,12 +40,22 @@ const Produtos = () => {
   //Adicionar produto
   function addProducts(id) {
     addProduct(id);
+    const toast = createStandaloneToast();
+    toast({
+      title: 'Adicionado ao carrinho',
+      position: 'top',
+      status: 'success',
+
+      duration: 4000,
+      isClosable: true,
+    });
   }
 
   //Salvar Produto Localstorage
   function saveStorages() {
     saveStorage();
   }
+
   const [search, setSearch] = useState('');
   return (
     <div

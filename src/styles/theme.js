@@ -19,9 +19,12 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bg: 'Colors.rosinha',
-        color: 'Colors.gray',
+        bg: 'gray.900',
+        color: 'gray.400',
       },
+      a:{
+        color:'teal'
+      }
     },
   },
   fonts: {
