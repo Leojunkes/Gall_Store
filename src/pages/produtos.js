@@ -37,6 +37,8 @@ const Produtos = () => {
   }
   console.log(soma);
 
+
+
   //Adicionar produto
   function addProducts(id) {
     addProduct(id);
@@ -169,6 +171,7 @@ const Produtos = () => {
             </Box>
           ))}
         </>
+       
       </div>
     </div>
   );

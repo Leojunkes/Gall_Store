@@ -23,7 +23,7 @@ import { CartContext } from '../hooks/useCart';
 import { formatPrice } from '../utils/format';
 
 const Cart = () => {
-  
+  const { updateProductAmount } = useContext(CartContext);
   const cart2 = useContext(CartContext);
   const [cart, setCart] = useState([]);
 
@@ -44,27 +44,23 @@ const Cart = () => {
 
   const arrayValores = cart.map((m) => <span>{m.valor * s}</span>);
 
-  const cartFormatted = cart.map((product) => ({
+  const cartFormated = cart.map((product) => ({
     ...product,
-    priceFormatted: formatPrice(product.valor),
-    priceTotal: formatPrice(product.valor),
+    pricef: product.valor,
+    priceT: product.valor * product.amount,
   }));
 
-  const total = formatPrice(
-    cart.reduce((sumTotal, product) => {
-      return (sumTotal += product.price * product.amount);
-    }, 0),
-  );
-
-  const increment = () => {
-    const valor = value + 1;
-    console.log(valor);
-    setValue(valor);
-  };
+  function increment() {
+    
+  }
 
   const decrement = () => {
     const valor = value - 1;
     setValue(valor);
+  };
+  const handleRemoveProd = (id) => {
+    const prodRemove = cart.filter((product) => product.id !== id);
+    setCart(prodRemove);
   };
 
   //var soma = arrayValores.reduce(function (soma, i) {
@@ -92,21 +88,21 @@ const Cart = () => {
               </Th>
             </Tr>
           </Thead>
-          {cart.map((c, key) => (
+          {cartFormated.map((product, key) => (
             <Tbody key={key}>
               <Tr>
                 <Td>
                   <Flex>
-                    <Image w="10rem" src={c.imagem} />
+                    <Image w="10rem" src={product.imagem} />
                     <Heading color="gray.500" ml="2" size="md" maxW="250px">
-                      {c.title}
+                      {product.title}
                     </Heading>
                     <Heading color="gray.500" m="30px 0 0 -90px" size="sm">
-                      Ref: {c.id}
+                      Ref: {product.id}
                     </Heading>
                   </Flex>
                 </Td>
-                <Td fontSize="18px">R$ {c.valor}</Td>
+                <Td fontSize="18px">R$ {product.valor}</Td>
                 <Td>
                   <Flex mr="40px">
                     <Box type="button" onClick={decrement}>
@@ -127,7 +123,15 @@ const Cart = () => {
                     </Flex>
                   </Flex>
                 </Td>
-                <Td fontSize="18px">R$ {c.valor}</Td>
+                <Td fontSize="18px">R$ {product.priceT}</Td>
+              </Tr>
+              <Tr>
+                <Button
+                  type="button"
+                  onClick={() => handleRemoveProd(product.id)}
+                >
+                  delete
+                </Button>
               </Tr>
             </Tbody>
           ))}
@@ -161,7 +165,9 @@ const Cart = () => {
         </HStack>
       </Flex>
 
-      {arrayValores}
+      <Button type="button" onClick={() => addTesteFlow()}>
+          aperte Teste
+        </Button>
     </div>
   );
 };
