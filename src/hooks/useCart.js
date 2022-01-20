@@ -8,10 +8,14 @@ export const CartProvider = ({ children }) => {
 
   //Adicionar produto
   const addProduct = (id) => {
-    const addprod = DATA_ALMOFADAS.find((product) => product.id === id);
-    const itemId = DATA_ALMOFADAS.map((item) => {
-      item.id === id ? { ...item, quantity: item.amount + 1 } : item;
-    });
+    const addprod = DATA_ALMOFADAS.find(
+      (product) => product.id === id,
+      //? { ...product, quantity: product.amount + 1 }
+      //: product;
+    );
+    //const itemId = DATA_ALMOFADAS.map((item) => {
+    //  item.id === id ? { ...item, quantity: item.amount + 1 } : item;
+    //});
     const newProdutos = {
       ...addprod,
     };

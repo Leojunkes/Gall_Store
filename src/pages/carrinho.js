@@ -37,9 +37,6 @@ const Cart = () => {
 
   const itemsCount = Object.keys(cart2.cart).length;
 
-  const testeTotalSoma = cart.map((p) => <Text>{p.valor}</Text>);
-  console.log(testeTotalSoma);
-
   const s = itemsCount;
   console.log(s);
   const n = <span>{itemsCount}</span>;
@@ -70,9 +67,9 @@ const Cart = () => {
   //});
 
   return (
-    <div style={{ marginTop: '35px' }}>
+    <>
       <Flex>
-        <Box w="100%">
+        <Flex w="100%">
           <Table>
             <Thead bg="#125c20">
               <Tr>
@@ -86,62 +83,52 @@ const Cart = () => {
                 <Th fontSize="0.8rem" color="gray.100">
                   Quantidade
                 </Th>
-                <Th fontSize="0.8rem" color="gray.100">
+                {/*<Th fontSize="0.8rem" color="gray.100">
                   Subtotal
-                </Th>
+                </Th>*/}
               </Tr>
             </Thead>
             {cartFormated.map((product, key) => (
               <Tbody key={key}>
                 <Tr>
                   <Td>
-                    <Flex>
-                      <Image w="10rem" src={product.imagem} />
-                      <Heading color="gray.500" ml="2" size="md" maxW="250px">
-                        {product.title}
-                      </Heading>
-                      <Heading color="gray.500" m="30px 0 0 -90px" size="sm">
-                        Ref: {product.id}
-                      </Heading>
-                    </Flex>
+                    <Image w="9rem" src={product.imagem} />
+                    <Heading color="gray.500" ml="2" size="sm" maxW="250px">
+                      {product.title}
+                    </Heading>
+                    <Heading color="gray.500" m="30px 0 0 -90px" size="sm">
+                      Ref: {product.id}
+                    </Heading>
                   </Td>
-                  <Td fontSize="18px">R$ {product.valor}</Td>
+                  <Td fontSize="1rem">R$ {product.valor}</Td>
                   <Td>
-                    <Flex mr="40px">
-                      <Box type="button" onClick={() => decrement(product.id)}>
-                        <Flex w="40px" type="button">
-                          <AiOutlineMinusCircle style={{ fontSize: '25px' }} />
-                        </Flex>{' '}
-                      </Box>
+                  <Flex>
 
-                      <Heading m="1px 6px 0 0" size="md">
-                        {product.amount}
-                      </Heading>
-                      <Flex ml="1.5" w="30px">
-                        <Box
-                          type="button"
-                          onClick={() => increment(product.id)}
-                        >
-                          <AiOutlinePlusCircle
-                            style={{ fontSize: '25px', marginLeft: '0px' }}
-                          />
-                        </Box>
-                      </Flex>
-                    </Flex>
+<Box type="button" onClick={() => decrement(product.id)}>
+      <Flex w="40px" type="button">
+        <AiOutlineMinusCircle
+          style={{ fontSize: '1.4rem' }}
+        />
+      </Flex>{' '}
+    </Box>
+
+    <Heading mr="15px" size="sm">
+      {product.amount}
+    </Heading>
+    
+      <Box
+        type="button"
+        onClick={() => increment(product.id)}
+      >
+        <AiOutlinePlusCircle
+          style={{ fontSize: '1.4rem', marginLeft: '0px' }}
+        />
+      </Box>
+      </Flex>
                   </Td>
-                  <Td fontSize="18px">R$ {product.priceT}</Td>
+
+                  {/*<Td fontSize="16px">R$ {product.priceT}</Td>*/}
                 </Tr>
-                <Tr>
-                  <Button
-                    type="button"
-                    onClick={() => handleRemoveProd(product.id)}
-                  >
-                    delete
-                  </Button>
-                </Tr>
-                <Button type="button" onClick={() => addTesteFlow(product.id)}>
-                  aperte Teste
-                </Button>
               </Tbody>
             ))}
 
@@ -150,15 +137,14 @@ const Cart = () => {
                 <Th></Th>
                 <Th></Th>
                 <Th></Th>
-                <Box ml="-160px">
-                  <Th color="gray.100" fontSize="1.4rem">
+
+                {/*<Th color="gray.100" fontSize="1.4rem">
                     Subtotal: R$
-                  </Th>
-                </Box>
+                  </Th>*/}
               </Tr>
             </Tfoot>
           </Table>
-        </Box>
+        </Flex>
       </Flex>
       <Flex mt="10px" alignItems="center" justifyContent="center">
         <HStack spacing={28}>
@@ -174,7 +160,7 @@ const Cart = () => {
           </Link>
         </HStack>
       </Flex>
-    </div>
+    </>
   );
 };
 
