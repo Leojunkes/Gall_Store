@@ -8,14 +8,27 @@ export const CartProvider = ({ children }) => {
 
   //Adicionar produto
   const addProduct = (id) => {
-    const addprod = DATA_ALMOFADAS.find((p) => p.id === id);
-
+    const addprod = DATA_ALMOFADAS.find((product) => product.id === id);
+    const itemId = DATA_ALMOFADAS.map((item) => {
+      item.id === id ? { ...item, quantity: item.amount + 1 } : item;
+    });
     const newProdutos = {
       ...addprod,
-      
     };
-
     setCart((old) => [...old, newProdutos]);
+    //setCart((old) => {
+    //  let q = 0;
+    //  if (old[pro/duct.id]) {
+    //    q = old[product.id].q;
+    //  }
+    //  return {
+    //    ...old,
+    //    [product.id]: {
+    //      q: q + 1,
+    //      product,
+    //    },
+    //  };
+    //});
   };
 
   //remover Produtos
@@ -39,7 +52,7 @@ export const CartProvider = ({ children }) => {
 
   //Salvar Produto Localstorage
   const saveStorage = () => {
-    localStorage.setItem('products', JSON.stringify([...cart]));
+    localStorage.setItem('products', JSON.stringify(cart));
   };
 
   return (

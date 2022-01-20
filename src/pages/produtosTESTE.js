@@ -12,6 +12,10 @@ const TesteFlow = () => {
     priceT: product.valor * product.amount,
   }));
 
+  const product = [
+    
+  ]
+
   useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
 

@@ -5,7 +5,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6060_.jpg",
     "title": "FolhasVerdes",
     "valor": "51.90",
-    "amount": "3"
+    "amount": "1"
   },
   {
     "id": "2 ",
@@ -13,7 +13,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6064_.jpg",
     "title": "FolhasVerdes1",
     "valor": "55.90",
-    "amount": "2"
+    "amount": "1"
   },
   {
     "id": "3 ",
@@ -29,7 +29,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6071_.jpg",
     "title": "VermelhasAlmof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 5",
@@ -37,7 +37,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6075_.jpg",
     "title": "MarromAlmof",
     "valor": "54.50",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 6",
@@ -45,7 +45,7 @@
     "imagemHover": "",
     "title": "RedondaMarromAlmof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 7",
@@ -53,7 +53,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6081_.jpg",
     "title": "Mostard10Almof",
     "valor": "54.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 8",
@@ -61,7 +61,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6085_.jpg",
     "title": "MostardFlorAlmof",
     "valor": "59.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 9",
@@ -69,7 +69,7 @@
     "imagemHover": "",
     "title": "Mostard1Almof",
     "valor": "49.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 10",
@@ -77,7 +77,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6095_.jpg",
     "title": "BlueWhiteAlmof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 11",
@@ -85,7 +85,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6099_.jpg",
     "title": "Blue10WhiteAlmof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 12",
@@ -93,7 +93,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6102_.jpg",
     "title": "Blue11WhiteAlmof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 13",
@@ -101,7 +101,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6107_.jpg",
     "title": "BlueHardWhiteAlmof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 14",
@@ -109,7 +109,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6110_.jpg",
     "title": "Blue1HardWhiteAlmof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 15",
@@ -117,7 +117,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6115_.jpg",
     "title": "Blue10HardWhiteAlmof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 16",
@@ -125,7 +125,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6119_.jpg",
     "title": "Blue2HardWhiteAlmof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 17",
@@ -133,7 +133,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6122_.jpg",
     "title": "Blue10WhiteAlmof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 18",
@@ -141,7 +141,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6126_.jpg",
     "title": "GrayAlmof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 19",
@@ -149,7 +149,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6130_.jpg",
     "title": "Gray1Almof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 20",
@@ -157,7 +157,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6134_.jpg",
     "title": "Gray20Almof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   },
   {
     "id": " 21",
@@ -165,6 +165,6 @@
     "imagemHover": "",
     "title": "Gray3_Almof",
     "valor": "62.90",
-    "amount": "5"
+    "amount": "1"
   }
 ]
