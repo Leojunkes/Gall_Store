@@ -74,12 +74,12 @@ export default function Header1() {
         >
           <DrawerOverlay />
           <DrawerContent>
-            <DrawerCloseButton />
+            <DrawerCloseButton _focus="none" />
             <DrawerHeader>
               <Image src="/imagens/logoGall1.png" />
             </DrawerHeader>
 
-            <DrawerBody cursor="pointer" fontSize="20px">
+            <DrawerBody  cursor="pointer" fontSize="20px">
               <Stack spacing="8">
                 <Link href="/">
                   <Text fontWeight="medium">Home</Text>
@@ -119,7 +119,7 @@ export default function Header1() {
           </DrawerContent>
         </Drawer>
         <Flex m="10px auto">
-          <Image w="120px" h="100px" src="/imagens/logoGall1.png" />
+          <Image ml='-20px' w="9rem"  src="/imagens/logoGall1.png" />
         </Flex>
         <Link href="/carrinho">
           <Flex

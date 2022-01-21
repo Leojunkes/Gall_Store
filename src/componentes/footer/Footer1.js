@@ -58,6 +58,7 @@ export default function Footer1() {
     <div style={{ backgroundColor: '#313131' }}>
       <div className="containerFooter1">
         <Flex
+        
           paddingTop="30px"
           justifyContent="space-around"
           mt="20px"
@@ -67,35 +68,7 @@ export default function Footer1() {
           fontSize="1.125rem"
           w="100vw"
         >
-          {/*<Flex ml="30px" mt="230px" maxW="350px" flexDirection="row">
-            <Text ml="50px" color="#ffffff">
-              Moda, Estilo, Elegância, vista-se com Gall
-            </Text>
-            <Text mt="10px" ml="50px" color="#ffffff">
-              Siga Gall em suas redes sociais:
-            </Text>
-
-            <Flex
-              m="10px 0 0 40px"
-              maxW="100px"
-              cursor="pointer"
-              justifyContent="space-evenly"
-            >
-              <Link href="https://www.instagram.com/gall.oficial/">
-                <BsInstagram style={{ marginLeft: '5px', color: '#ffffff' }} />
-              </Link>
-              <Link href="https://www.facebook.com/gall.oficial">
-                <FiFacebook style={{ color: '#ffffff' }} />
-              </Link>
-              <Link href="">
-                <FiTwitter style={{ color: '#ffffff' }} />
-              </Link>
-            </Flex>
-          </Flex>*/}
-
-
-
-          <Flex cursor="pointer" flexDirection="column" color="#ffffff" s>
+          <Flex paddingLeft='8px' cursor="pointer" flexDirection="column" color="#ffffff" >
             <Text color="#71BDD2">Dúvidas</Text>
             <Link href="">
               <Text>Trocas e Devoluçoes</Text>
@@ -111,7 +84,7 @@ export default function Footer1() {
             </Link>
           </Flex>
 
-          <Flex ml='16px' flexDirection="column" color="#ffffff">
+          <Flex ml="16px" flexDirection="column" color="#ffffff">
             <Text color="#71BDD2">Mapa</Text>
             <Text>Home</Text>
             <Text>Sobre</Text>
@@ -131,7 +104,7 @@ export default function Footer1() {
         </Flex>
       </div>
       <div className="containerFooter1">
-        <Flex mr="15px" mt='-50px' paddingBottom='20px'>
+        <Flex mr="15px" mt="-50px" paddingBottom="20px">
           <Text ml="10px" maxW="100px" color="#71BDD2">
             Formas de Pagamento
           </Text>
@@ -147,17 +120,19 @@ export default function Footer1() {
             src="https://www.yoganatomia.com.br/wp-content/uploads/2021/06/1200px-Logo%E2%80%94pix_powered_by_Banco_Central_Brazil_2020.svg-1024x364.png"
           />
         </Flex>
-
+        <Flex
+          alignItems="center"
+          justifyContent="center"
+          textAlign="center"
+          m="20px 0 0 -330px"
+          color="gray.300"
+          h="60px"
+          w="100%"
+          bg="#0a0a0a"
+        >
+          Gall store Online 2021 - Todos os direitos reservados - CNPJ 000000000
+        </Flex>
       </div>
-      {/* <Flex
-        alignItems="center"
-        justifyContent="center"
-        color="gray.300"
-        h="60px"
-        bg="#0a0a0a"
-      >
-        ©Gall store Online 2021 - Todos os direitos reservados
-      </Flex> */}
     </div>
   );
 }

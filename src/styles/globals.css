@@ -114,8 +114,8 @@ button {
 }
 
 body {
-  background: var(--gray-900);
-  color: var(--white);
+  background: #edf2f7;
+  color: var(--gray-800);
 }
 
 button {
