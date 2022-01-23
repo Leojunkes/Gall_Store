@@ -47,9 +47,13 @@ const Cart = () => {
     priceT: product.valor * product.amount,
   }));
 
-  function increment(product) {
-    setQuantity(product.amount + 1);
-  }
+  const increment = (id) => {
+    const alerta = alert('deu animal!');
+    const alertaNegativo = alert('deu errado');
+    cart.map((item) => {
+      item.id === id ? item.amount + 1 : alertaNegativo;
+    });
+  };
 
   const decrement = () => {
     setQuantity(quantity - 1);
@@ -113,7 +117,7 @@ const Cart = () => {
                         {product.amount}
                       </Heading>
 
-                      <Box type="button" onClick={() => increment(product.id)}>
+                      <Box type="button" onClick={increment}>
                         <AiOutlinePlusCircle
                           style={{ fontSize: '1.4rem', marginLeft: '0px' }}
                         />
@@ -123,12 +127,9 @@ const Cart = () => {
 
                   <Td fontSize="18px">R$ {product.priceT}</Td>
                 </Tr>
-                
               </Tbody>
-              
             ))}
-            
-            
+
             <Tfoot>
               <Tr bg="#125c20">
                 <Th></Th>

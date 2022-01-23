@@ -13,21 +13,18 @@ export const CartProvider = ({ children }) => {
       //? { ...product, quantity: product.amount + 1 }
       //: product;
     );
-    if (addprod) {
-      return json.almofadas.map((item) => {
-        if (item.id === id) {
-          return { 
-            ...item, amount:item.amount + 1
-          };
-        }
-        return item;
-      });
-    }
-    //const itemId = DATA_ALMOFADAS.map((item) => {
-    //  item.id === id ? { ...item, quantity: item.amount + 1 } : item;
-    //});
+    const addProducts = json.almofadas.find((item) => {
+      if (item.id === id) {
+        return {
+          ...item,
+          amount: item.amount + 1,
+        };
+      }
+      return item;
+    });
+    
     const newProdutos = {
-      ...addprod,
+      ...addprod
     };
     setCart((old) => [...old, newProdutos]);
   };

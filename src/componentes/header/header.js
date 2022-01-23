@@ -56,11 +56,13 @@ const Header = () => {
             right="-30px"
             cursor="pointer"
             mr="70px"
+            position="fixed"
           >
             <GiBeachBag
               style={{ width: '6rem', marginTop: '20px', marginRight: '-50px' }}
               fontSize="2.2rem"
               color="#376b2e"
+              
             />
             <Box
               textAlign="center"
