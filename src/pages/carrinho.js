@@ -83,9 +83,6 @@ const Cart = () => {
                 <Th fontSize="0.8rem" color="gray.100">
                   Quantidade
                 </Th>
-                {/*<Th fontSize="0.8rem" color="gray.100">
-                  Subtotal
-                </Th>*/}
               </Tr>
             </Thead>
             {cartFormated.map((product, key) => (
@@ -96,42 +93,42 @@ const Cart = () => {
                     <Heading color="gray.500" ml="2" size="sm" maxW="250px">
                       {product.title}
                     </Heading>
+                    <Heading size="sm">R$ {product.valor}</Heading>
                     <Heading color="gray.500" m="30px 0 0 -90px" size="sm">
                       Ref: {product.id}
                     </Heading>
                   </Td>
-                  <Td fontSize="1rem">R$ {product.valor}</Td>
+
                   <Td>
-                  <Flex>
+                    <Flex>
+                      <Box type="button" onClick={() => decrement(product.id)}>
+                        <Flex w="40px" type="button">
+                          <AiOutlineMinusCircle
+                            style={{ fontSize: '1.4rem' }}
+                          />
+                        </Flex>{' '}
+                      </Box>
 
-<Box type="button" onClick={() => decrement(product.id)}>
-      <Flex w="40px" type="button">
-        <AiOutlineMinusCircle
-          style={{ fontSize: '1.4rem' }}
-        />
-      </Flex>{' '}
-    </Box>
+                      <Heading mr="15px" size="md">
+                        {product.amount}
+                      </Heading>
 
-    <Heading mr="15px" size="sm">
-      {product.amount}
-    </Heading>
-    
-      <Box
-        type="button"
-        onClick={() => increment(product.id)}
-      >
-        <AiOutlinePlusCircle
-          style={{ fontSize: '1.4rem', marginLeft: '0px' }}
-        />
-      </Box>
-      </Flex>
+                      <Box type="button" onClick={() => increment(product.id)}>
+                        <AiOutlinePlusCircle
+                          style={{ fontSize: '1.4rem', marginLeft: '0px' }}
+                        />
+                      </Box>
+                    </Flex>
                   </Td>
 
-                  {/*<Td fontSize="16px">R$ {product.priceT}</Td>*/}
+                  <Td fontSize="18px">R$ {product.priceT}</Td>
                 </Tr>
+                
               </Tbody>
+              
             ))}
-
+            
+            
             <Tfoot>
               <Tr bg="#125c20">
                 <Th></Th>

@@ -14,7 +14,7 @@ const InstagramPhotos = () => {
       <Grid >
         <HStack spacing="8">
           <Box>
-            <Link href="https://www.instagram.com/p/CWLUdsGrGSK/?utm_source=ig_web_copy_link">
+            <a target="_blank" href="https://www.instagram.com/p/CWLUdsGrGSK/?utm_source=ig_web_copy_link">
               <Image
                 backgroundImage=""
                 transition="all ease 0.2s"
@@ -26,10 +26,11 @@ const InstagramPhotos = () => {
                 src="/imagens/camisaGall.png"
                 opacity="0.9"
               />
-            </Link>
+            </a>
           </Box>
           <Box>
-            <Link href="https://www.instagram.com/p/CWnpAtrLNio/?utm_source=ig_web_copy_link">
+            <a target="_blank" href="https://www.instagram.com/p/CWnpAtrLNio/?utm_source=ig_web_copy_link">
+              
               <Image
                 backgroundImage=""
                 transition="all ease 0.2s"
@@ -41,10 +42,10 @@ const InstagramPhotos = () => {
                 src="/imagens/gallFera.png"
                 opacity="0.9"
               />
-            </Link>
+            </a>
           </Box>
           <Box>
-            <Link href="https://www.instagram.com/p/CXTZvObu7No/?utm_source=ig_web_copy_link">
+            <a target="_blank" href="https://www.instagram.com/p/CXTZvObu7No/?utm_source=ig_web_copy_link">
               <Image
                 backgroundImage=""
                 transition="all ease 0.2s"
@@ -56,7 +57,7 @@ const InstagramPhotos = () => {
                 src="/imagens/bolsaGall.png"
                 opacity="0.9"
               />
-            </Link>
+            </a>
           </Box>
         </HStack>
       </Grid>

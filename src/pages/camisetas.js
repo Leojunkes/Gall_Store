@@ -10,8 +10,8 @@ import {
 } from '@chakra-ui/react';
 
 import { BsCartPlus } from 'react-icons/bs';
-import CAMIS_DATA from '/mockProdutos/CAMIS_DATA';
-import HeaderProdutos from '../componentes/header_Produtos';
+import CAMIS_DATA from '../../data/CAMIS_DATA.json';
+import HeaderProdutos from '../componentes//header_Products';
 
 import { useState } from 'react';
 

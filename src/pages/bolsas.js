@@ -1,6 +1,6 @@
 import { Flex, Button, Image, Text, Grid } from '@chakra-ui/react';
 
-import HeaderProdutos from '../componentes/header_Produtos';
+import HeaderProdutos from '../componentes/header_Products';
 
 export default function ProdutosBolsas() {
   return (

@@ -10,8 +10,9 @@ import {
 } from '@chakra-ui/react';
 
 import { BsCartPlus } from 'react-icons/bs';
-import DATA_ALMOFADAS2 from '/mockProdutos/ALMOF2_DATA';
-import HeaderProdutos from '../componentes/header_Produtos';
+
+import DATA_ALMOFADAS2 from '../../data/ALMOF2_DATA.json';
+import HeaderProdutos from '../componentes/header_Products';
 
 import { useState } from 'react';
 

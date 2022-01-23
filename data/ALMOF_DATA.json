@@ -1,4 +1,5 @@
-[
+{
+  "almofadas":[
   {
     "id": " 1",
     "imagem": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6058_.jpg",
@@ -29,7 +30,7 @@
     "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas/IMG_6071_.jpg",
     "title": "VermelhasAlmof",
     "valor": "62.90",
-    "amount": "4"
+    "amount": "2"
   },
   {
     "id": " 5",
@@ -168,3 +169,4 @@
     "amount": "1"
   }
 ]
+}

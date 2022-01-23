@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from 'react';
-import DATA_ALMOFADAS from '/mockProdutos/ALMOF_DATA';
+import json from '../../data/ALMOF_DATA.json';
 
 export const CartContext = createContext();
 
@@ -8,11 +8,21 @@ export const CartProvider = ({ children }) => {
 
   //Adicionar produto
   const addProduct = (id) => {
-    const addprod = DATA_ALMOFADAS.find(
+    const addprod = json.almofadas.find(
       (product) => product.id === id,
       //? { ...product, quantity: product.amount + 1 }
       //: product;
     );
+    if (addprod) {
+      return json.almofadas.map((item) => {
+        if (item.id === id) {
+          return { 
+            ...item, amount:item.amount + 1
+          };
+        }
+        return item;
+      });
+    }
     //const itemId = DATA_ALMOFADAS.map((item) => {
     //  item.id === id ? { ...item, quantity: item.amount + 1 } : item;
     //});
@@ -20,19 +30,6 @@ export const CartProvider = ({ children }) => {
       ...addprod,
     };
     setCart((old) => [...old, newProdutos]);
-    //setCart((old) => {
-    //  let q = 0;
-    //  if (old[pro/duct.id]) {
-    //    q = old[product.id].q;
-    //  }
-    //  return {
-    //    ...old,
-    //    [product.id]: {
-    //      q: q + 1,
-    //      product,
-    //    },
-    //  };
-    //});
   };
 
   //remover Produtos
