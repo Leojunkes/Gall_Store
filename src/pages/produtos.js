@@ -40,7 +40,7 @@ const Produtos = () => {
 
   //Adicionar produto
   function addProducts(id) {
-    addProduct(id);
+    addProduct(id)
     const toast = createStandaloneToast();
     toast({
       title: 'Adicionado ao carrinho',

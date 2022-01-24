@@ -1,8 +1,8 @@
 function Teste(request, response) {
-  const testeAmigo = 'olá sou Api-teste';
+  const tempo = new Date();
 
   response.json({
-    tes: testeAmigo,
+    date: tempo.toGMTString(),
   });
 }
 export default Teste;

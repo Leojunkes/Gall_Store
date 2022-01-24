@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { createContext, useContext, useState } from 'react';
 import json from '../../data/ALMOF_DATA.json';
 
@@ -5,15 +6,16 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const productAlm = 'http://localhost:3001/produtos/${id}';
 
   //Adicionar produto
-  const addProduct = (id) => {
-    const addprod = json.almofadas.find(
-      (product) => product.id === id,
-      //? { ...product, quantity: product.amount + 1 }
-      //: product;
-    );
-    const addProducts = json.almofadas.find((item) => {
+  const addProduct = async (id) => {
+    const addprod = json.almofadas.find((product) => product.id === id);
+    if (!addprod) {
+      await axios.get(`productAlm`);
+    }
+
+    const addProducts = json.almofadas.map((item) => {
       if (item.id === id) {
         return {
           ...item,
@@ -22,9 +24,10 @@ export const CartProvider = ({ children }) => {
       }
       return item;
     });
-    
+
     const newProdutos = {
-      ...addprod
+      ...addprod,
+      addProducts,
     };
     setCart((old) => [...old, newProdutos]);
   };

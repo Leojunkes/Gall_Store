@@ -48,11 +48,7 @@ const Cart = () => {
   }));
 
   const increment = (id) => {
-    const alerta = alert('deu animal!');
-    const alertaNegativo = alert('deu errado');
-    cart.map((item) => {
-      item.id === id ? item.amount + 1 : alertaNegativo;
-    });
+    
   };
 
   const decrement = () => {
@@ -82,10 +78,10 @@ const Cart = () => {
                 </Th>
 
                 <Th fontSize="0.8rem" color="gray.100">
-                  Preço Unitário
+                  Quantidade
                 </Th>
                 <Th fontSize="0.8rem" color="gray.100">
-                  Quantidade
+                  Subtotal
                 </Th>
               </Tr>
             </Thead>
@@ -93,13 +89,16 @@ const Cart = () => {
               <Tbody key={key}>
                 <Tr>
                   <Td>
-                    <Image w="9rem" src={product.imagem} />
-                    <Heading color="gray.500" ml="2" size="sm" maxW="250px">
+                    <Image ml="20px" w="11rem" src={product.imagem} />
+
+                    <Heading ml="55px" color="gray.500" size="sm">
                       {product.title}
                     </Heading>
-                    <Heading size="sm">R$ {product.valor}</Heading>
-                    <Heading color="gray.500" m="30px 0 0 -90px" size="sm">
-                      Ref: {product.id}
+                    <Heading ml="55px" size="sm" color="green">
+                      Valor Unitário
+                    </Heading>
+                    <Heading ml="65px" size="sm">
+                      R$ {product.valor}
                     </Heading>
                   </Td>
 
@@ -113,7 +112,7 @@ const Cart = () => {
                         </Flex>{' '}
                       </Box>
 
-                      <Heading mr="15px" size="md">
+                      <Heading mr="15px" fontSize="1.2rem">
                         {product.amount}
                       </Heading>
 
@@ -125,7 +124,7 @@ const Cart = () => {
                     </Flex>
                   </Td>
 
-                  <Td fontSize="18px">R$ {product.priceT}</Td>
+                  <Td fontSize="1.4rem">R$ {product.priceT}</Td>
                 </Tr>
               </Tbody>
             ))}

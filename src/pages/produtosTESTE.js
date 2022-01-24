@@ -12,13 +12,13 @@ import {
   Thead,
   Tr,
 } from '@chakra-ui/react';
+import axios from 'axios';
 import { useEffect, useState } from 'react';
-
-import DATA_ALMOFADAS from '/mockProdutos/ALMOF_DATA';
 
 /* eslint-disable @next/next/link-passhref */
 const TesteFlow = () => {
   const [cart, setCart] = useState([]);
+  const [dados, setDados] = useState([]);
   //const cartFormated = cart.map((product) => ({
   //  ...product,
   //  pricef: product.valor,
@@ -31,16 +31,24 @@ const TesteFlow = () => {
     { name: 'almofadas2', id: 2, price: 31.99, quantity: 1 },
   ];
   function add(index) {
-    product[index].quantity+=1
-    
+    product[index].quantity += 1;
   }
-  add(2)
-    add(2)
-    console.log(product);
-  
-  
+  add(2);
+  add(2);
+  console.log(dados.Produtos);
 
-  
+  const apiTeste = 'http://localhost:3001/api/teste';
+
+  useEffect(() => {
+    axios
+      .get(apiTeste)
+      .then((response) => {
+        setDados(response.data);
+      })
+      .catch((error) => {
+        alert('ocorreu erro durante o get!');
+      });
+  }, []);
 
   //useEffect(() => {
   //  const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
@@ -56,8 +64,15 @@ const TesteFlow = () => {
       <Box m="25px auto" display="flex">
         <Button>-</Button>
         <Text ml="4">1</Text>
-        <Button type='button' onClick={()=>add()} ml="4">+</Button>
+        <Button type="button" onClick={() => add()} ml="4">
+          +
+        </Button>
       </Box>
+      <Box>
+      <Box>{dados.date}</Box>
+      </Box>
+
+      <Box></Box>
     </Flex>
   );
 };

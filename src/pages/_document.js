@@ -6,7 +6,6 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          
           {/* Bootstrap */}
           <head>
             <link
@@ -43,6 +42,15 @@ export default class MyDocument extends Document {
             rel="shortcut icon"
             href="/imagens/logoGall1.png"
             type="image/png"
+          />
+          <script
+            src="https://apis.google.com/js/platform.js"
+            async
+            defer
+          ></script>
+          <meta
+            name="google-signin-client_id"
+            content="321869646769-11o4q7thsicte8g6ro7hgball8tvot5j.apps.googleusercontent.com"
           />
         </Head>
         <body>
