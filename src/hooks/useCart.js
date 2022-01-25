@@ -9,28 +9,31 @@ export const CartProvider = ({ children }) => {
   const productAlm = 'http://localhost:3001/produtos/${id}';
 
   //Adicionar produto
-  const addProduct = async (id) => {
-    const addprod = json.almofadas.find((product) => product.id === id);
-    if (!addprod) {
-      await axios.get(`productAlm`);
-    }
+  const addItems = (id) => {
+    const productInTheCart = json.almofadas.find((product) => product.id === id);
+    console.log(productInTheCart);
 
-    const addProducts = json.almofadas.map((item) => {
-      if (item.id === id) {
-        return {
-          ...item,
-          amount: item.amount + 1,
-        };
-      }
-      return item;
-    });
+    //setCart([...cart, { amount:10}]);
 
-    const newProdutos = {
-      ...addprod,
-      addProducts,
-    };
-    setCart((old) => [...old, newProdutos]);
+    setCart((old) => [...old, productInTheCart]);
   };
+
+  //Adicionar produto
+  //const addProduct = async (id) => {
+  //  const addprod = json.almofadas.find((product) => product.id === id);
+  //  const updateItem = cart.map((item) =>
+  //    item.id === id
+  //      ? {
+  //          ...item,
+  //          amount: Number(item.amount + 1),
+  //        }
+  //      : item,
+  //  );
+  //  const newProdutos = {
+  //    updateItem,
+  //  };
+  //  setCart((old) => [...old, newProdutos]);
+  //};
 
   //remover Produtos
   const removeProd = (id) => {
@@ -58,7 +61,7 @@ export const CartProvider = ({ children }) => {
 
   return (
     <CartContext.Provider
-      value={{ cart, addProduct, saveStorage, updateProductAmount }}
+      value={{ cart, addItems, saveStorage, updateProductAmount }}
     >
       {children}
     </CartContext.Provider>

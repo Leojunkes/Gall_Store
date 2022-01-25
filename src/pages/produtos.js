@@ -24,7 +24,7 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import Link from 'next/link';
 
 const Produtos = () => {
-  const { addProduct, saveStorage } = useContext(CartContext);
+  const { addItems, saveStorage } = useContext(CartContext);
   const cart2 = useContext(CartContext);
 
   const itemsCount = Object.keys(cart2.cart).length;
@@ -40,7 +40,7 @@ const Produtos = () => {
 
   //Adicionar produto
   function addProducts(id) {
-    addProduct(id)
+    addItems(id)
     const toast = createStandaloneToast();
     toast({
       title: 'Adicionado ao carrinho',
