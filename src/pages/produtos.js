@@ -26,8 +26,6 @@ const Produtos = () => {
   const { addItems, saveStorage } = useCart();
   const cart2 = useCart();
 
-  //const itemsCount = Object.keys(cart2.cart).length;
-
   //Adicionar produto
   function addProducts(id) {
     addItems(id);

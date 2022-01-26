@@ -2,8 +2,6 @@ import {
   Flex,
   Button,
   Image,
-  Text,
-  Grid,
   HStack,
   Divider,
   Heading,
@@ -15,16 +13,17 @@ import {
   Tbody,
   Td,
   Tfoot,
+  createStandaloneToast,
 } from '@chakra-ui/react';
+
 import { useState, useEffect, useContext } from 'react';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 import Link from 'next/link';
-import { CartContext } from '../hooks/useCart';
+import { useCart } from '../hooks/useCart';
 
 const Cart = () => {
-  const cart2 = useContext(CartContext);
+  const cart2 = useCart();
   const [cart, setCart] = useState([]);
-  const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
@@ -40,16 +39,13 @@ const Cart = () => {
   }, []);
 
   const itemsCount = Object.keys(cart2.cart).length;
+  const total = cart.reduce((sumtotal, product) => {
+    return (sumtotal += product.valor * product.amount);
+  }, 0);
 
   const s = itemsCount;
   console.log(s);
   const n = <span>{itemsCount}</span>;
-
-  const cartFormated = cart.map((product) => ({
-    ...product,
-    pricef: product.valor,
-    priceT: product.valor * product.amount,
-  }));
 
   const increment = (key) => {
     const cloneCartProducts = [...cart];
@@ -57,6 +53,7 @@ const Cart = () => {
     updateProduct.amount += 1;
     updateProduct.priceT = updateProduct.pricef * updateProduct.amount;
     cloneCartProducts[key] = updateProduct;
+
     setCart(cloneCartProducts);
   };
 
@@ -66,6 +63,18 @@ const Cart = () => {
     updateProduct.amount -= 1;
     updateProduct.priceT = updateProduct.pricef * updateProduct.amount;
     cloneCartProducts[key] = updateProduct;
+    if (updateProduct.amount <= -1) {
+      const toast = createStandaloneToast();
+      toast({
+        title: 'Erro na alteração da quantidade do produto',
+        position: 'top',
+        status: 'error',
+
+        duration: 4000,
+        isClosable: true,
+      });
+      return;
+    }
     setCart(cloneCartProducts);
   };
   const handleRemoveProd = (id) => {
@@ -75,10 +84,6 @@ const Cart = () => {
   function clearCart() {
     setCart([]);
   }
-
-  //var soma = arrayValores.reduce(function (soma, i) {
-  //  return soma + i;
-  //});
 
   return (
     <>
@@ -91,7 +96,7 @@ const Cart = () => {
                   Sua sacola está com {itemsCount > 0 ? n : 0} itens
                 </Th>
 
-                <Th fontSize="0.8rem" color="gray.100">
+                <Th mr="20px" fontSize="0.8rem" color="gray.100">
                   Quantidade
                 </Th>
                 <Th fontSize="0.8rem" color="gray.100">
@@ -143,17 +148,9 @@ const Cart = () => {
               </Tbody>
             ))}
 
-            <Tfoot>
-              <Tr bg="#125c20">
-                <Th></Th>
-                <Th></Th>
-                <Th></Th>
-
-                {/*<Th color="gray.100" fontSize="1.4rem">
-                    Subtotal: R${product.priceT*amount}
-                  </Th>*/}
-              </Tr>
-            </Tfoot>
+            <Flex>
+            Subtotal: R$: {total}
+            </Flex>
           </Table>
         </Flex>
       </Flex>

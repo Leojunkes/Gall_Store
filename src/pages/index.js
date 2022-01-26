@@ -3,9 +3,10 @@ import Head from 'next/head';
 import { Button, Flex, Input } from '@chakra-ui/react';
 
 import Content from '../componentes/content';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [cart, setCart] = useState([]);
   useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
 

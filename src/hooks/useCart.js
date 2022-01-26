@@ -6,13 +6,13 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
-  const productAlm = 'http://localhost:3001/produtos/${id}';
 
   //Adicionar produto
   const addItems = (id) => {
     const productInTheCart = json.almofadas.find(
       (product) => product.id === id,
     );
+
     const toast = createStandaloneToast();
     toast({
       title: 'Adicionado ao carrinho',
