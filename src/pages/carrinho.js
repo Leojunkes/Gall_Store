@@ -29,8 +29,12 @@ const Cart = () => {
   useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
 
-    const cart1 =
-      localStorage.getItem('products') !== null ? localStorageProdutos : [];
+    const cart1 = (localStorageProdutos || []).map((product) => ({
+      ...product,
+      amount: parseInt(product.amount),
+      pricef: parseFloat(product.valor),
+      priceT: parseFloat(product.valor) * parseInt(product.amount),
+    }));
 
     setCart([...cart1]);
   }, []);
@@ -47,12 +51,22 @@ const Cart = () => {
     priceT: product.valor * product.amount,
   }));
 
-  const increment = (id) => {
-    
+  const increment = (key) => {
+    const cloneCartProducts = [...cart];
+    const updateProduct = { ...cloneCartProducts[key] };
+    updateProduct.amount += 1;
+    updateProduct.priceT = updateProduct.pricef * updateProduct.amount;
+    cloneCartProducts[key] = updateProduct;
+    setCart(cloneCartProducts);
   };
 
-  const decrement = () => {
-    setQuantity(quantity - 1);
+  const decrement = (key) => {
+    const cloneCartProducts = [...cart];
+    const updateProduct = { ...cloneCartProducts[key] };
+    updateProduct.amount -= 1;
+    updateProduct.priceT = updateProduct.pricef * updateProduct.amount;
+    cloneCartProducts[key] = updateProduct;
+    setCart(cloneCartProducts);
   };
   const handleRemoveProd = (id) => {
     const prodRemove = cart.filter((product) => product.id !== id);
@@ -85,7 +99,7 @@ const Cart = () => {
                 </Th>
               </Tr>
             </Thead>
-            {cartFormated.map((product, key) => (
+            {cart.map((product, key) => (
               <Tbody key={key}>
                 <Tr>
                   <Td>
@@ -104,7 +118,7 @@ const Cart = () => {
 
                   <Td>
                     <Flex>
-                      <Box type="button" onClick={() => decrement(product.id)}>
+                      <Box type="button" onClick={() => decrement(key)}>
                         <Flex w="40px" type="button">
                           <AiOutlineMinusCircle
                             style={{ fontSize: '1.4rem' }}
@@ -116,7 +130,7 @@ const Cart = () => {
                         {product.amount}
                       </Heading>
 
-                      <Box type="button" onClick={increment}>
+                      <Box type="button" onClick={() => increment(key)}>
                         <AiOutlinePlusCircle
                           style={{ fontSize: '1.4rem', marginLeft: '0px' }}
                         />
@@ -136,7 +150,7 @@ const Cart = () => {
                 <Th></Th>
 
                 {/*<Th color="gray.100" fontSize="1.4rem">
-                    Subtotal: R$
+                    Subtotal: R${product.priceT*amount}
                   </Th>*/}
               </Tr>
             </Tfoot>

@@ -1,6 +1,6 @@
-import axios from 'axios';
 import { createContext, useContext, useState } from 'react';
 import json from '../../data/ALMOF_DATA.json';
+import { createStandaloneToast } from '@chakra-ui/react';
 
 export const CartContext = createContext();
 
@@ -10,30 +10,22 @@ export const CartProvider = ({ children }) => {
 
   //Adicionar produto
   const addItems = (id) => {
-    const productInTheCart = json.almofadas.find((product) => product.id === id);
-    console.log(productInTheCart);
+    const productInTheCart = json.almofadas.find(
+      (product) => product.id === id,
+    );
+    const toast = createStandaloneToast();
+    toast({
+      title: 'Adicionado ao carrinho',
+      position: 'top',
+      status: 'success',
 
-    //setCart([...cart, { amount:10}]);
+      duration: 4000,
+      isClosable: true,
+    });
+    console.log(productInTheCart);
 
     setCart((old) => [...old, productInTheCart]);
   };
-
-  //Adicionar produto
-  //const addProduct = async (id) => {
-  //  const addprod = json.almofadas.find((product) => product.id === id);
-  //  const updateItem = cart.map((item) =>
-  //    item.id === id
-  //      ? {
-  //          ...item,
-  //          amount: Number(item.amount + 1),
-  //        }
-  //      : item,
-  //  );
-  //  const newProdutos = {
-  //    updateItem,
-  //  };
-  //  setCart((old) => [...old, newProdutos]);
-  //};
 
   //remover Produtos
   const removeProd = (id) => {

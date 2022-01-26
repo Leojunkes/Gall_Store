@@ -7,16 +7,15 @@ import {
   Divider,
   Heading,
   Box,
-  createStandaloneToast,
   HStack,
 } from '@chakra-ui/react';
 
 import { BsCartPlus } from 'react-icons/bs';
 import json from '../../data/ALMOF_DATA.json';
 import HeaderProdutos from '../componentes/header_Products';
-import { CartContext } from '../hooks/useCart';
+import { useCart } from '../hooks/useCart';
 
-import { useContext, useState } from 'react';
+import { useState } from 'react';
 
 import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { AiOutlineSearch } from 'react-icons/ai';
@@ -24,32 +23,14 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import Link from 'next/link';
 
 const Produtos = () => {
-  const { addItems, saveStorage } = useContext(CartContext);
-  const cart2 = useContext(CartContext);
+  const { addItems, saveStorage } = useCart();
+  const cart2 = useCart();
 
-  const itemsCount = Object.keys(cart2.cart).length;
-
-  const arrayteste = [1, 2, 3];
-
-  var soma = 0;
-
-  for (var i = 0; i < arrayteste.length; i++) {
-    soma += arrayteste[i];
-  }
-  console.log(soma);
+  //const itemsCount = Object.keys(cart2.cart).length;
 
   //Adicionar produto
   function addProducts(id) {
-    addItems(id)
-    const toast = createStandaloneToast();
-    toast({
-      title: 'Adicionado ao carrinho',
-      position: 'top',
-      status: 'success',
-
-      duration: 4000,
-      isClosable: true,
-    });
+    addItems(id);
   }
 
   //Salvar Produto Localstorage
