@@ -23,12 +23,12 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import Link from 'next/link';
 
 const Produtos = () => {
-  const { addItems, saveStorage } = useCart();
+  const { addAlmofadas, saveStorage } = useCart();
   const cart2 = useCart();
 
   //Adicionar produto
   function addProducts(id) {
-    addItems(id);
+    addAlmofadas(id);
   }
 
   //Salvar Produto Localstorage

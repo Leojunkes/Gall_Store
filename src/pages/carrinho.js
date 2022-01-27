@@ -12,11 +12,10 @@ import {
   Thead,
   Tbody,
   Td,
-  Tfoot,
-  createStandaloneToast,
+  Text,
 } from '@chakra-ui/react';
 
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
 import Link from 'next/link';
 import { useCart } from '../hooks/useCart';
@@ -63,18 +62,7 @@ const Cart = () => {
     updateProduct.amount -= 1;
     updateProduct.priceT = updateProduct.pricef * updateProduct.amount;
     cloneCartProducts[key] = updateProduct;
-    if (updateProduct.amount <= -1) {
-      const toast = createStandaloneToast();
-      toast({
-        title: 'Erro na alteração da quantidade do produto',
-        position: 'top',
-        status: 'error',
 
-        duration: 4000,
-        isClosable: true,
-      });
-      return;
-    }
     setCart(cloneCartProducts);
   };
   const handleRemoveProd = (id) => {
@@ -87,74 +75,83 @@ const Cart = () => {
 
   return (
     <>
-      <Flex>
-        <Flex w="100%">
-          <Table>
-            <Thead bg="#125c20">
+      <Flex flexDirection="column" w="100%">
+        <Table>
+          <Thead bg="#125c20">
+            <Tr>
+              <Th fontSize="0.8rem" color="gray.100">
+                Sua sacola está com {itemsCount > 0 ? n : 0} itens
+              </Th>
+
+              <Th mr="20px" fontSize="0.8rem" color="gray.100">
+                Quantidade
+              </Th>
+              <Th fontSize="0.8rem" color="gray.100">
+                Subtotal
+              </Th>
+            </Tr>
+          </Thead>
+          {cart.map((product, key) => (
+            <Tbody key={key}>
               <Tr>
-                <Th fontSize="0.8rem" color="gray.100">
-                  Sua sacola está com {itemsCount > 0 ? n : 0} itens
-                </Th>
+                <Td>
+                  <Image ml="5px" w="11rem" src={product.imagem} />
 
-                <Th mr="20px" fontSize="0.8rem" color="gray.100">
-                  Quantidade
-                </Th>
-                <Th fontSize="0.8rem" color="gray.100">
-                  Subtotal
-                </Th>
+                  <Heading ml="42px" color="gray.500" size="sm">
+                    {product.title}
+                  </Heading>
+                  <Heading ml="42px" size="sm" color="green">
+                    Valor Unitário
+                  </Heading>
+                  <Heading ml="47px" size="md">
+                    R$ {product.valor}
+                  </Heading>
+                </Td>
+
+                <Td border='none' m='80px 0 0 -20px' display="flex">
+                  <Button
+                    _hover={{ bg: 'none' }}
+                    _focus="none"
+                    bg="none"
+                    disabled={product.amount <= 0}
+                    type="button"
+                    onClick={() => decrement(key)}
+                  >
+                    <AiOutlineMinusCircle style={{ fontSize: '1.5rem' }} />
+                  </Button>
+
+                  <Heading mt='5px' fontSize="1.4rem">{product.amount}</Heading>
+
+                  <Button
+                    _hover={{ bg: 'none' }}
+                    _focus="none"
+                    bg="none"
+                    type="button"
+                    onClick={() => increment(key)}
+                  >
+                    <AiOutlinePlusCircle style={{ fontSize: '1.5rem' }} />
+                  </Button>
+                </Td>
+
+                <Td fontSize="1.5rem" lineHeight="26px">
+                  R$ {product.priceT}
+                </Td>
               </Tr>
-            </Thead>
-            {cart.map((product, key) => (
-              <Tbody key={key}>
-                <Tr>
-                  <Td>
-                    <Image ml="20px" w="11rem" src={product.imagem} />
-
-                    <Heading ml="55px" color="gray.500" size="sm">
-                      {product.title}
-                    </Heading>
-                    <Heading ml="55px" size="sm" color="green">
-                      Valor Unitário
-                    </Heading>
-                    <Heading ml="65px" size="sm">
-                      R$ {product.valor}
-                    </Heading>
-                  </Td>
-
-                  <Td>
-                    <Flex>
-                      <Box type="button" onClick={() => decrement(key)}>
-                        <Flex w="40px" type="button">
-                          <AiOutlineMinusCircle
-                            style={{ fontSize: '1.4rem' }}
-                          />
-                        </Flex>{' '}
-                      </Box>
-
-                      <Heading mr="15px" fontSize="1.2rem">
-                        {product.amount}
-                      </Heading>
-
-                      <Box type="button" onClick={() => increment(key)}>
-                        <AiOutlinePlusCircle
-                          style={{ fontSize: '1.4rem', marginLeft: '0px' }}
-                        />
-                      </Box>
-                    </Flex>
-                  </Td>
-
-                  <Td fontSize="1.4rem">R$ {product.priceT}</Td>
-                </Tr>
-              </Tbody>
-            ))}
-
-            <Flex>
-            Subtotal: R$: {total}
-            </Flex>
-          </Table>
+            </Tbody>
+          ))}
+        </Table>
+        <Flex
+          justifyContent="end"
+          color="gray.100"
+          fontSize="1.5rem"
+          w="100%"
+          bg="#125c20"
+        >
+          <Text m='12px 185px 0 0px'  paddingBottom='20px'>Subtotal: R$:{total.toFixed(2)}</Text>
         </Flex>
       </Flex>
-      <Flex mt="10px" alignItems="center" justifyContent="center">
+
+      <Flex mt="40px"paddingBottom='40px' alignItems="center" justifyContent="center">
         <HStack spacing={28}>
           <Link href="/produtos">
             <Button color="gray.800" bg="gray.300" border="1px solid green">

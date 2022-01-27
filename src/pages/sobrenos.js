@@ -29,7 +29,7 @@ export default function SobreNos() {
         backgroundSize="cover"
       >
         <Grid
-          mt="100px"
+          m="100px 0 0 9px"
           // ml="150px"
           justifyContent="center"
         >
@@ -40,7 +40,7 @@ export default function SobreNos() {
           >
             Sobre Nós
           </Text>
-          <Heading size="md" fontWeight="medium" maxW="300px">
+          <Heading size="md" fontWeight="medium" maxW="420px">
             {' '}
             A Gall nasceu comprometida com o futuro e com o propósito de
             colaborar com a produção de moda consciente.{' '}

@@ -1,149 +1,173 @@
+{
+    "almofadas1":
 [
     {
         "id": " 1",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6140_.jpg",
         "imagemHover": "",
         "title": "2HardBlueFlores",
-        "valor": "55.90"
+        "valor": "55.90",
+        "amount":"1"
     },
     {
         "id": "2 ",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6142_.jpg",
         "imagemHover": "",
         "title": "HardBlue3Flores",
-        "valor": "55.90"
+        "valor": "55.90",
+        "amount":"1"
     },
     {
         "id": "3 ",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6143_.jpg",
         "imagemHover": "",
         "title": "Amarela3Almof",
-        "valor": "70.90"
+        "valor": "70.90",
+        "amount":"1"
     },
     {
         "id": "4 ",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6146_.jpg",
         "imagemHover": "",
         "title": "BcVd3_Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 5",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6148_.jpg",
         "imagemHover": "",
         "title": "BcVd3_1Almof",
-        "valor": "89.50"
+        "valor": "89.50",
+        "amount":"1"
     },
     {
         "id": " 6",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6151_.jpg",
         "imagemHover": "",
         "title": "Gray1_Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 7",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6155_.jpg",
         "imagemHover": "",
         "title": "Red2_Almof",
-        "valor": "54.90"
+        "valor": "54.90",
+        "amount":"1"
     },
     {
         "id": " 8",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6157_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6159_.jpg",
         "title": "Bc1Almof",
-        "valor": "49.90"
+        "valor": "49.90",
+        "amount":"1"
     },
     {
         "id": " 9",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6162_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6164_.jpg",
         "title": "White13Almof",
-        "valor": "49.90"
+        "valor": "49.90",
+        "amount":"1"
     },
     {
         "id": " 10",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6165_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6167_.jpg",
         "title": "White1Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 11",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6170_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6172_.jpg",
         "title": "WhiteAlmof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 12",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6174_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6176_.jpg",
         "title": "GreenFlowerAlmof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 13",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6178_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6180_.jpg",
         "title": "GreenFlower1Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 14",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6181_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6183_.jpg",
         "title": "GreenFlower10Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 15",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6186_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6187_.jpg",
         "title": "lightPinkAlmof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 16",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6190_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6191_.jpg",
         "title": "lightPink1Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 17",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6194_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6196_.jpg",
         "title": "lightPink2Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 18",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6198_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6200_.jpg",
         "title": "GrayAlmof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 19",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6202_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6204_.jpg",
         "title": "Gray1Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 20",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6205_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6208_.jpg",
         "title": "Gray20Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 21",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6209_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas1/IMG_6211_.jpg",
         "title": "Gray20Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     }
 ]
+}

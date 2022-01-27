@@ -1,149 +1,173 @@
+{
+    "almofadas2":
 [
     {
         "id": " 1",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6213_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6216_.jpg",
         "title": "2softBlueFish",
-        "valor": "55.90"
+        "valor": "55.90",
+        "amount":"1"
     },
     {
         "id": "2 ",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6218_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6220_.jpg",
         "title": "2softBlue10Fish",
-        "valor": "55.90"
+        "valor": "55.90",
+        "amount":"1"
     },
     {
         "id": "3 ",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6222_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6223_.jpg",
         "title": "MarromAlmof",
-        "valor": "70.90"
+        "valor": "70.90",
+        "amount":"1"
     },
     {
         "id": "4 ",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6226_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6228_.jpg",
         "title": "Marrom10Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 5",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6229_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6232_.jpg",
         "title": "Marrom12Almof",
-        "valor": "77.50"
+        "valor": "77.50",
+        "amount":"1"
     },
     {
         "id": " 6",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6233_.jpg",
         "imagemHover": "",
         "title": "Marrom3Flowers",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 7",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6236_.jpg",
         "imagemHover": "",
         "title": "lightBlue3Fishes",
-        "valor": "54.90"
+        "valor": "54.90",
+        "amount":"1"
     },
     {
         "id": " 8",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6239_.jpg",
         "imagemHover": "",
         "title": "White3Almof",
-        "valor": "49.90"
+        "valor": "49.90",
+        "amount":"1"
     },
     {
         "id": " 9",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6241_.jpg",
         "imagemHover": "",
         "title": "Green3Flowers",
-        "valor": "49.90"
+        "valor": "49.90",
+        "amount":"1"
     },
     {
         "id": " 10",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6243_.jpg",
         "imagemHover": "",
         "title": "Colors3Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 11",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6245_.jpg",
         "imagemHover": "",
         "title": "Colors1Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 12",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6246_.jpg",
         "imagemHover": "",
         "title": "Colors10Almof",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 13",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6248_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6250_.jpg",
         "title": "MarromAlmoff",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 14",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6252_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6253_.jpg",
         "title": "Marrom21Almoff",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 15",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6255_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6257_.jpg",
         "title": "Marrom11Almoff",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 16",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6260_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6262_.jpg",
         "title": "Woman1",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 17",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6264_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6266_.jpg",
         "title": "Woman10",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 18",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6268_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6269_.jpg",
         "title": "Woman20",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 19",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6271_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6273_.jpg",
         "title": "Blueflowers",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 20",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6275_.jpg",
         "imagemHover": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6277_.jpg",
         "title": "WhiteFlowers",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     },
     {
         "id": " 21",
         "imagem": "https://api-next-teste.vercel.app/gallAlmofadas2/IMG_6280_.jpg",
         "imagemHover": "",
         "title": "WhiteClower",
-        "valor": "62.90"
+        "valor": "62.90",
+        "amount":"1"
     }
 ]
+}
