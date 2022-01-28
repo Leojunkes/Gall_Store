@@ -3,6 +3,7 @@ import json from '../../data/ALMOF_DATA.json';
 import json1 from '../../data/ALMOF1_DATA.json';
 import json2 from '../../data/ALMOF2_DATA.json';
 import json3 from '../../data/ALMOF3_DATA.json';
+import jsonCami from '../../data/CAMIS_DATA.json';
 import { createStandaloneToast } from '@chakra-ui/react';
 
 export const CartContext = createContext();
@@ -86,6 +87,26 @@ export const CartProvider = ({ children }) => {
 
     setCart((old) => [...old, productInTheCart]);
   };
+  //Adicionar produtos Camisetas
+  const addcamisetas = (id) => {
+    const productInTheCart = jsonCami.camisetas.find(
+      (product) => product.id === id,
+    );
+
+    const toast = createStandaloneToast();
+    toast({
+      title: 'Adicionado ao carrinho',
+      position: 'top',
+      status: 'success',
+
+      duration: 4000,
+      isClosable: true,
+    });
+    console.log(productInTheCart);
+
+    setCart((old) => [...old, productInTheCart]);
+  };
+
   //remover Produtos
   const removeProd = (id) => {
     const prodRemove = cart.filter((product) => product.id !== id);
@@ -118,6 +139,7 @@ export const CartProvider = ({ children }) => {
         addAlmofadas1,
         addAlmofadas2,
         addAlmofadas3,
+        addcamisetas,
         saveStorage,
         updateProductAmount,
       }}

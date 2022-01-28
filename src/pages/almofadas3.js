@@ -24,7 +24,7 @@ import Link from 'next/link';
 
 const Produtos = () => {
   const { addAlmofadas3, saveStorage } = useCart();
-  const cart2 = useCart();
+  
 
   //Adicionar produto
   function addProducts(id) {

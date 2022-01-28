@@ -104,6 +104,48 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+@media (max-width: 460px) {
+  html {
+    font-size: 65.5%;
+  }
+  .cardFotos {
+    margin: auto;
+  }
+  .containerFooter {
+    display: none;
+  }
+  .containerFooter1 {
+    display: flex;
+  }
+  .produtos {
+    display: grid;
+  }
+  .produtos1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 400px) {
+  html {
+    font-size: 58.5%;
+  }
+  .cardFotos {
+    margin: auto;
+  }
+  .containerFooter {
+    display: none;
+  }
+  .containerFooter1 {
+    display: flex;
+  }
+  .produtos {
+    display: grid;
+  }
+  .produtos1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 
 body,
 imput,

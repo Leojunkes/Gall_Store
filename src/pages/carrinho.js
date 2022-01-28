@@ -13,6 +13,7 @@ import {
   Tbody,
   Td,
   Text,
+  Tfoot,
 } from '@chakra-ui/react';
 
 import { useState, useEffect } from 'react';
@@ -75,7 +76,7 @@ const Cart = () => {
 
   return (
     <>
-      <Flex flexDirection="column" w="100%">
+      <Flex mt='10px' flexDirection="column">
         <Table>
           <Thead bg="#125c20">
             <Tr>
@@ -108,37 +109,69 @@ const Cart = () => {
                   </Heading>
                 </Td>
 
-                <Td border='none' m='80px 0 0 -20px' display="flex">
-                  <Button
-                    _hover={{ bg: 'none' }}
-                    _focus="none"
-                    bg="none"
-                    disabled={product.amount <= 0}
-                    type="button"
-                    onClick={() => decrement(key)}
-                  >
-                    <AiOutlineMinusCircle style={{ fontSize: '1.5rem' }} />
-                  </Button>
+                <Td>
+                  <Flex>
+                    <Button
+                      _hover={{ bg: 'green.200' }}
+                      _focus="none"
+                      bg="none"
+                      disabled={product.amount <= 0}
+                      type="button"
+                      onClick={() => decrement(key)}
+                      fontSize="2rem"
+                      color="gray.700"
+                    >
+                      -
+                    </Button>
 
-                  <Heading mt='5px' fontSize="1.4rem">{product.amount}</Heading>
+                    <Box
+                      bg="none"
+                      w="40px"
+                      border="1px solid green"
+                      fontSize="1.7rem"
+                      color="gray.700"
+                    >
+                      <Text m="7px 0 0 10px">{product.amount}</Text>
+                    </Box>
 
-                  <Button
-                    _hover={{ bg: 'none' }}
-                    _focus="none"
-                    bg="none"
-                    type="button"
-                    onClick={() => increment(key)}
-                  >
-                    <AiOutlinePlusCircle style={{ fontSize: '1.5rem' }} />
-                  </Button>
+                    <Button
+                      _hover={{ bg: 'green.200' }}
+                      _focus="none"
+                      bg="none"
+                      type="button"
+                      onClick={() => increment(key)}
+                      fontSize="2rem"
+                      color="gray.700"
+                    >
+                      +
+                    </Button>
+                  </Flex>
                 </Td>
 
-                <Td fontSize="1.5rem" lineHeight="26px">
-                  R$ {product.priceT}
+                <Td fontSize="1.6rem" lineHeight="26px">
+                  R$
+                  {product.priceT.toFixed(2)}
                 </Td>
               </Tr>
             </Tbody>
           ))}
+          <Tfoot bg="#125c20">
+            <Tr>
+              <Th></Th>
+
+              <Th></Th>
+              <Th>
+                <Flex flexDirection="column">
+                  <Text fontSize="1.2rem" color="gray.100">
+                    Subtotal:
+                  </Text>
+                  <Text fontSize="1.5rem" color="gray.100">
+                    R$:{total.toFixed(2)}
+                  </Text>
+                </Flex>
+              </Th>
+            </Tr>
+          </Tfoot>
         </Table>
         <Flex
           justifyContent="end"
@@ -146,12 +179,15 @@ const Cart = () => {
           fontSize="1.5rem"
           w="100%"
           bg="#125c20"
-        >
-          <Text m='12px 185px 0 0px'  paddingBottom='20px'>Subtotal: R$:{total.toFixed(2)}</Text>
-        </Flex>
+        ></Flex>
       </Flex>
 
-      <Flex mt="40px"paddingBottom='40px' alignItems="center" justifyContent="center">
+      <Flex
+        mt="40px"
+        paddingBottom="40px"
+        alignItems="center"
+        justifyContent="center"
+      >
         <HStack spacing={28}>
           <Link href="/produtos">
             <Button color="gray.800" bg="gray.300" border="1px solid green">
