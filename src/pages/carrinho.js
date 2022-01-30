@@ -95,16 +95,16 @@ const Cart = () => {
           {cart.map((product, key) => (
             <Tbody key={key}>
               <Tr>
-                <Td>
-                  <Image ml="5px" w="11rem" src={product.imagem} />
+                <Td justifyContent="center"alignItems="center">
+                  <Image w="11rem" src={product.imagem} />
 
-                  <Heading ml="42px" color="gray.500" size="sm">
+                  <Heading color="gray.500" size="sm">
                     {product.title}
                   </Heading>
-                  <Heading ml="42px" size="sm" color="green">
+                  <Heading size="sm" color="green">
                     Valor Unitário
                   </Heading>
-                  <Heading ml="47px" size="md">
+                  <Heading size="md">
                     R$ {product.valor}
                   </Heading>
                 </Td>
@@ -131,7 +131,7 @@ const Cart = () => {
                       fontSize="1.7rem"
                       color="gray.700"
                     >
-                      <Text m="7px 0 0 10px">{product.amount}</Text>
+                      <Text mt='8px' textAlign='center'>{product.amount}</Text>
                     </Box>
 
                     <Button

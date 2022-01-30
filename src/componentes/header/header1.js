@@ -55,7 +55,7 @@ export default function Header1() {
       style={{ width: '100%', height: '100%', overflow: 'hidden' }}
       className="header1"
     >
-      <Flex h="8rem" bg="gray.100" justifyContent="space-between">
+      <Flex h="14rem" bg="gray.100" justifyContent="space-between">
         <Button
           _focus="none"
           style={{ marginTop: '40px', marginLeft: '10px' }}
@@ -119,7 +119,7 @@ export default function Header1() {
           </DrawerContent>
         </Drawer>
         <Flex m="10px auto">
-          <Image ml='-20px' w="9rem"  src="/imagens/logoGall1.png" />
+          <Image ml='-20px' w="14rem"  src="/imagens/logoGall1.png" />
         </Flex>
         <Link href="/carrinho">
           <Flex
@@ -131,14 +131,14 @@ export default function Header1() {
             mr="70px"
           >
             <GiBeachBag
-              style={{ width: '6rem', marginTop: '20px', marginRight: '-50px' }}
-              fontSize="2.2rem"
+              style={{ width: '7rem', marginTop: '20px', marginRight: '-50px' }}
+              fontSize="2.9rem"
               color="#376b2e"
             />
             <Box
               textAlign="center"
               m="20px -20px 0 20px"
-              w="1.5rem"
+              w="1.9rem"
               h="20px"
               borderRadius="full"
               bg="red.700"

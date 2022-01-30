@@ -58,7 +58,6 @@ export default function Footer1() {
     <div style={{ backgroundColor: '#313131' }}>
       <div className="containerFooter1">
         <Flex
-        
           paddingTop="30px"
           justifyContent="space-around"
           mt="20px"
@@ -68,7 +67,12 @@ export default function Footer1() {
           fontSize="1.125rem"
           w="100vw"
         >
-          <Flex paddingLeft='8px' cursor="pointer" flexDirection="column" color="#ffffff" >
+          <Flex
+            paddingLeft="8px"
+            cursor="pointer"
+            flexDirection="column"
+            color="#ffffff"
+          >
             <Text color="#71BDD2">Dúvidas</Text>
             <Link href="">
               <Text>Trocas e Devoluçoes</Text>
@@ -104,12 +108,13 @@ export default function Footer1() {
         </Flex>
       </div>
       <div className="containerFooter1">
-        <Flex mr="15px" mt="-50px" paddingBottom="20px">
+        <Flex mr="15px" mt="-100px" paddingBottom="20px">
           <Text ml="10px" maxW="100px" color="#71BDD2">
             Formas de Pagamento
           </Text>
           <Image
             w="8rem"
+            ml='20px'
             h="3rem"
             src="https://www.yoganatomia.com.br/wp-content/uploads/2021/06/pagseguro-logo-1-1024x262.png"
           />
@@ -120,18 +125,15 @@ export default function Footer1() {
             src="https://www.yoganatomia.com.br/wp-content/uploads/2021/06/1200px-Logo%E2%80%94pix_powered_by_Banco_Central_Brazil_2020.svg-1024x364.png"
           />
         </Flex>
-        <Flex
-          alignItems="center"
-          justifyContent="center"
+        {/*<Flex
           textAlign="center"
-          m="20px 0 0 -330px"
           color="gray.300"
           h="60px"
-          w="100%"
+          w="100vh"
           bg="#0a0a0a"
         >
           Gall store Online 2021 - Todos os direitos reservados - CNPJ 000000000
-        </Flex>
+        </Flex>*/}
       </div>
     </div>
   );
