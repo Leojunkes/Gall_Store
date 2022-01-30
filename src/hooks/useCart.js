@@ -107,12 +107,6 @@ export const CartProvider = ({ children }) => {
     setCart((old) => [...old, productInTheCart]);
   };
 
-  //remover Produtos
-  const removeProd = (id) => {
-    const prodRemove = cart.filter((product) => product.id !== id);
-    setCart(prodRemove);
-  };
-
   //atualizar produtos
   const updateProductAmount = (productId, amount) => {
     const updateCart = cart.map((cartItem) =>
@@ -141,6 +135,7 @@ export const CartProvider = ({ children }) => {
         addAlmofadas3,
         addcamisetas,
         saveStorage,
+
         updateProductAmount,
       }}
     >

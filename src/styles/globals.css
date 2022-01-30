@@ -57,7 +57,7 @@
   .header1 {
     display: grid;
   }
-  .headerProdutos{
+  .headerProdutos {
     display: flex;
     flex-direction: column;
     width: 60%;
@@ -65,7 +65,7 @@
     cursor: pointer;
     margin-top: 7px;
   }
-  .sobrenos10{
+  .sobrenos10 {
     margin: 0 10px 0 10px;
   }
 }
@@ -127,7 +127,7 @@
 }
 @media (max-width: 400px) {
   html {
-    font-size: 58.5%;
+    font-size: 60.5%;
   }
   .cardFotos {
     margin: auto;

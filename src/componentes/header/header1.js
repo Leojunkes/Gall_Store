@@ -55,7 +55,7 @@ export default function Header1() {
       style={{ width: '100%', height: '100%', overflow: 'hidden' }}
       className="header1"
     >
-      <Flex h="14rem" bg="gray.100" justifyContent="space-between">
+      <Flex boxShadow="15.5218px 10.9578px 0px rgba(0, 0, 0, 0.11), 10.0604px 7.10225px 0px rgba(0, 0, 0, 0.0835185), 5.97878px 4.22077px 0px rgba(0, 0, 0, 0.0668148), 3.10437px 2.19155px 0px rgba(0, 0, 0, 0.055), 1.26474px 0.892855px 0px rgba(0, 0, 0, 0.0431852), 0.287441px 0.202922px 0px rgba(0, 0, 0, 0.0264815);" h="14rem" bg="gray.100" justifyContent="space-between">
         <Button
           _focus="none"
           style={{ marginTop: '40px', marginLeft: '10px' }}
@@ -79,7 +79,7 @@ export default function Header1() {
               <Image src="/imagens/logoGall1.png" />
             </DrawerHeader>
 
-            <DrawerBody  cursor="pointer" fontSize="20px">
+            <DrawerBody cursor="pointer" fontSize="20px">
               <Stack spacing="8">
                 <Link href="/">
                   <Text fontWeight="medium">Home</Text>
@@ -95,7 +95,7 @@ export default function Header1() {
                     <Button
                       _hover="false"
                       _focus="none"
-                      fontSize="1.6rem"
+                      fontSize="20px"
                       fontWeight="light"
                       bg="none"
                       justifyContent="initial"
@@ -109,9 +109,11 @@ export default function Header1() {
                     <PopoverArrow />
                     <PopoverCloseButton />
                     <PopoverHeader color="#ffffff">WhatsApp</PopoverHeader>
-                    <PopoverBody color="#ffffff">
-                      A Gall terá o maior prazer em lhe ajudar!
-                    </PopoverBody>
+                    <Link href="https://api.whatsapp.com/send?phone=5547997275360&text=">
+                      <PopoverBody color="#ffffff">
+                        A Gall terá o maior prazer em lhe ajudar!
+                      </PopoverBody>
+                    </Link>
                   </PopoverContent>
                 </Popover>
               </Stack>
@@ -119,13 +121,14 @@ export default function Header1() {
           </DrawerContent>
         </Drawer>
         <Flex m="10px auto">
-          <Image ml='-20px' w="14rem"  src="/imagens/logoGall1.png" />
+          <Image ml="-20px" w="100%" src="/imagens/logoGall1.png" />
         </Flex>
         <Link href="/carrinho">
           <Flex
             type="button"
             onClick={saveLocalStorage}
             position="absolute"
+            position="fixed"
             right="-30px"
             cursor="pointer"
             mr="70px"
@@ -149,7 +152,6 @@ export default function Header1() {
             </Box>
           </Flex>
         </Link>
-        
       </Flex>
     </div>
   );

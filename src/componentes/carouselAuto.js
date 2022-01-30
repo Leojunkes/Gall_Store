@@ -2,13 +2,14 @@ import { UncontrolledCarousel } from 'reactstrap';
 export default function CarouselAuto() {
   return (
     <div>
-      <UncontrolledCarousel
+      <UncontrolledCarousel 
         items={[
           {
             altText: 'Slide 1',
 
             key: 1,
             src: 'https://api-next-teste.vercel.app/gallCarrossel/arte.png',
+            
           },
           {
             altText: 'Slide 2',

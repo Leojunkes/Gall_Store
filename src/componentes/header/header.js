@@ -22,7 +22,7 @@ import { GiBeachBag } from 'react-icons/gi';
 import Link from 'next/link';
 import { Box } from '@chakra-ui/react';
 
-import { useContext, useEffect, useState } from 'react';
+import { useContext } from 'react';
 import { CartContext } from '../../hooks/useCart';
 
 const Header = () => {
@@ -62,7 +62,6 @@ const Header = () => {
               style={{ width: '6rem', marginTop: '20px', marginRight: '-50px' }}
               fontSize="2.2rem"
               color="#376b2e"
-              
             />
             <Box
               textAlign="center"

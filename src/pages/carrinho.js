@@ -17,11 +17,13 @@ import {
 } from '@chakra-ui/react';
 
 import { useState, useEffect } from 'react';
-import { AiOutlinePlusCircle, AiOutlineMinusCircle } from 'react-icons/ai';
+
 import Link from 'next/link';
 import { useCart } from '../hooks/useCart';
+import { BsTrash } from 'react-icons/bs';
 
 const Cart = () => {
+  const { saveStorage } = useCart();
   const cart2 = useCart();
   const [cart, setCart] = useState([]);
 
@@ -66,8 +68,9 @@ const Cart = () => {
 
     setCart(cloneCartProducts);
   };
-  const handleRemoveProd = (id) => {
+  const removeProd = (id) => {
     const prodRemove = cart.filter((product) => product.id !== id);
+    saveStorage();
     setCart(prodRemove);
   };
   function clearCart() {
@@ -76,7 +79,7 @@ const Cart = () => {
 
   return (
     <>
-      <Flex mt='10px' flexDirection="column">
+      <Flex mt="10px" flexDirection="column">
         <Table>
           <Thead bg="#125c20">
             <Tr>
@@ -95,18 +98,19 @@ const Cart = () => {
           {cart.map((product, key) => (
             <Tbody key={key}>
               <Tr>
-                <Td justifyContent="center"alignItems="center">
-                  <Image w="11rem" src={product.imagem} />
-
-                  <Heading color="gray.500" size="sm">
-                    {product.title}
-                  </Heading>
-                  <Heading size="sm" color="green">
-                    Valor Unitário
-                  </Heading>
-                  <Heading size="md">
-                    R$ {product.valor}
-                  </Heading>
+                <Td justifyContent="center" alignItems="center">
+                  <Flex flexDirection="column">
+                    <Image objectFit="cover" w="11rem" src={product.imagem} />
+                    <Box ml="26px">
+                      <Heading color="gray.500" size="sm">
+                        {product.title}
+                      </Heading>
+                      <Heading size="sm" color="green">
+                        Valor Unitário
+                      </Heading>
+                      <Heading size="md">R$ {product.valor}</Heading>
+                    </Box>
+                  </Flex>
                 </Td>
 
                 <Td>
@@ -131,7 +135,9 @@ const Cart = () => {
                       fontSize="1.7rem"
                       color="gray.700"
                     >
-                      <Text mt='8px' textAlign='center'>{product.amount}</Text>
+                      <Text mt="8px" textAlign="center">
+                        {product.amount}
+                      </Text>
                     </Box>
 
                     <Button
@@ -145,6 +151,17 @@ const Cart = () => {
                     >
                       +
                     </Button>
+                    <Box
+                      color="red.700"
+                      type="button"
+                      w="30px"
+                      m="55px 0 0 46px"
+                      position="absolute"
+                      fontSize="1.8rem"
+                      onClick={() => removeProd(product.id)}
+                    >
+                      <BsTrash />
+                    </Box>
                   </Flex>
                 </Td>
 
@@ -161,9 +178,9 @@ const Cart = () => {
 
               <Th></Th>
               <Th>
-                <Flex flexDirection="column">
+                <Flex lineHeight="15px" flexDirection="column">
                   <Text fontSize="1.2rem" color="gray.100">
-                    Subtotal:
+                    Total:
                   </Text>
                   <Text fontSize="1.5rem" color="gray.100">
                     R$:{total.toFixed(2)}
@@ -190,12 +207,17 @@ const Cart = () => {
       >
         <HStack spacing={28}>
           <Link href="/produtos">
-            <Button color="gray.800" bg="gray.300" border="1px solid green">
+            <Button
+              h="3.5rem"
+              color="gray.800"
+              bg="gray.300"
+              border="1px solid green"
+            >
               Continuar comprando
             </Button>
           </Link>
-          <Link href="/produtos">
-            <Button color="gray.100" bg="#125c20">
+          <Link href="/comprafinal">
+            <Button h="3.5rem" color="gray.100" bg="#125c20">
               Finalizar Compra
             </Button>
           </Link>
