@@ -70,6 +70,7 @@ const Cart = () => {
   };
   const removeProd = (id) => {
     const prodRemove = cart.filter((product) => product.id !== id);
+
     saveStorage();
     setCart(prodRemove);
   };
@@ -212,11 +213,12 @@ const Cart = () => {
               color="gray.800"
               bg="gray.300"
               border="1px solid green"
+              onClick={() => saveStorage()}
             >
               Continuar comprando
             </Button>
           </Link>
-          <Link href="/comprafinal">
+          <Link href="/FormCheckout">
             <Button h="3.5rem" color="gray.100" bg="#125c20">
               Finalizar Compra
             </Button>

@@ -17,7 +17,7 @@ import Link from 'next/link';
 export default function HeaderProdutos() {
   return (
     <Flex
-      w="80%"
+      w="100%"
       m="10px auto"
       borderRadius="30px 0 30px 0"
       color="gray.200"
@@ -27,45 +27,45 @@ export default function HeaderProdutos() {
       textAlign="center"
       className="headerProdutos"
     >
-      <Flex cursor="pointer" mt="3" className="headerProdutos">
+      <Flex  paddingBottom='7px' cursor="pointer" mt="3" className="headerProdutos">
         <Link href="/produtos">
-          <Text fontSize="1.2rem">Almofadas</Text>
+          <Button borderBottom='1px solid'  ml="6px" bg='green' _hover={{bg: '#125C20'}} fontSize="1.1rem">Almofadas</Button>
         </Link>
-        <Divider mt='-5px' />
+        
         <Link href="/almofadas1">
-          <Text ml="8px" fontSize="1.2rem">
+          <Button borderBottom='1px solid'  bg='green' _hover={{bg: '#125C20'}} ml="6px" fontSize="1.1rem">
             Almofadas1
-          </Text>
+          </Button>
         </Link>
-        <Divider mt='-5px'/>
+        
         <Link href="/almofadas2">
-          <Text ml="8px" fontSize="1.2rem">
+          <Button borderBottom='1px solid'  bg='green' _hover={{bg: '#125C20'}} ml="6px" fontSize="1.1rem">
             Almofadas2
-          </Text>
+          </Button>
         </Link>
-        <Divider mt='-5px'/>
+        
         <Link href="/almofadas3">
-          <Text ml="8px" fontSize="1.2rem">
+          <Button borderBottom='1px solid'  bg='green' _hover={{bg: '#125C20'}} ml="6px" fontSize="1.1rem">
             Almofadas3
-          </Text>
+          </Button>
         </Link>
-        <Divider mt='-5px'/>
+        
         <Link href="/camisetas">
-          <Text ml="8px" fontSize="1.2rem">
+          <Button borderBottom='1px solid'  bg='green' _hover={{bg: '#125C20'}}  ml="6px" fontSize="1.1rem">
             Camisetas
-          </Text>
+          </Button>
         </Link>
-        <Divider mt='-5px'/>
+        
         <Link href="/bolsas">
-          <Text ml="8px" fontSize="1.2rem">
+          <Button borderBottom='1px solid'  bg='green' _hover={{bg: '#125C20'}} ml="6px" fontSize="1.1rem">
             Bolsas
-          </Text>
+          </Button>
         </Link>
-        <Divider mt='-5px'/>
+        
         <Link href="/produtosTESTE">
-          <Text ml="8px" fontSize="1.2rem">
+          <Button borderBottom='1px solid' bg='green' _hover={{bg: '#125C20'}} ml="6px" fontSize="1.1rem">
             Teste
-          </Text>
+          </Button>
         </Link>
       </Flex>
     </Flex>
