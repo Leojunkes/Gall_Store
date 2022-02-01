@@ -31,7 +31,7 @@ import {
 } from '@chakra-ui/react';
 import { GiBeachBag } from 'react-icons/gi';
 import { GiHamburgerMenu } from 'react-icons/gi';
-
+import HeaderMinSmall from '../headerInicialSmall';
 import Link from 'next/link';
 import React, { useContext, useState } from 'react';
 import { height } from 'dom-helpers';
@@ -55,14 +55,21 @@ export default function Header1() {
       style={{ width: '100%', height: '100%', overflow: 'hidden' }}
       className="header1"
     >
-      <Flex boxShadow="15.5218px 10.9578px 0px rgba(0, 0, 0, 0.11), 10.0604px 7.10225px 0px rgba(0, 0, 0, 0.0835185), 5.97878px 4.22077px 0px rgba(0, 0, 0, 0.0668148), 3.10437px 2.19155px 0px rgba(0, 0, 0, 0.055), 1.26474px 0.892855px 0px rgba(0, 0, 0, 0.0431852), 0.287441px 0.202922px 0px rgba(0, 0, 0, 0.0264815);" h="14rem" bg="gray.100" justifyContent="space-between">
+      <HeaderMinSmall/>
+      <Flex
+        boxShadow="15.5218px 10.9578px 0px rgba(0, 0, 0, 0.11), 10.0604px 7.10225px 0px rgba(0, 0, 0, 0.0835185), 5.97878px 4.22077px 0px rgba(0, 0, 0, 0.0668148), 3.10437px 2.19155px 0px rgba(0, 0, 0, 0.055), 1.26474px 0.892855px 0px rgba(0, 0, 0, 0.0431852), 0.287441px 0.202922px 0px rgba(0, 0, 0, 0.0264815);"
+        h="14rem"
+        bg="gray.100"
+        justifyContent="space-between"
+      >
         <Button
           _focus="none"
-          style={{ marginTop: '40px', marginLeft: '10px' }}
+          style={{ marginTop: '40px', marginLeft: '18px' }}
           ref={btnRef}
           bg="#2e6a2c"
           color="gray.100"
           onClick={onOpen}
+          position="absolute"
         >
           <GiHamburgerMenu style={{ fontSize: '20px' }} />
         </Button>
@@ -120,8 +127,8 @@ export default function Header1() {
             </DrawerBody>
           </DrawerContent>
         </Drawer>
-        <Flex m='0 auto'>
-          <Image w='15rem' src="/imagens/logoGall1.png" />
+        <Flex m="10px auto">
+          <Image w="15rem" src="/imagens/logoGall1.png" />
         </Flex>
         <Link href="/carrinho">
           <Flex
@@ -129,9 +136,9 @@ export default function Header1() {
             onClick={saveLocalStorage}
             position="absolute"
             position="fixed"
-            right="-30px"
+            right="-48px"
             cursor="pointer"
-            mr="70px"
+            mr="80px"
           >
             <GiBeachBag
               style={{ width: '7rem', marginTop: '20px', marginRight: '-50px' }}
