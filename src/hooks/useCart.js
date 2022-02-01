@@ -129,6 +129,7 @@ export const CartProvider = ({ children }) => {
     <CartContext.Provider
       value={{
         cart,
+        setCart,
         addAlmofadas,
         addAlmofadas1,
         addAlmofadas2,

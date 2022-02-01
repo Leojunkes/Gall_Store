@@ -120,8 +120,8 @@ export default function Header1() {
             </DrawerBody>
           </DrawerContent>
         </Drawer>
-        <Flex m="10px auto">
-          <Image ml="-20px" w="100%" src="/imagens/logoGall1.png" />
+        <Flex m='0 auto'>
+          <Image w='15rem' src="/imagens/logoGall1.png" />
         </Flex>
         <Link href="/carrinho">
           <Flex

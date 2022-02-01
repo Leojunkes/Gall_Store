@@ -24,8 +24,15 @@ import { BsTrash } from 'react-icons/bs';
 
 const Cart = () => {
   const { saveStorage } = useCart();
-  const cart2 = useCart();
   const [cart, setCart] = useState([]);
+  const cart2 = useCart();
+
+  const p='total:50,00'
+
+  const msgWhats =
+    'https://api.whatsapp.com/send?phone=5547997275360&text=' + p;
+    
+    console.log(p)
 
   useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
@@ -222,6 +229,9 @@ const Cart = () => {
             <Button h="3.5rem" color="gray.100" bg="#125c20">
               Finalizar Compra
             </Button>
+          </Link>
+          <Link href={msgWhats}>
+          <Button type='button'>whats</Button>
           </Link>
         </HStack>
       </Flex>
