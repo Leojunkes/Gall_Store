@@ -35,7 +35,7 @@ const Header = () => {
   function saveLocalStorage() {
     saveStorage();
   }
-  const p = 'ola gatas';
+  const p = 'ola turma!';
   const msgWhats =
     'https://api.whatsapp.com/send?phone=5547997275360&text=' + p;
 

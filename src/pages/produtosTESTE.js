@@ -5,6 +5,9 @@ import { useEffect, useState } from 'react';
 /* eslint-disable @next/next/link-passhref */
 const TesteFlow = () => {
   const [cart, setCart] = useState(['']);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
   useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
 
@@ -17,25 +20,46 @@ const TesteFlow = () => {
 
     setCart([...cart1]);
   }, []);
-  console.log(cart);
+
+  //envio de pedidos por whats
+  function whatsSend() {
+    let fone = '+48999311384';
+    let url = `https://api.whatsapp.com/send/?phone=${fone}&text=
+    *Cliente*%0A${name}%0A
+    *email*${email}
+    *Produtos*${'#produtos1'}
+    
+    
+    
+    &app_absent=0`;
+    window.open(url);
+  }
+
   return (
-    <Flex
-      as="form"
-      action="https://formsubmit.co/leojn8@gmail.com"
-      method="POST"
-      flexDirection="column"
-    >
-      <FormControl mt='6'>
+    <Flex as="form" onSubmit={whatsSend} flexDirection="column">
+      <FormControl mt="6">
         <Input
-          type="hidden"
-          name="_next"
-          value="http://localhost:3001/obrigado"
+          onChange={(event) => {
+            setName(event.target.value);
+          }}
+          value={name}
+          type="text"
+          name="name"
+          placeholder="Nome"
         />
-        <Input type="text" name="name" placeholder="Nome" />
-        <Input type="email" name="email" placeholder="Email Address" />
+        <Input
+          onChange={(event) => {
+            setEmail(event.target.value);
+          }}
+          value={email}
+          type="email"
+          name="email"
+          placeholder="Email Address"
+        />
         {cart.map((product, key) => (
           <>
             <Input
+              id="produtos1"
               key={key}
               value={product.title}
               readOnly
@@ -44,16 +68,16 @@ const TesteFlow = () => {
               placeholder="Compras"
             />
             <Input
-              value={product.valor}
+              value=""
               readOnly
               type="text"
-              name="produto1"
+              name="valor"
               placeholder="Compras"
             />
           </>
         ))}
 
-        <Input h="80px" type="text" placeholder="Mensagem" />
+        <Input h="80px" type="text" name="mensagem" placeholder="Mensagem" />
         <Button type="submit">Enviar</Button>
       </FormControl>
     </Flex>
