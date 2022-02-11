@@ -27,12 +27,12 @@ const Cart = () => {
   const [cart, setCart] = useState([]);
   const cart2 = useCart();
 
-  const p='total:50,00'
+  const p = 'total:50,00';
 
   const msgWhats =
     'https://api.whatsapp.com/send?phone=5547997275360&text=' + p;
-    
-    console.log(p)
+
+  console.log(p);
 
   useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
@@ -221,17 +221,20 @@ const Cart = () => {
               bg="gray.300"
               border="1px solid green"
               onClick={() => saveStorage()}
+              _hover={{ bg: '#125c20',color:'white' }}
             >
               Continuar comprando
             </Button>
           </Link>
-          <Link href="/FormCheckout">
-            <Button h="3.5rem" color="gray.100" bg="#125c20">
+          <Link href="/produtosTESTE">
+            <Button
+              _hover={{ bg: 'green' }}
+              h="3.5rem"
+              color="gray.100"
+              bg="#125c20"
+            >
               Finalizar Compra
             </Button>
-          </Link>
-          <Link href={msgWhats}>
-          <Button type='button'>whats</Button>
           </Link>
         </HStack>
       </Flex>

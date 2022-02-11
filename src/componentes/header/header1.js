@@ -70,6 +70,7 @@ export default function Header1() {
           color="gray.100"
           onClick={onOpen}
           position="absolute"
+          _hover={{bg:'green'}}
         >
           <GiHamburgerMenu style={{ fontSize: '20px' }} />
         </Button>

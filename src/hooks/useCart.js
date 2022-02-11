@@ -10,6 +10,45 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [endereco, setEnderecoEntrega] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [fones, setFones] = useState('');
+
+  //envio do pedido por Whats
+  const whatsSend = () => {
+    let fone = '5548999311384';
+    const produtos = document.getElementById('produtos1').value;
+
+    //const newProductArray = {
+    //  id: Math.random(),
+    //  nome: name,
+    //  emaail: email,
+    //  productss: products,
+    //};
+    //if (!name) {
+    //  return;
+    //}
+
+    let url = `https://api.whatsapp.com/send/?phone=${fone}&text=
+    *PEDIDO SITE GALL*%0A
+    *Cliente:*%0A${name}%0A
+    *Endereço de entrega:*%0A${endereco}%0A
+    *Telefone*%0A${fones}%0A
+    *email*%0A${email}%0A
+    *Produtos*%0A${produtos}%0A
+
+    &app_absent=0`;
+    window.open(url);
+    console.log(produtos);
+
+    //setProducts((old) => [...old,produtos+produtos]);
+    //setProducts([produtos]);
+    //localStorage.setItem('productsWhatsSend', JSON.stringify(products));
+    //console.log(products);
+  };
+  //Fim do envio por whats
 
   //Adicionar produto ALMOFADAS
   const addAlmofadas = (id) => {
@@ -130,6 +169,14 @@ export const CartProvider = ({ children }) => {
       value={{
         cart,
         setCart,
+        setEmail,
+        setName,
+        setEnderecoEntrega,
+        setFones,
+        fones,
+        endereco,
+        name,
+        email,
         addAlmofadas,
         addAlmofadas1,
         addAlmofadas2,
@@ -137,6 +184,7 @@ export const CartProvider = ({ children }) => {
         addcamisetas,
         saveStorage,
 
+        whatsSend,
         updateProductAmount,
       }}
     >

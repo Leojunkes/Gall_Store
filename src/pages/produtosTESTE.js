@@ -1,12 +1,21 @@
 import { Input, Flex, Textarea, Button, FormControl } from '@chakra-ui/react';
-import axios from 'axios';
+import { useCart } from '../hooks/useCart';
 import { useEffect, useState } from 'react';
 
 /* eslint-disable @next/next/link-passhref */
 const TesteFlow = () => {
+  const {
+    whatsSend,
+    setEnderecoEntrega,
+    endereco,
+    name,
+    setName,
+    email,
+    setEmail,
+    fones,
+    setFones,
+  } = useCart();
   const [cart, setCart] = useState(['']);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
 
   useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
@@ -22,21 +31,13 @@ const TesteFlow = () => {
   }, []);
 
   //envio de pedidos por whats
-  function whatsSend() {
-    let fone = '+48999311384';
-    let url = `https://api.whatsapp.com/send/?phone=${fone}&text=
-    *Cliente*%0A${name}%0A
-    *email*${email}
-    *Produtos*${'#produtos1'}
-    
-    
-    
-    &app_absent=0`;
-    window.open(url);
+  function WhatsSend(e) {
+    e.preventDefault();
+    whatsSend();
   }
 
   return (
-    <Flex as="form" onSubmit={whatsSend} flexDirection="column">
+    <Flex as="form" onSubmit={WhatsSend} flexDirection="column">
       <FormControl mt="6">
         <Input
           onChange={(event) => {
@@ -46,6 +47,24 @@ const TesteFlow = () => {
           type="text"
           name="name"
           placeholder="Nome"
+        />
+        <Input
+          onChange={(event) => {
+            setEnderecoEntrega(event.target.value);
+          }}
+          value={endereco}
+          type="text"
+          name="endereco"
+          placeholder="endereco"
+        />
+        <Input
+          onChange={(event) => {
+            setFones(event.target.value);
+          }}
+          value={fones}
+          type="text"
+          name="fones"
+          placeholder="Telefone"
         />
         <Input
           onChange={(event) => {
@@ -65,13 +84,6 @@ const TesteFlow = () => {
               readOnly
               type="text"
               name="produto"
-              placeholder="Compras"
-            />
-            <Input
-              value=""
-              readOnly
-              type="text"
-              name="valor"
               placeholder="Compras"
             />
           </>
