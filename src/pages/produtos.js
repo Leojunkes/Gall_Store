@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 
 import { BsCartPlus } from 'react-icons/bs';
-import json from '../../data/ALMOF_DATA.json';
+import DATA_ALMOF from '../../data/ALMOF_DATA.json';
 import HeaderProdutos from '../componentes/header_Products';
 import { useCart } from '../hooks/useCart';
 
@@ -80,7 +80,7 @@ const Produtos = () => {
 
       <div className="produtos1">
         <>
-          {json.almofadas
+          {DATA_ALMOF.almofadas
             .filter((val) => {
               if (search === '') {
                 return val;

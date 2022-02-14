@@ -1,4 +1,4 @@
-import { Input, Flex, Textarea, Button, FormControl } from '@chakra-ui/react';
+import { Input, Flex, Text, Button, FormControl } from '@chakra-ui/react';
 import { useCart } from '../hooks/useCart';
 import { useEffect, useState } from 'react';
 
@@ -12,6 +12,8 @@ const TesteFlow = () => {
     setName,
     email,
     setEmail,
+    setProdutos,
+    produtos,
     fones,
     setFones,
   } = useCart();
@@ -26,18 +28,20 @@ const TesteFlow = () => {
       pricef: parseFloat(product.valor),
       priceT: parseFloat(product.valor) * parseInt(product.amount),
     }));
+    console.log(cart1);
 
     setCart([...cart1]);
   }, []);
 
   //envio de pedidos por whats
-  function WhatsSend(e) {
+  function WhatsSend(e, id) {
     e.preventDefault();
-    whatsSend();
+    whatsSend(id);
   }
 
   return (
     <Flex as="form" onSubmit={WhatsSend} flexDirection="column">
+      <Text>Dados para finalizar seu pedido</Text>
       <FormControl mt="6">
         <Input
           onChange={(event) => {
@@ -75,19 +79,21 @@ const TesteFlow = () => {
           name="email"
           placeholder="Email Address"
         />
-        {cart.map((product, key) => (
-          <>
+
+        <>
+          {cart.map((a) => (
             <Input
               id="produtos1"
-              key={key}
-              value={product.title}
-              readOnly
+              value={produtos}
               type="text"
               name="produto"
-              placeholder="Compras"
+              placeholder={a.title}
+              onChange={(event) => {
+                setProdutos(event.target.value);
+              }}
             />
-          </>
-        ))}
+          ))}
+        </>
 
         <Input h="80px" type="text" name="mensagem" placeholder="Mensagem" />
         <Button type="submit">Enviar</Button>

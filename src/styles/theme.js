@@ -4,13 +4,13 @@ export const theme = extendTheme({
   colors: {
     Colors: {
       white: '#ffffff',
-      waterGreen:'71BDD2',
+      waterGreen: '71BDD2',
       gray: '#313131',
-      green:'#41710E',
+      green: '#41710E',
       lightGreen: '#E0F7CD',
       gelo: '#DEE2E6',
       gray900: '#181B23',
-      rosinha:'#f5e9f7',
+      rosinha: '#f5e9f7',
       yellow: '#f9bd07',
       orange: '#e94b1b',
       ligthBlue: '#0b88ca',
@@ -22,9 +22,6 @@ export const theme = extendTheme({
         bg: '#edf2f7',
         color: 'gray.800',
       },
-      a:{
-        color:'teal'
-      }
     },
   },
   fonts: {

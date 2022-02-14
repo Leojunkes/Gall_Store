@@ -12,24 +12,18 @@ export const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   const [products, setProducts] = useState([]);
   const [endereco, setEnderecoEntrega] = useState('');
+  const [produtos, setProdutos] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [fones, setFones] = useState('');
 
   //envio do pedido por Whats
-  const whatsSend = () => {
+  const whatsSend = (id) => {
     let fone = '5548999311384';
-    const produtos = document.getElementById('produtos1').value;
-
-    //const newProductArray = {
-    //  id: Math.random(),
-    //  nome: name,
-    //  emaail: email,
-    //  productss: products,
-    //};
-    //if (!name) {
-    //  return;
-    //}
+    //const produtos = document.getElementById('produtos1').value;
+    const produtos1 = json.almofadas.find((product) => product.id === id);
+    console.log(products);
+    setProducts((old) => [...old, produtos1]);
 
     let url = `https://api.whatsapp.com/send/?phone=${fone}&text=
     *PEDIDO SITE GALL*%0A
@@ -37,13 +31,12 @@ export const CartProvider = ({ children }) => {
     *Endereço de entrega:*%0A${endereco}%0A
     *Telefone*%0A${fones}%0A
     *email*%0A${email}%0A
-    *Produtos*%0A${produtos}%0A
+    *Produtos*%0A${products}%0A
 
     &app_absent=0`;
     window.open(url);
-    console.log(produtos);
+    console.log(products);
 
-    //setProducts((old) => [...old,produtos+produtos]);
     //setProducts([produtos]);
     //localStorage.setItem('productsWhatsSend', JSON.stringify(products));
     //console.log(products);
@@ -173,6 +166,8 @@ export const CartProvider = ({ children }) => {
         setName,
         setEnderecoEntrega,
         setFones,
+        setProdutos,
+        produtos,
         fones,
         endereco,
         name,
