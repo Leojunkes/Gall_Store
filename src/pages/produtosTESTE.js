@@ -84,7 +84,7 @@ const TesteFlow = () => {
           {cart.map((a) => (
             <Input
               id="produtos1"
-              value={produtos}
+              value={a.title}
               type="text"
               name="produto"
               placeholder={a.title}
