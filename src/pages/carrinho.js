@@ -116,7 +116,13 @@ const Cart = () => {
                       <Heading size="sm" color="green">
                         Valor Unitário
                       </Heading>
-                      <Heading size="md">R$ {product.valor}</Heading>
+                      <Heading size="md">
+                        R${' '}
+                        {new Intl.NumberFormat('pt-BR', {
+                          style: 'currency',
+                          currency: 'BRL',
+                        }).format(product.valor)}
+                      </Heading>
                     </Box>
                   </Flex>
                 </Td>
@@ -175,7 +181,10 @@ const Cart = () => {
 
                 <Td fontSize="1.6rem" lineHeight="26px">
                   R$
-                  {product.priceT.toFixed(2)}
+                  {new Intl.NumberFormat('pt-BR', {
+                    style: 'currency',
+                    currency: 'BRL',
+                  }).format(product.priceT)}
                 </Td>
               </Tr>
             </Tbody>
@@ -190,8 +199,12 @@ const Cart = () => {
                   <Text fontSize="1.2rem" color="gray.100">
                     Total:
                   </Text>
-                  <Text fontSize="1.5rem" color="gray.100">
-                    R$:{total.toFixed(2)}
+                  <Text lineHeight="30px" fontSize="1.5rem" color="gray.100">
+                    R$:
+                    {new Intl.NumberFormat('pt-BR', {
+                      style: 'currency',
+                      currency: 'BRL',
+                    }).format(total)}
                   </Text>
                 </Flex>
               </Th>
@@ -221,7 +234,7 @@ const Cart = () => {
               bg="gray.300"
               border="1px solid green"
               onClick={() => saveStorage()}
-              _hover={{ bg: '#125c20',color:'white' }}
+              _hover={{ bg: '#125c20', color: 'white' }}
             >
               Continuar comprando
             </Button>

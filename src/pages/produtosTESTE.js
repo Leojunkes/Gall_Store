@@ -38,6 +38,12 @@ const TesteFlow = () => {
     e.preventDefault();
     whatsSend(id);
   }
+  var valor = 125.5;
+  var dinheiro = valor.toLocaleString('pt-br', {
+    style: 'currency',
+    currency: 'BRL',
+  });
+  console.log(dinheiro);
 
   return (
     <Flex as="form" onSubmit={WhatsSend} flexDirection="column">
