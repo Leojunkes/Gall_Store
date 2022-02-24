@@ -117,7 +117,7 @@ const Cart = () => {
                         Valor Unitário
                       </Heading>
                       <Heading size="md">
-                        R${' '}
+                        {' '}
                         {new Intl.NumberFormat('pt-BR', {
                           style: 'currency',
                           currency: 'BRL',
@@ -180,7 +180,7 @@ const Cart = () => {
                 </Td>
 
                 <Td fontSize="1.6rem" lineHeight="26px">
-                  R$
+                  
                   {new Intl.NumberFormat('pt-BR', {
                     style: 'currency',
                     currency: 'BRL',
@@ -200,7 +200,7 @@ const Cart = () => {
                     Total:
                   </Text>
                   <Text lineHeight="30px" fontSize="1.5rem" color="gray.100">
-                    R$:
+                    
                     {new Intl.NumberFormat('pt-BR', {
                       style: 'currency',
                       currency: 'BRL',

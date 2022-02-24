@@ -22,7 +22,7 @@ export const CartProvider = ({ children }) => {
     let fone = '5548999311384';
     length = localStorage.length;
     console.log(length);
-    const produtos = document.querySelectorAll('input[type=text]').value;
+    const produtos = document.getElementById('produtos1').value;
 
     let url = `https://api.whatsapp.com/send/?phone=${fone}&text=
     *PEDIDO SITE GALL*%0A
@@ -40,8 +40,6 @@ export const CartProvider = ({ children }) => {
     console.log(products);
   };
   //Fim do envio por whats
-
-  
 
   //Adicionar produto ALMOFADAS
   const addAlmofadas = (id) => {
