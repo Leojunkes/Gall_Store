@@ -1,4 +1,12 @@
-import { Input, Flex, Text, Button, FormControl } from '@chakra-ui/react';
+import {
+  Input,
+  Flex,
+  Text,
+  Button,
+  FormControl,
+  Box,
+  VStack,
+} from '@chakra-ui/react';
 import { useCart } from '../hooks/useCart';
 import { useEffect, useState } from 'react';
 
@@ -38,71 +46,90 @@ const TesteFlow = () => {
     e.preventDefault();
     whatsSend(id);
   }
-  var valor = 125.5;
-  var dinheiro = valor.toLocaleString('pt-br', {
-    style: 'currency',
-    currency: 'BRL',
-  });
-  console.log(dinheiro);
 
   return (
-    <Flex as="form" onSubmit={WhatsSend} flexDirection="column">
-      <Text>Dados para finalizar seu pedido</Text>
+    <Flex
+      m="80px auto"
+      w="50%"
+      as="form"
+      onSubmit={WhatsSend}
+      flexDirection="column"
+      borderRadius="8px"
+    >
+      <Box m="0 auto">
+        <Text fontFamily='Inter' fontWeight='600' fontSize='18px' >Dados para finalizar seu pedido</Text>
+      </Box>
+
       <FormControl mt="6">
-        <Input
-          onChange={(event) => {
-            setName(event.target.value);
-          }}
-          value={name}
-          type="text"
-          name="name"
-          placeholder="Nome"
-        />
-        <Input
-          onChange={(event) => {
-            setEnderecoEntrega(event.target.value);
-          }}
-          value={endereco}
-          type="text"
-          name="endereco"
-          placeholder="endereco"
-        />
-        <Input
-          onChange={(event) => {
-            setFones(event.target.value);
-          }}
-          value={fones}
-          type="text"
-          name="fones"
-          placeholder="Telefone"
-        />
-        <Input
-          onChange={(event) => {
-            setEmail(event.target.value);
-          }}
-          value={email}
-          type="email"
-          name="email"
-          placeholder="Email Address"
-        />
+        <VStack>
+          <Input
+            _focus="none"
+            onChange={(event) => {
+              setName(event.target.value);
+            }}
+            value={name}
+            type="text"
+            name="name"
+            placeholder="Nome"
+          />
+          <Input
+            _focus="none"
+            onChange={(event) => {
+              setEnderecoEntrega(event.target.value);
+            }}
+            value={endereco}
+            type="text"
+            name="endereco"
+            placeholder="endereco"
+          />
+          <Input
+            _focus="none"
+            onChange={(event) => {
+              setFones(event.target.value);
+            }}
+            value={fones}
+            type="text"
+            name="fones"
+            placeholder="Telefone"
+          />
+          <Input
+            _focus="none"
+            onChange={(event) => {
+              setEmail(event.target.value);
+            }}
+            value={email}
+            type="email"
+            name="email"
+            placeholder="Email Address"
+          />
 
-        <>
-          {cart.map((a) => (
-            <Input
-              id="produtos1"
-              value={a.title}
-              type="text"
-              name="produto"
-              placeholder={a.title}
-              onChange={(event) => {
-                setProdutos(event.target.value);
-              }}
-            />
-          ))}
-        </>
+          <>
+            {cart.map((a) => (
+              <Input
+                _focus="none"
+                id="produtos1"
+                value={a.title}
+                type="text"
+                name="produto"
+                placeholder={a.title}
+                onChange={(event) => {
+                  setProdutos(event.target.value);
+                }}
+              />
+            ))}
+          </>
 
-        <Input h="80px" type="text" name="mensagem" placeholder="Mensagem" />
-        <Button type="submit">Enviar</Button>
+          <Input
+            _focus="none"
+            h="80px"
+            type="text"
+            name="mensagem"
+            placeholder="Mensagem"
+          />
+          <Button w="100%" colorScheme="green" type="submit">
+            Enviar
+          </Button>
+        </VStack>
       </FormControl>
     </Flex>
   );

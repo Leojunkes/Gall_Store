@@ -26,7 +26,7 @@ const ClientForm = () => {
 
   return (
     <>
-      <Flex as="form" flexDirection="column" onSubmit={handleCreateUsers}>
+      <Flex w='60%' as="form" flexDirection="column" onSubmit={handleCreateUsers}>
         <Text>Preencha o formulário abaixo:</Text>
         <Box>
           <Text>Nome</Text>

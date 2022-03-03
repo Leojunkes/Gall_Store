@@ -113,7 +113,10 @@ const Produtos = () => {
                   <Box textAlign="center">
                     <Text>{a.title}</Text>
                     <Heading color="#2e6a2c" size="md">
-                      {a.valor}
+                      {new Intl.NumberFormat('pt-BR', {
+                        style: 'currency',
+                        currency: 'BRL',
+                      }).format(a.valor)}
                     </Heading>
                     <Box paddingBottom="14px">
                       <Button
