@@ -57,7 +57,9 @@ const TesteFlow = () => {
       borderRadius="8px"
     >
       <Box m="0 auto">
-        <Text fontFamily='Inter' fontWeight='600' fontSize='18px' >Dados para finalizar seu pedido</Text>
+        <Text fontFamily="Inter" fontWeight="600" fontSize="18px">
+          Dados para finalizar seu pedido
+        </Text>
       </Box>
 
       <FormControl mt="6">
@@ -71,6 +73,7 @@ const TesteFlow = () => {
             type="text"
             name="name"
             placeholder="Nome"
+            _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
           />
           <Input
             _focus="none"
@@ -81,6 +84,7 @@ const TesteFlow = () => {
             type="text"
             name="endereco"
             placeholder="endereco"
+            _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
           />
           <Input
             _focus="none"
@@ -91,6 +95,7 @@ const TesteFlow = () => {
             type="text"
             name="fones"
             placeholder="Telefone"
+            _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
           />
           <Input
             _focus="none"
@@ -101,6 +106,7 @@ const TesteFlow = () => {
             type="email"
             name="email"
             placeholder="Email Address"
+            _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
           />
 
           <>
@@ -112,6 +118,8 @@ const TesteFlow = () => {
                 type="text"
                 name="produto"
                 placeholder={a.title}
+                _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
+                isReadOnly
                 onChange={(event) => {
                   setProdutos(event.target.value);
                 }}
@@ -125,8 +133,9 @@ const TesteFlow = () => {
             type="text"
             name="mensagem"
             placeholder="Mensagem"
+            _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
           />
-          <Button w="100%" colorScheme="green" type="submit">
+          <Button _focus="none" w="100%" colorScheme="green" type="submit">
             Enviar
           </Button>
         </VStack>

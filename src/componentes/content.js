@@ -25,7 +25,7 @@ export default function Content() {
         <CarouselAuto />
       </Flex>
       <Divider m="0 auto" w="90%" color="green" mt="55px" />
-      <Link href="/produtos">
+      <Link href="/cadastroCliente">
         <Flex
           bg="#ffffff"
           mt="5px"

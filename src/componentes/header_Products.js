@@ -27,44 +27,87 @@ export default function HeaderProdutos() {
       textAlign="center"
       className="headerProdutos"
     >
-      <Flex  paddingBottom='7px' cursor="pointer" mt="3" className="headerProdutos">
+      <Flex
+        paddingBottom="7px"
+        cursor="pointer"
+        mt="3"
+        className="headerProdutos"
+      >
         <Link href="/produtos">
-          <Button borderBottom='1px solid'  ml="6px" bg='green' _hover={{bg: '#125C20'}} fontSize="1.1rem">Almofadas</Button>
+          <Button
+            borderBottom="1px solid"
+            ml="6px"
+            bg="green"
+            _hover={{ bg: '#125C20' }}
+            fontSize="1.1rem"
+            _focus="none"
+          >
+            Almofadas
+          </Button>
         </Link>
-        
+
         <Link href="/almofadas1">
-          <Button borderBottom='1px solid'  bg='green' _hover={{bg: '#125C20'}} ml="6px" fontSize="1.1rem">
+          <Button
+            borderBottom="1px solid"
+            bg="green"
+            _hover={{ bg: '#125C20' }}
+            ml="6px"
+            fontSize="1.1rem"
+            _focus="none"
+          >
             Almofadas1
           </Button>
         </Link>
-        
+
         <Link href="/almofadas2">
-          <Button borderBottom='1px solid'  bg='green' _hover={{bg: '#125C20'}} ml="6px" fontSize="1.1rem">
+          <Button
+            borderBottom="1px solid"
+            bg="green"
+            _hover={{ bg: '#125C20' }}
+            ml="6px"
+            fontSize="1.1rem"
+            _focus="none"
+          >
             Almofadas2
           </Button>
         </Link>
-        
+
         <Link href="/almofadas3">
-          <Button borderBottom='1px solid'  bg='green' _hover={{bg: '#125C20'}} ml="6px" fontSize="1.1rem">
+          <Button
+            borderBottom="1px solid"
+            bg="green"
+            _hover={{ bg: '#125C20' }}
+            ml="6px"
+            fontSize="1.1rem"
+            _focus="none"
+          >
             Almofadas3
           </Button>
         </Link>
-        
+
         <Link href="/camisetas">
-          <Button borderBottom='1px solid'  bg='green' _hover={{bg: '#125C20'}}  ml="6px" fontSize="1.1rem">
+          <Button
+            borderBottom="1px solid"
+            bg="green"
+            _hover={{ bg: '#125C20' }}
+            ml="6px"
+            fontSize="1.1rem"
+            _focus="none"
+          >
             Camisetas
           </Button>
         </Link>
-        
+
         <Link href="/bolsas">
-          <Button borderBottom='1px solid'  bg='green' _hover={{bg: '#125C20'}} ml="6px" fontSize="1.1rem">
+          <Button
+            borderBottom="1px solid"
+            bg="green"
+            _hover={{ bg: '#125C20' }}
+            ml="6px"
+            fontSize="1.1rem"
+            _focus="none"
+          >
             Bolsas
-          </Button>
-        </Link>
-        
-        <Link href="/produtosTESTE">
-          <Button borderBottom='1px solid' bg='green' _hover={{bg: '#125C20'}} ml="6px" fontSize="1.1rem">
-            Teste
           </Button>
         </Link>
       </Flex>
