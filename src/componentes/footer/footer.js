@@ -69,7 +69,6 @@ export default function Footer() {
         fontWeight="400"
         bg="#313131"
         fontSize="1.125rem"
-        
       >
         <Flex ml="-44px" mt="30px" maxW="250px" flexDirection="column">
           <Text ml="50px" color="#ffffff">
@@ -85,9 +84,9 @@ export default function Footer() {
             cursor="pointer"
             justifyContent="space-evenly"
           >
-            <Link target="_blank"href="https://www.instagram.com/gall.oficial/">
+            <a target="_blank" href="https://www.instagram.com/gall.oficial/">
               <BsInstagram style={{ marginLeft: '5px', color: '#ffffff' }} />
-            </Link>
+            </a>
             <Link href="https://www.facebook.com/gall.oficial">
               <FiFacebook style={{ color: '#ffffff' }} />
             </Link>
@@ -126,21 +125,6 @@ export default function Footer() {
               {ischangebutton === true ? produtosShow : produtosHide}
             </Button>
           </Flex>
-        </Flex>
-
-        <Flex flexDirection="column">
-          <Text color="#71BDD2">Formas de Pagamento</Text>
-          <Image
-            w="13rem"
-            h="3rem"
-            src="https://www.yoganatomia.com.br/wp-content/uploads/2021/06/pagseguro-logo-1-1024x262.png"
-          />
-          <Image
-            w="13rem"
-            mt="5px"
-            h="4rem"
-            src="https://www.yoganatomia.com.br/wp-content/uploads/2021/06/1200px-Logo%E2%80%94pix_powered_by_Banco_Central_Brazil_2020.svg-1024x364.png"
-          />
         </Flex>
       </Flex>
       <Flex

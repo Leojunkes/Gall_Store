@@ -180,7 +180,6 @@ const Cart = () => {
                 </Td>
 
                 <Td fontSize="1.6rem" lineHeight="26px">
-                  
                   {new Intl.NumberFormat('pt-BR', {
                     style: 'currency',
                     currency: 'BRL',
@@ -200,7 +199,6 @@ const Cart = () => {
                     Total:
                   </Text>
                   <Text lineHeight="30px" fontSize="1.5rem" color="gray.100">
-                    
                     {new Intl.NumberFormat('pt-BR', {
                       style: 'currency',
                       currency: 'BRL',
@@ -239,7 +237,7 @@ const Cart = () => {
               Continuar comprando
             </Button>
           </Link>
-          <Link href="/produtosTESTE">
+          <Link href="/cadastroCliente">
             <Button
               _hover={{ bg: 'green' }}
               h="3.5rem"

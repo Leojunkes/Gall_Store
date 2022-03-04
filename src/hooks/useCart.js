@@ -16,13 +16,14 @@ export const CartProvider = ({ children }) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [fones, setFones] = useState('');
+  const [mensagens, setMensagens] = useState('');
 
   //envio do pedido por Whats
   const whatsSend = () => {
     let fone = '5548999311384';
     length = localStorage.length;
     console.log(length);
-    const produtos = document.getElementById('produtos1').value;
+   
 
     let url = `https://api.whatsapp.com/send/?phone=${fone}&text=
     *PEDIDO SITE GALL*%0A
@@ -30,6 +31,7 @@ export const CartProvider = ({ children }) => {
     *Endereço de entrega:*%0A${endereco}%0A
     *Telefone*%0A${fones}%0A
     *email*%0A${email}%0A
+    *mensagem*%0A${mensagens}%0A
     *Produtos*%0A${produtos}%0A
 
     &app_absent=0`;
@@ -37,7 +39,8 @@ export const CartProvider = ({ children }) => {
 
     setProducts([...products]);
     //localStorage.setItem('productsWhatsSend', JSON.stringify(products));
-    console.log(products);
+    //console.log(products);
+    //console.log(cart);
   };
   //Fim do envio por whats
 
@@ -165,6 +168,8 @@ export const CartProvider = ({ children }) => {
         setEnderecoEntrega,
         setFones,
         setProdutos,
+        setMensagens,
+        mensagens,
         produtos,
         fones,
         endereco,

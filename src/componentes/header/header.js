@@ -104,7 +104,7 @@ const Header = () => {
                     Início
                   </Tab>
                 </Link>
-                <Link href="/produtos">
+                <Link href="/cadastroCliente">
                   <Tab fontSize="1.3rem" _focus="none">
                     Produtos
                   </Tab>

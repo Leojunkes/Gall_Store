@@ -6,6 +6,8 @@ import {
   FormControl,
   Box,
   VStack,
+  Divider,
+  Link,
 } from '@chakra-ui/react';
 import { useCart } from '../hooks/useCart';
 import { useEffect, useState } from 'react';
@@ -17,6 +19,8 @@ const TesteFlow = () => {
     setEnderecoEntrega,
     endereco,
     name,
+    mensagens,
+    setMensagens,
     setName,
     email,
     setEmail,
@@ -36,7 +40,7 @@ const TesteFlow = () => {
       pricef: parseFloat(product.valor),
       priceT: parseFloat(product.valor) * parseInt(product.amount),
     }));
-    console.log(cart1);
+    console.log(cart);
 
     setCart([...cart1]);
   }, []);
@@ -44,7 +48,7 @@ const TesteFlow = () => {
   //envio de pedidos por whats
   function WhatsSend(e, id) {
     e.preventDefault();
-    whatsSend(id);
+    whatsSend();
   }
 
   return (
@@ -59,6 +63,21 @@ const TesteFlow = () => {
       <Box m="0 auto">
         <Text fontFamily="Inter" fontWeight="600" fontSize="18px">
           Dados para finalizar seu pedido
+        </Text>
+        <Divider />
+        <Text fontFamily="Inter" fontWeight="600" fontSize="16px">
+          Em breve este site estará disponível para pedidos, enquanto isso
+          aproveite e conheça alguns de nossos produtos en nosso{' '}
+          <a target="_blank" href="https://www.instagram.com/gall.oficial/">
+            <label style={{ color: 'green', cursor: 'pointer' }}>
+              Instagram
+            </label>
+          </a>
+        </Text>
+        <Divider />
+        <Text fontFamily="Inter" fontWeight="600" fontSize="16px">
+          Qualquer dúvida estaremos disponíveis, preencha o cadastro completo e
+          aguarde nosso contato.
         </Text>
       </Box>
 
@@ -134,6 +153,9 @@ const TesteFlow = () => {
             name="mensagem"
             placeholder="Mensagem"
             _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
+            onChange={(event) => {
+              setMensagens(event.target.value);
+            }}
           />
           <Button _focus="none" w="100%" colorScheme="green" type="submit">
             Enviar
