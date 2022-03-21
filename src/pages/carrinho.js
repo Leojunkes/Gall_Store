@@ -16,26 +16,35 @@ import {
   Tfoot,
 } from '@chakra-ui/react';
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 
 import Link from 'next/link';
 import { useCart } from '../hooks/useCart';
 import { BsTrash } from 'react-icons/bs';
 
 const Cart = () => {
-  const { saveStorage } = useCart();
-  const [cart, setCart] = useState([]);
-  const cart2 = useCart();
+  const {
+    saveStorage,
+    deleteCartItem,
+    cart,
+    setCart,
+    setTotal10,
+    total10,
+    quantity,
+    setQuantity,
+  } = useCart();
 
-  const p = 'total:50,00';
-
-  const msgWhats =
-    'https://api.whatsapp.com/send?phone=5547997275360&text=' + p;
-
-  console.log(p);
+  const total = cart.reduce((sumtotal, product) => {
+    return (sumtotal += product.valor * product.amount);
+  }, 0);
 
   useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
+
+    const localstorageTotal = JSON.parse(localStorage.getItem('saveTotal'));
+    const totalSum =
+      localStorage.getItem('saveTotal') !== null ? localstorageTotal : [];
+    console.log(totalSum);
 
     const cart1 = (localStorageProdutos || []).map((product) => ({
       ...product,
@@ -45,15 +54,18 @@ const Cart = () => {
     }));
 
     setCart([...cart1]);
+    setTotal10(totalSum);
+    console.log(cart);
   }, []);
 
-  const itemsCount = Object.keys(cart2.cart).length;
-  const total = cart.reduce((sumtotal, product) => {
-    return (sumtotal += product.valor * product.amount);
+  const itemsCount = Object.keys(cart).length;
+
+  const totalAmount = cart.reduce((amountTotal, product) => {
+    return (amountTotal += product.amount);
   }, 0);
 
   const s = itemsCount;
-  console.log(s);
+  //console.log(s);
   const n = <span>{itemsCount}</span>;
 
   const increment = (key) => {
@@ -64,6 +76,7 @@ const Cart = () => {
     cloneCartProducts[key] = updateProduct;
 
     setCart(cloneCartProducts);
+    localStorage.setItem('saveTotal', JSON.stringify(total));
   };
 
   const decrement = (key) => {
@@ -75,15 +88,12 @@ const Cart = () => {
 
     setCart(cloneCartProducts);
   };
-  const removeProd = (id) => {
-    const prodRemove = cart.filter((product) => product.id !== id);
 
-    saveStorage();
-    setCart(prodRemove);
+  const salvarTotal = () => {
+    localStorage.setItem('saveTotal', JSON.stringify(total));
+    localStorage.setItem('products', JSON.stringify(cart));
+    localStorage.setItem('totalAmount', JSON.stringify(quantity));
   };
-  function clearCart() {
-    setCart([]);
-  }
 
   return (
     <>
@@ -172,7 +182,7 @@ const Cart = () => {
                       m="55px 0 0 46px"
                       position="absolute"
                       fontSize="1.8rem"
-                      onClick={() => removeProd(product.id)}
+                      onClick={() => deleteCartItem(product.id)}
                     >
                       <BsTrash />
                     </Box>
@@ -180,7 +190,6 @@ const Cart = () => {
                 </Td>
 
                 <Td fontSize="1.6rem" lineHeight="26px">
-                  
                   {new Intl.NumberFormat('pt-BR', {
                     style: 'currency',
                     currency: 'BRL',
@@ -200,7 +209,6 @@ const Cart = () => {
                     Total:
                   </Text>
                   <Text lineHeight="30px" fontSize="1.5rem" color="gray.100">
-                    
                     {new Intl.NumberFormat('pt-BR', {
                       style: 'currency',
                       currency: 'BRL',
@@ -239,12 +247,13 @@ const Cart = () => {
               Continuar comprando
             </Button>
           </Link>
-          <Link href="/produtosTESTE">
+          <Link href="/cadastroCliente">
             <Button
               _hover={{ bg: 'green' }}
               h="3.5rem"
               color="gray.100"
               bg="#125c20"
+              onClick={salvarTotal}
             >
               Finalizar Compra
             </Button>

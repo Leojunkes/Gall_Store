@@ -1,13 +1,27 @@
-import { Flex, Text, Box, HStack } from '@chakra-ui/react';
+import { Flex, Text, Box, HStack, Link } from '@chakra-ui/react';
 import { FaFacebookF } from 'react-icons/fa';
 import { AiFillInstagram, AiTwotonePhone } from 'react-icons/ai';
 export default function HeaderMinSmall() {
   return (
-    <Flex h="30px" color="gray.200" w="100%" bg="#125C20">
+    <Flex alignItems="center" h="50px" color="gray.200" w="100%" bg="#125C20">
       <Box ml="3px" mt="5px">
         <HStack spacing="4">
-          <FaFacebookF />
-          <AiFillInstagram />
+          <Link
+            _hover={{ color: 'gray.800' }}
+            href="https://www.facebook.com/gall.oficial"
+            isExternal
+            _focus="none"
+          >
+            <FaFacebookF style={{ fontSize: '1.3rem' }} />
+          </Link>
+          <Link
+          _hover={{ color: 'gray.800' }}
+          href="https://www.instagram.com/gall.oficial/"
+          isExternal
+          _focus="none"
+        >
+          <AiFillInstagram style={{ marginLeft: '8px', fontSize: '1.3rem' }} />
+        </Link>
           <AiTwotonePhone />
           <Text>(47) 997275360</Text>
         </HStack>

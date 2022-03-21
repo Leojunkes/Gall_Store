@@ -6,29 +6,50 @@ import {
   FormControl,
   Box,
   VStack,
+  Divider,
+  Link,
+  Image,
 } from '@chakra-ui/react';
 import { useCart } from '../hooks/useCart';
 import { useEffect, useState } from 'react';
+import { BsWhatsapp } from 'react-icons/bs';
 
 /* eslint-disable @next/next/link-passhref */
 const TesteFlow = () => {
   const {
     whatsSend,
     setEnderecoEntrega,
+    setQuantity,
+    quantity,
     endereco,
     name,
+    mensagens,
+    setMensagens,
     setName,
     email,
     setEmail,
     setProdutos,
+    setProductsAmount,
+    amount,
     produtos,
     fones,
     setFones,
+    setTotal10,
+    total10,
+    cart,
+    setCart,
   } = useCart();
-  const [cart, setCart] = useState(['']);
 
   useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
+
+    const localstorageTotal = JSON.parse(localStorage.getItem('saveTotal'));
+    const totalSum =
+      localStorage.getItem('saveTotal') !== null ? localstorageTotal : [];
+
+    const localStorageAmount = JSON.parse(localStorage.getItem('totalAmount'));
+    const totalAmount =
+      localStorage.getItem('totalAmount') !== null ? localStorageAmount : [];
 
     const cart1 = (localStorageProdutos || []).map((product) => ({
       ...product,
@@ -36,33 +57,67 @@ const TesteFlow = () => {
       pricef: parseFloat(product.valor),
       priceT: parseFloat(product.valor) * parseInt(product.amount),
     }));
-    console.log(cart1);
-
+    console.log(cart);
+    console.log(totalSum);
+    setTotal10(totalSum);
+    setQuantity(totalAmount);
+    console.log(quantity);
     setCart([...cart1]);
   }, []);
 
   //envio de pedidos por whats
-  function WhatsSend(e, id) {
+  function WhatsSend(e) {
     e.preventDefault();
-    whatsSend(id);
+    whatsSend();
+
+    document.location.replace('/');
+    localStorage.removeItem('products');
+    localStorage.removeItem('saveTotal');
   }
 
   return (
     <Flex
       m="80px auto"
-      w="50%"
       as="form"
+      maxWidth="800px"
       onSubmit={WhatsSend}
       flexDirection="column"
       borderRadius="8px"
     >
       <Box m="0 auto">
-        <Text fontFamily="Inter" fontWeight="600" fontSize="18px">
+        <Text
+          textAlign="center"
+          fontFamily="Inter"
+          fontWeight="600"
+          fontSize="1.4rem"
+        >
           Dados para finalizar seu pedido
+        </Text>
+        {/*<Divider />*/}
+        {/*<Text fontFamily="Inter" fontWeight="600" fontSize="16px">
+          Em breve este site estará disponível para pedidos, enquanto isso
+          aproveite e conheça alguns de nossos produtos en nosso{' '}
+          <a target="_blank" href="https://www.instagram.com/gall.oficial/">
+            <label style={{ color: 'green', cursor: 'pointer' }}>
+              Instagram
+            </label>
+          </a>
+        </Text>*/}
+        <Divider />
+        <Text
+          fontSize="1.2rem"
+          fontFamily="Inter"
+          fontWeight="600"
+          w="95%"
+          m="0 auto"
+        >
+          Qualquer dúvida estaremos disponíveis, preencha o cadastro completo
+          para concluir seu pedido, após finalizar cadastro envie seu pedido por
+          WHATS.
         </Text>
       </Box>
 
-      <FormControl mt="6">
+      <FormControl w="70%" m="0 auto" mt="6">
         <VStack>
           <Input
             _focus="none"
@@ -70,17 +125,20 @@ const TesteFlow = () => {
               setName(event.target.value);
             }}
             value={name}
+            isRequired="true"
             type="text"
             name="name"
             placeholder="Nome"
             _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
           />
+
           <Input
             _focus="none"
             onChange={(event) => {
               setEnderecoEntrega(event.target.value);
             }}
             value={endereco}
+            isRequired="true"
             type="text"
             name="endereco"
             placeholder="endereco"
@@ -92,6 +150,7 @@ const TesteFlow = () => {
               setFones(event.target.value);
             }}
             value={fones}
+            isRequired="true"
             type="text"
             name="fones"
             placeholder="Telefone"
@@ -103,29 +162,64 @@ const TesteFlow = () => {
               setEmail(event.target.value);
             }}
             value={email}
+            isRequired="true"
             type="email"
             name="email"
-            placeholder="Email Address"
+            placeholder="Email"
             _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
           />
 
           <>
-            {cart.map((a) => (
-              <Input
-                _focus="none"
-                id="produtos1"
-                value={a.title}
-                type="text"
-                name="produto"
-                placeholder={a.title}
-                _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
-                isReadOnly
-                onChange={(event) => {
-                  setProdutos(event.target.value);
-                }}
-              />
+            {cart.map((product, index) => (
+              <Box w="100%" key={index}>
+                <Input
+                  _focus="none"
+                  className="produtos1"
+                  value={product.title}
+                  type="text"
+                  name="produto"
+                  placeholder={product.title}
+                  _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
+                  isReadOnly
+                  onChange={(event) => {
+                    setProdutos(event.target.value);
+                  }}
+                />
+              </Box>
+            ))}
+            {cart.map((product, index) => (
+              <Box>
+                <Input
+                  _focus="none"
+                  className="amount1"
+                  value={product.amount}
+                  type="number"
+                  name="produto"
+                  placeholder={product.amount}
+                  _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
+                  isReadOnly
+                  onChange={(event) => {
+                    setProdutos(event.target.value);
+                  }}
+                  color="gray.400"
+                />
+              </Box>
             ))}
           </>
+
+          <Input
+            _focus="none"
+            onChange={(event) => {
+              setTotal10(event.target.value);
+            }}
+            value={total10}
+            id="totalValor"
+            isReadOnly
+            type="number"
+            name="valorTotal"
+            color="gray.400"
+            _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
+          />
 
           <Input
             _focus="none"
@@ -134,10 +228,25 @@ const TesteFlow = () => {
             name="mensagem"
             placeholder="Mensagem"
             _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
+            onChange={(event) => {
+              setMensagens(event.target.value);
+            }}
           />
-          <Button _focus="none" w="100%" colorScheme="green" type="submit">
-            Enviar
+          <Button
+            leftIcon={<BsWhatsapp />}
+            _focus="none"
+            w="100%"
+            colorScheme="green"
+            type="submit"
+            h="50px"
+            fontSize="1.3rem"
+          >
+            Enviar seu pedido por whats
           </Button>
+
+          <Text id="result"></Text>
+          <Text id="amount"></Text>
+          <Text id="totalsuper"></Text>
         </VStack>
       </FormControl>
     </Flex>
