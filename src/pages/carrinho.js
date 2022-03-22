@@ -254,6 +254,7 @@ const Cart = () => {
               color="gray.100"
               bg="#125c20"
               onClick={salvarTotal}
+              _focus="none"
             >
               Finalizar Compra
             </Button>

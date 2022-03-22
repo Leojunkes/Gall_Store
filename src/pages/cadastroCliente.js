@@ -141,7 +141,7 @@ const TesteFlow = () => {
             isRequired="true"
             type="text"
             name="endereco"
-            placeholder="endereco"
+            placeholder="Endereco"
             _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
           />
           <Input
@@ -169,63 +169,11 @@ const TesteFlow = () => {
             _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
           />
 
-          <>
-            {cart.map((product, index) => (
-              <Box w="100%" key={index}>
-                <Input
-                  _focus="none"
-                  className="produtos1"
-                  value={product.title}
-                  type="text"
-                  name="produto"
-                  placeholder={product.title}
-                  _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
-                  isReadOnly
-                  onChange={(event) => {
-                    setProdutos(event.target.value);
-                  }}
-                />
-              </Box>
-            ))}
-            {cart.map((product, index) => (
-              <Box>
-                <Input
-                  _focus="none"
-                  className="amount1"
-                  value={product.amount}
-                  type="number"
-                  name="produto"
-                  placeholder={product.amount}
-                  _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
-                  isReadOnly
-                  onChange={(event) => {
-                    setProdutos(event.target.value);
-                  }}
-                  color="gray.400"
-                />
-              </Box>
-            ))}
-          </>
-
-          <Input
-            _focus="none"
-            onChange={(event) => {
-              setTotal10(event.target.value);
-            }}
-            value={total10}
-            id="totalValor"
-            isReadOnly
-            type="number"
-            name="valorTotal"
-            color="gray.400"
-            _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
-          />
-
           <Input
             _focus="none"
             h="80px"
             type="text"
-            name="mensagem"
+            name="Mensagem"
             placeholder="Mensagem"
             _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
             onChange={(event) => {
@@ -244,9 +192,60 @@ const TesteFlow = () => {
             Enviar seu pedido por whats
           </Button>
 
-          <Text id="result"></Text>
           <Text id="amount"></Text>
-          <Text id="totalsuper"></Text>
+
+          <Text id="result"></Text>
+          <>
+            {cart.map((product, index) => (
+              <Box w="100%" key={index}>
+                <Input
+                  _focus="none"
+                  className="produtos1"
+                  value={product.title}
+                  name="produto"
+                  placeholder={product.title}
+                  _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
+                  isReadOnly
+                  onChange={(event) => {
+                    setProdutos(event.target.value);
+                  }}
+                  type="hidden"
+                />
+              </Box>
+            ))}
+            {cart.map((product, index) => (
+              <Box>
+                <Input
+                  _focus="none"
+                  className="amount1"
+                  value={product.amount}
+                  name="produto"
+                  placeholder={product.amount}
+                  _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
+                  isReadOnly
+                  onChange={(event) => {
+                    setProdutos(event.target.value);
+                  }}
+                  color="gray.400"
+                  type="hidden"
+                />
+              </Box>
+            ))}
+          </>
+
+          <Input
+            _focus="none"
+            onChange={(event) => {
+              setTotal10(event.target.value);
+            }}
+            value={total10}
+            id="totalValor"
+            isReadOnly
+            name="valorTotal"
+            color="gray.400"
+            _placeholder={{ fontFamily: 'Inter', fontWeight: '600' }}
+            type="hidden"
+          />
         </VStack>
       </FormControl>
     </Flex>

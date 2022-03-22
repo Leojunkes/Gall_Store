@@ -98,7 +98,7 @@ export default function HeaderProdutos() {
           </Button>
         </Link>
 
-        <Link href="/bolsas">
+        {/*<Link href="/bolsas">
           <Button
             borderBottom="1px solid"
             bg="green"
@@ -109,7 +109,7 @@ export default function HeaderProdutos() {
           >
             Bolsas
           </Button>
-        </Link>
+        </Link>*/}
       </Flex>
     </Flex>
   );

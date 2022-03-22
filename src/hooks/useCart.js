@@ -46,38 +46,21 @@ export const CartProvider = ({ children }) => {
   const whatsSend = () => {
     let fone = '5548999311384';
 
+    var amountTotal = document.querySelectorAll('.amount1');
     var produtos = document.querySelectorAll('.produtos1');
     var content = '';
-    for (var i = 1; i < produtos.length; i++) {
+    for (var i = 0; i < produtos.length; i++) {
       content +=
-        'PRODUTO : ' + produtos[i].value +   '(' + 'índice' + i + ')' + ' | ';
+        'PRODUTO : ' +
+        produtos[i].value +
+        '(' +
+        'QUANTIDADE  :  ' +
+        amountTotal[i].value +
+        '  )' +
+        ' | ';
     }
     var totalProducts = (document.getElementById('result').value = content);
 
-    var amountTotal = document.querySelectorAll('.amount1');
-    var content = '';
-    for (var i = 1; i < amountTotal.length; i++) {
-      content +=
-        'QUANTIDADE : ' +
-        amountTotal[i].value +
-          '(' +
-        'índice' +
-        i +
-        ')' +
-        ' | ';
-    }
-    var totalAmount = (document.getElementById('result').value = content);
-
-    var productEamount = document.querySelectorAll('.produtos1, .amount1');
-    var content = '';
-    for (var i = 0; i < productEamount.length; i++) {
-      content += productEamount[i].value;
-    }
-    var totalProdEamount = (document.getElementById('totalsuper').value =
-      content);
-
-    console.log(productEamount);
-    console.log(totalAmount);
     console.log(totalProducts);
 
     var totalValores = document.getElementById('totalValor').value;
@@ -89,11 +72,9 @@ export const CartProvider = ({ children }) => {
     *Cliente:*%0A${name}%0A
     *Endereço de entrega:*%0A${endereco}%0A
     *Telefone*%0A${fones}%0A
-    *email*%0A${email}%0A
-    *mensagem*%0A${mensagens}%0A
+    *Email*%0A${email}%0A
+    *Mensagem*%0A${mensagens}%0A
     *PRODUTOS*%0A${totalProducts}%0A 
-    *QUANTIDADE*%0A${totalAmount}%0A 
-     
     *Total da Compra*%0A*${new Intl.NumberFormat('pt-BR', {
       style: 'currency',
       currency: 'BRL',
