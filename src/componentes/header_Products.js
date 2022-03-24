@@ -1,16 +1,5 @@
 /* eslint-disable @next/next/link-passhref */
-import {
-  Flex,
-  Button,
-  Image,
-  Text,
-  Tabs,
-  TabList,
-  TabPanels,
-  Tab,
-  Grid,
-  Divider,
-} from '@chakra-ui/react';
+import { Flex, Button } from '@chakra-ui/react';
 
 import Link from 'next/link';
 

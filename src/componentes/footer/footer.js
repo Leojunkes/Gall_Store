@@ -132,7 +132,7 @@ export default function Footer() {
         h="60px"
         bg="#0a0a0a"
       >
-        Gall store Online 2021 - Todos os direitos reservados - CNPJ 000000000
+        Gall store Online 2022 - Todos os direitos reservados - CNPJ 000000000
       </Flex>
     </div>
   );

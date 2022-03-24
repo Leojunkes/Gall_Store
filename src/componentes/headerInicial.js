@@ -1,4 +1,4 @@
-import { Flex, Text, Box, HStack, Link } from '@chakra-ui/react';
+import { Flex, Text, Box, Link } from '@chakra-ui/react';
 import { FaFacebookF } from 'react-icons/fa';
 import { AiFillInstagram, AiTwotonePhone } from 'react-icons/ai';
 export default function HeaderMin() {
