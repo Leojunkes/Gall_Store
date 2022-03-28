@@ -242,6 +242,8 @@ export const CartProvider = ({ children }) => {
         setQuantity,
         setTotal10,
         total10,
+        setProduct,
+        product,
         quantity,
         mensagens,
         produtos,

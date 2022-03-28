@@ -21,45 +21,30 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useCart } from '../hooks/useCart';
 
-const Cart = () => {
-  const { saveStorage } = useCart();
-  const cart2 = useCart();
-  const [cart, setCart] = useState([]);
+const ProductDetails = () => {
+  const { saveStorage, product, setProduct } = useCart();
 
   useEffect(() => {
-    const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
-
-    const cart1 = (localStorageProdutos || []).map((product) => ({
-      ...product,
-      amount: parseInt(product.amount),
-      pricef: parseFloat(product.valor),
-      priceT: parseFloat(product.valor) * parseInt(product.amount),
-    }));
-
-    setCart([...cart1]);
+    //const localStorageProducts = JSON.parse(localStorage.getItem('product'));
+    //console.log(localStorageProducts);
+    //const product1 = (localStorageProducts || '').map((product) => ({
+    //  ...product,
+    //}));
+    //setProduct(product1);
+    //const totalSum =
+    //  localStorage.getItem('saveTotal') !== null ? localstorageTotal : [];
+    //console.log(totalSum);
   }, []);
-
-  const itemsCount = Object.keys(cart2.cart).length;
-  const total = cart.reduce((sumtotal, product) => {
-    return (sumtotal += product.valor * product.amount);
-  }, 0);
 
   return (
     <>
-      <Flex  alignItems='center' justifyContent='center' mt="50px" flexDirection="column">
-        Checkout / carrinho
-        <Box>
-          <Text>Formulário com informações do cliente</Text>
-          <Text>Nome</Text>
-          <Text>Telefone/whats</Text>
-          <Text>CPF</Text>
-
-          <Text>dados do cliente + produtos escolhidos que virão da planilha do GOOGLE</Text>
-
-        </Box>
-      </Flex>
+      {/*<Flex>
+        {product.map((m) => (
+          <Text>{m.id}</Text>
+        ))}
+      </Flex>*/}
     </>
   );
 };
 
-export default Cart;
+export default ProductDetails;

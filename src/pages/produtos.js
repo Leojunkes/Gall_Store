@@ -21,14 +21,16 @@ import { Input, InputGroup, InputLeftElement } from '@chakra-ui/react';
 import { AiOutlineSearch } from 'react-icons/ai';
 
 import Link from 'next/link';
+import ModalInitial from '../componentes/modal';
 
 const Produtos = () => {
-  const { addAlmofadas, saveStorage, productDetail,saveStorageDetail } = useCart();
+  const { addAlmofadas, saveStorage, productDetail, saveStorageDetail } =
+    useCart();
 
   //Adicionar produto
   function addProducts(id) {
     addAlmofadas(id);
-    productDetail();
+    productDetail(id);
   }
 
   //Salvar Produto Localstorage
@@ -43,6 +45,7 @@ const Produtos = () => {
       style={{ marginTop: '30px', backgroundColor: '#edf2f7' }}
     >
       <HeaderProdutos />
+      <ModalInitial/>
 
       <Flex
         color="gray.100"
@@ -98,8 +101,7 @@ const Produtos = () => {
                   m="14px auto"
                   bg="gray.200"
                 >
-                  <Box type='button'onClick={() => saveStorageDetail(a.id)}>
-                    
+                  <Box type="button" onClick={() => saveStorageDetail(a.id)}>
                     <Image
                       backgroundImage=""
                       transition="all ease 0.2s"

@@ -38,7 +38,6 @@ export default function Content() {
   const modalOpen = (
     <>
       <Box>
-        {testeM}
         <ModalInitial />
       </Box>
     </>
