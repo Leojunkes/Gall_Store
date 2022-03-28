@@ -52,6 +52,10 @@ export default class MyDocument extends Document {
             name="google-signin-client_id"
             content="321869646769-11o4q7thsicte8g6ro7hgball8tvot5j.apps.googleusercontent.com"
           />
+          <meta
+            name="google-site-verification"
+            content="naDsUxQ4ehRipVNXD4UsLgfva_1-f-BgA0K3grWVT18"
+          />
         </Head>
         <body>
           <Main />

@@ -17,48 +17,8 @@ import {
 import { BsInstagram, BsFacebook } from 'react-icons/bs';
 import { FiFacebook, FiTwitter } from 'react-icons/fi';
 import Link from 'next/link';
-import { useState } from 'react';
 
 export default function Footer() {
-  const [ischangebutton, SetIsChangeButton] = useState(false);
-
-  const produtosShow = (
-    <>
-      <Button _hover={{ bg: 'none' }} bg="none">
-        <Text ml="-29px" mb="8px" fontSize="16px" fontWeight="light">
-          Produtos
-        </Text>
-      </Button>
-      <Flex bg="none" cursor="pointer" color="gray.400" flexDirection="column">
-        <Stack>
-          <Text _hover={{ color: 'gray.200' }}>almofadas</Text>
-          <Text _hover={{ color: 'gray.200' }}>almofadas1</Text>
-          <Text _hover={{ color: 'gray.200' }}>almofadas2</Text>
-          <Text _hover={{ color: 'gray.200' }}>almofadas3</Text>
-          <Text _hover={{ color: 'gray.200' }}>bolsas</Text>
-          <Text _hover={{ color: 'gray.200' }}>camisetas</Text>
-        </Stack>
-      </Flex>
-    </>
-  );
-  const produtosHide = (
-    <Button _hover={{ bg: 'none' }} bg="none">
-      <Text mb="8px" ml="-29px" fontSize="16px" fontWeight="light">
-        Produtos
-      </Text>
-    </Button>
-  );
-
-  function alterar() {
-    if (ischangebutton === false) {
-      SetIsChangeButton(true);
-    }
-    if (ischangebutton === true) {
-      SetIsChangeButton(false);
-    }
-    console.log(ischangebutton);
-  }
-
   return (
     <div className="containerFooter">
       <Flex

@@ -23,11 +23,12 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import Link from 'next/link';
 
 const Produtos = () => {
-  const { addAlmofadas, saveStorage } = useCart();
+  const { addAlmofadas, saveStorage, productDetail,saveStorageDetail } = useCart();
 
   //Adicionar produto
   function addProducts(id) {
     addAlmofadas(id);
+    productDetail();
   }
 
   //Salvar Produto Localstorage
@@ -97,7 +98,8 @@ const Produtos = () => {
                   m="14px auto"
                   bg="gray.200"
                 >
-                  <Box>
+                  <Box type='button'onClick={() => saveStorageDetail(a.id)}>
+                    
                     <Image
                       backgroundImage=""
                       transition="all ease 0.2s"

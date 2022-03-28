@@ -20,6 +20,7 @@ export const CartProvider = ({ children }) => {
   const [amount, setProductsAmount] = useState(1);
   const [quantity, setQuantity] = useState([]);
   const [total10, setTotal10] = useState('');
+  const [product, setProduct] = useState([]);
 
   useEffect(() => {
     const localStorageProdutos = JSON.parse(localStorage.getItem('products'));
@@ -90,6 +91,18 @@ export const CartProvider = ({ children }) => {
     console.log(total10);
   };
   //Fim do envio por whats
+
+  //Mais detalhes de cada Produto
+  const productDetail = (id) => {
+    const productDetails = json.almofadas.find((product) => product.id === id);
+    setProduct(productDetails);
+  };
+  // fechando Mais detalhes de cada Produto
+
+  //Salvar productDetail
+  const saveStorageDetail = () => {
+    localStorage.setItem('product', JSON.stringify(product));
+  };
 
   //Adicionar produto ALMOFADAS
   const addAlmofadas = (id) => {
@@ -246,6 +259,8 @@ export const CartProvider = ({ children }) => {
         deleteCartItem,
         whatsSend,
         updateProductAmount,
+        productDetail,
+        saveStorageDetail,
       }}
     >
       {children}
