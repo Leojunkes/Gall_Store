@@ -16,6 +16,8 @@ import {
   Tfoot,
 } from '@chakra-ui/react';
 
+import swal from 'sweetalert';
+
 import { useEffect } from 'react';
 
 import Link from 'next/link';
@@ -57,6 +59,12 @@ const Cart = () => {
     setTotal10(totalSum);
     console.log(cart);
   }, []);
+
+  const testeAlert = () => {
+    swal("Are you sure you want to do this?", {
+      buttons: ["Oh não!", "Aww Sim!"],
+    });
+  };
 
   const itemsCount = Object.keys(cart).length;
 
@@ -259,6 +267,9 @@ const Cart = () => {
               Finalizar Compra
             </Button>
           </Link>
+          <Button type="button" onClick={testeAlert}>
+            teste
+          </Button>
         </HStack>
       </Flex>
     </>
